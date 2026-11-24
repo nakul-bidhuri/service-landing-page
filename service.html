@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>Services | Digitech - Electronic Surveillance & HMS Infrastructure</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets from Original Site -->
+    <link href="assets/css/font-awesome-all.css" rel="stylesheet">
+    <link href="assets/css/flaticon.css" rel="stylesheet">
+    <link href="assets/css/owl.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/nice-select.css" rel="stylesheet">
+    <link href="assets/css/color.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <!-- Professional, Minimalistic & Futuristic Theme Enhancements (Using Original #009ace & #135d76) -->
+    <style>
+        :root {
+            --brand-cyan: #009ace;
+            --brand-dark-cyan: #007ba5;
+            --brand-navy: #135d76;
+            --brand-dark: #0a1b24;
+            --brand-card-bg: rgba(255, 255, 255, 0.95);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #334155;
+            background-color: #f8fafc;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Futuristic Header Top Bar */
+        .header-top {
+            background: linear-gradient(90deg, #135d76 0%, #0d4254 100%) !important;
+            border-bottom: 1px solid rgba(0, 154, 206, 0.25);
+            padding: 8px 0 !important;
+        }
+        .header-top .top-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header-top .info li {
+            font-size: 13px !important;
+            font-weight: 500;
+            color: #e2e8f0 !important;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .header-top .info li i {
+            color: #009ace !important;
+        }
+        .hms-telemetry-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 154, 206, 0.15);
+            border: 1px solid rgba(0, 154, 206, 0.4);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 600;
+            color: #38bdf8;
+            letter-spacing: 0.5px;
+        }
+        .pulse-dot {
+            width: 7px;
+            height: 7px;
+            background: #009ace;
+            border-radius: 50%;
+            box-shadow: 0 0 8px #009ace;
+            animation: hmsPulse 2s infinite;
+        }
+        @keyframes hmsPulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 154, 206, 0.7); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(0, 154, 206, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 154, 206, 0); }
+        }
+
+        /* Upper Header Clean & Professional Polish */
+        .header-upper {
+            padding: 20px 0 !important;
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+        }
+        .header-upper .logo img {
+            max-height: 48px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+        .header-upper .logo:hover img {
+            transform: scale(1.02);
+        }
+        .header-upper .info-list li {
+            padding-left: 55px !important;
+        }
+        .header-upper .info-list li i {
+            width: 44px !important;
+            height: 44px !important;
+            line-height: 44px !important;
+            background: rgba(0, 154, 206, 0.08) !important;
+            color: #009ace !important;
+            border-radius: 10px !important;
+            border: 1px solid rgba(0, 154, 206, 0.2);
+            font-size: 18px !important;
+        }
+        .header-upper .info-list li p {
+            font-size: 12px;
+            font-weight: 500;
+            color: #64748b;
+            margin-bottom: 2px;
+        }
+        .header-upper .info-list li h5 a {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 15px;
+            letter-spacing: -0.2px;
+        }
+
+        /* Minimalistic & Modern Buttons */
+        .theme-btn.style-one {
+            background: #009ace !important;
+            border-radius: 8px !important;
+            font-weight: 700 !important;
+            font-size: 13px !important;
+            letter-spacing: 0.5px !important;
+            text-transform: uppercase !important;
+            padding: 12px 28px !important;
+            box-shadow: 0 4px 14px rgba(0, 154, 206, 0.35) !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+        .theme-btn.style-one:hover {
+            background: #007ba5 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 154, 206, 0.45) !important;
+        }
+
+        /* Modern Navigation Bar */
+        .header-lower {
+            background: #ffffff !important;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .main-menu .navigation > li > a {
+            font-weight: 600 !important;
+            font-size: 15px !important;
+            color: #1e293b !important;
+            padding: 22px 20px !important;
+            transition: color 0.2s ease !important;
+        }
+        .main-menu .navigation > li.current > a,
+        .main-menu .navigation > li:hover > a {
+            color: #009ace !important;
+        }
+
+        /* Futuristic Page Title Banner */
+        .page-title {
+            position: relative;
+            padding: 100px 0 90px 0 !important;
+            background-size: cover;
+            background-position: center;
+        }
+        .page-title::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10, 27, 36, 0.94) 0%, rgba(19, 93, 118, 0.88) 100%);
+        }
+        .page-title .content-box {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        .page-title h1 {
+            font-size: 42px !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            letter-spacing: -0.5px;
+            margin-bottom: 15px;
+        }
+        .page-title .sub-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 154, 206, 0.2);
+            border: 1px solid rgba(0, 154, 206, 0.5);
+            padding: 6px 18px;
+            border-radius: 30px;
+            color: #38bdf8;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .page-title .bread-crumb li {
+            color: #cbd5e1 !important;
+            font-size: 14px;
+        }
+        .page-title .bread-crumb li a {
+            color: #94a3b8 !important;
+            font-weight: 500;
+        }
+        .page-title .bread-crumb li a:hover {
+            color: #009ace !important;
+        }
+
+        /* Professional & Minimalistic Service Cards */
+        .service-section {
+            padding: 90px 0 80px 0 !important;
+            background: #f8fafc;
+        }
+        .service-block-one {
+            margin-bottom: 30px;
+        }
+        .service-block-one .inner-box {
+            border-radius: 14px !important;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            background-color: #0a1b24;
+        }
+        .service-block-one .inner-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 36px rgba(0, 154, 206, 0.18);
+            border-color: rgba(0, 154, 206, 0.4);
+        }
+        .service-block-one .inner-box .content-box {
+            padding: 40px 30px !important;
+            background: linear-gradient(180deg, rgba(10, 27, 36, 0.4) 0%, rgba(10, 27, 36, 0.92) 100%) !important;
+        }
+        .service-block-one .inner-box .content-box .category {
+            color: #009ace !important;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+        .service-block-one .inner-box .content-box h3 {
+            font-weight: 700 !important;
+            font-size: 22px !important;
+            color: #ffffff !important;
+            margin-top: 5px;
+        }
+        .service-block-one .inner-box .content-box .count {
+            color: rgba(255, 255, 255, 0.15) !important;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 44px;
+        }
+        .service-block-one .inner-box .overlay-content {
+            background: linear-gradient(135deg, rgba(19, 93, 118, 0.96) 0%, rgba(10, 27, 36, 0.96) 100%) !important;
+            backdrop-filter: blur(8px);
+            padding: 40px 30px !important;
+            border: 1px solid rgba(0, 154, 206, 0.4);
+            border-radius: 14px;
+        }
+        .service-block-one .inner-box .overlay-content h3 a {
+            color: #ffffff !important;
+            font-size: 22px !important;
+            font-weight: 700;
+        }
+        .service-block-one .inner-box .overlay-content p {
+            color: #e2e8f0 !important;
+            font-size: 14px !important;
+            line-height: 1.6 !important;
+            margin: 15px 0 25px 0 !important;
+        }
+        .service-block-one .inner-box .overlay-content .btn-box a {
+            background: #009ace !important;
+            color: #ffffff !important;
+            border-radius: 6px;
+            padding: 8px 20px;
+            font-weight: 600;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+        .service-block-one .inner-box .overlay-content .btn-box a:hover {
+            background: #ffffff !important;
+            color: #009ace !important;
+        }
+
+        /* Futuristic Special Services Section (Digitech HMS & AI Core) */
+        .service-style-five {
+            padding: 95px 0 !important;
+            position: relative;
+        }
+        .service-style-five .sec-title h2 {
+            font-size: 36px !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            letter-spacing: -0.5px;
+        }
+        .service-style-five .top-title p {
+            color: #009ace !important;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+        }
+        .service-block-four .inner-box {
+            background: rgba(10, 27, 36, 0.85) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 154, 206, 0.25) !important;
+            border-radius: 14px !important;
+            padding: 35px 25px !important;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .service-block-four .inner-box:hover {
+            border-color: #009ace !important;
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 154, 206, 0.2);
+        }
+        .service-block-four .inner-box .icon-box i {
+            color: #009ace !important;
+            font-size: 42px;
+        }
+        .service-block-four .inner-box h4 {
+            color: #ffffff !important;
+            font-size: 19px !important;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+        .service-block-four .inner-box .text p {
+            color: #cbd5e1 !important;
+            font-size: 13px !important;
+            line-height: 1.6;
+        }
+        .service-block-four .inner-box .text a {
+            color: #009ace !important;
+            font-weight: 600;
+            font-size: 13px;
+        }
+
+        /* Minimalist Trust & Certification Strip */
+        .trust-strip {
+            background: #ffffff;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 40px 0;
+        }
+        .trust-item {
+            text-align: center;
+            padding: 10px 15px;
+        }
+        .trust-item .trust-num {
+            font-size: 32px;
+            font-weight: 800;
+            color: #135d76;
+            line-height: 1.1;
+        }
+        .trust-item .trust-num span {
+            color: #009ace;
+        }
+        .trust-item .trust-lbl {
+            font-size: 12px;
+            font-weight: 600;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 5px;
+        }
+
+        /* Footer Polish */
+        .main-footer {
+            background-color: #0a1b24 !important;
+            border-top: 1px solid rgba(0, 154, 206, 0.2);
+        }
+        .footer-top {
+            padding: 70px 0 40px 0 !important;
+        }
+        .footer-widget .support-box h4 a {
+            color: #009ace !important;
+            font-weight: 800;
+            font-size: 20px;
+        }
+        .footer-bottom {
+            background: #061117 !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 20px 0 !important;
+        }
+        .footer-bottom .copyright p {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        /* Floating Minimalist Quick Connect Buttons */
+        .floating-action-bar {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 999;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .floating-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-size: 20px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        .floating-btn.wa-btn {
+            background: #25d366;
+        }
+        .floating-btn.call-btn {
+            background: #009ace;
+        }
+        .floating-btn:hover {
+            transform: scale(1.1);
+            color: #ffffff;
+        }
+
+        /* Minimalist Request Demo Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(10, 27, 36, 0.75);
+            backdrop-filter: blur(6px);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .modal-box {
+            background: #ffffff;
+            border-radius: 16px;
+            max-width: 500px;
+            width: 100%;
+            padding: 35px 30px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 22px;
+            color: #94a3b8;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+        .modal-close:hover {
+            color: #0f172a;
+        }
+        .modal-field {
+            margin-bottom: 16px;
+        }
+        .modal-field label {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .modal-field input, .modal-field select, .modal-field textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #1e293b;
+            background: #f8fafc;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .modal-field input:focus, .modal-field select:focus, .modal-field textarea:focus {
+            border-color: #009ace;
+            background: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="boxed_wrapper">
+        
+        <!-- Main Header -->
+        <header class="main-header style-one">
+            
+            <!-- Mobile Header Info -->
+            <div class="page-header-mobile-info">
+                <div class="page-header-mobile-info-content">
+                    <div class="header-top">
+                        <div class="auto-container">
+                            <div class="top-inner clearfix">
+                                <ul class="info clearfix pull-left">
+                                    <li><i class="icon-placeholder"></i>A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-upper">
+                        <div class="auto-container">
+                            <div class="upper-inner clearfix">
+                                <div class="logo-box pull-left">
+                                    <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="Digitech Services"></a></figure>
+                                </div>
+                                <ul class="info-list clearfix pull-right">
+                                    <li>
+                                        <i class="icon-email"></i>
+                                        <p>Mail Us On</p>
+                                        <h5><a href="mailto:info@digitechservices.net">info@digitechservices.net</a></h5>
+                                    </li>
+                                    <li>
+                                        <i class="icon-smartphone"></i>
+                                        <p>Make a Call</p>
+                                        <h5><a href="tel:09999760222">(+91-) 09999760222</a></h5>
+                                    </li>
+                                    <li class="btn-box">
+                                        <button onclick="openDemoModal('General Service Inquiry')" class="theme-btn style-one">Request Demo</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle-box clearfix">
+                    <div class="page-header-mobile-info-toggle"></div>
+                    <div class="btn-box">
+                        <button onclick="openDemoModal('General Service Inquiry')" class="theme-btn style-one">Request Demo</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Header Bar with HMS Telemetry Indicator -->
+            <div class="header-top auto-hidden">
+                <div class="auto-container">
+                    <div class="top-inner clearfix">
+                        <ul class="info clearfix pull-left">
+                            <li>
+                                <i class="icon-placeholder"></i>
+                                <span>A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi-110070</span>
+                            </li>
+                            <li style="margin-left: 20px;">
+                                <i class="fas fa-certificate"></i>
+                                <span>ISO 9001:2015 Certified Company (Est. 2004)</span>
+                            </li>
+                        </ul>
+                        <div class="pull-right">
+                            <div class="hms-telemetry-badge">
+                                <span class="pulse-dot"></span>
+                                <span>DIGITECH HMS ACTIVE // 24/7 PROACTIVE MONITORING</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upper Header -->
+            <div class="header-upper auto-hidden">
+                <div class="auto-container">
+                    <div class="upper-inner clearfix">
+                        <div class="logo-box pull-left">
+                            <figure class="logo">
+                                <a href="index.html"><img src="assets/images/logo.png" alt="Digitech Services Logo"></a>
+                            </figure>
+                        </div>
+                        <ul class="info-list clearfix pull-right">
+                            <li>
+                                <i class="icon-email"></i>
+                                <p>Mail Us On</p>
+                                <h5><a href="mailto:info@digitechservices.net">info@digitechservices.net</a></h5>
+                            </li>
+                            <li>
+                                <i class="icon-smartphone"></i>
+                                <p>Make a Call</p>
+                                <h5><a href="tel:09999760222">(+91-) 9999-760-222</a></h5>
+                            </li>
+                            <li class="btn-box">
+                                <button onclick="openDemoModal('Site Survey Request')" class="theme-btn style-one">Request Demo</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lower Header Navigation -->
+            <div class="header-lower">
+                <div class="auto-container">
+                    <div class="outer-box clearfix">
+                        <div class="menu-area clearfix pull-left">
+                            <!-- Mobile Navigation Toggler -->
+                            <div class="mobile-nav-toggler">
+                                <i class="icon-bar"></i>
+                                <i class="icon-bar"></i>
+                                <i class="icon-bar"></i>
+                            </div>
+                            <nav class="main-menu navbar-expand-md navbar-light">
+                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li class="current dropdown"><a href="service.html">Services</a>
+                                            <ul>
+                                                <li><a href="cctv-surveillance.html">CCTV Surveillance</a></li>
+                                                <li><a href="fire-alarm-system.html">Fire Alarm System</a></li>
+                                                <li><a href="access-control-system.html">Access Control System</a></li>
+                                                <li><a href="pa-system.html">PA System</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="clients.html">Clients</a></li>
+                                        <li><a href="certificates.html">Certificates</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="menu-right-content clearfix pull-right">
+                            <ul class="social-style-one clearfix">
+                                <li><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticky Header -->
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="outer-box clearfix">
+                        <div class="menu-area pull-left">
+                            <nav class="main-menu clearfix">
+                                <!-- Keep This Empty / Menu injected via JavaScript -->
+                            </nav>
+                        </div>
+                        <div class="menu-right-content clearfix pull-right">
+                            <ul class="social-style-one clearfix">
+                                <li><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Header End -->
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><i class="fas fa-times"></i></div>
+
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt="Digitech Services" title="Digitech"></a></div>
+                <div class="menu-outer"><!-- Menu Injected via Javascript --></div>
+                <div class="contact-info">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi</li>
+                        <li><a href="tel:+9999760222">(+91-) 9999-760-222</a></li>
+                        <li><a href="mailto:info@digitechservices.net">info@digitechservices.net</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="index.html"><span class="fab fa-linkedin-in"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End Mobile Menu -->
+
+        <!-- Page Title Banner -->
+        <section class="page-title" style="background-image: url(assets/images/background/page-title.jpg);">
+            <div class="auto-container">
+                <div class="content-box">
+                    <div class="sub-tag">
+                        <i class="fas fa-shield-alt"></i> SMART SECURITY & SURVEILLANCE INFRASTRUCTURE
+                    </div>
+                    <div class="title">
+                        <h1>Our Services</h1>
+                    </div>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="index.html">Home</a></li>
+                        <li>Electronic Surveillance & Digitech HMS Solutions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Title Banner -->
+
+        <!-- Trust & Proof Metrics Strip -->
+        <div class="trust-strip">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-3 col-md-6 col-sm-6 trust-item">
+                        <div class="trust-num">20<span>+</span></div>
+                        <div class="trust-lbl">Years Industry Excellence</div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 trust-item">
+                        <div class="trust-num">50k<span>+</span></div>
+                        <div class="trust-lbl">Commercial Sites Protected</div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 trust-item">
+                        <div class="trust-num">99.9<span>%</span></div>
+                        <div class="trust-lbl">HMS Monitored Uptime SLA</div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6 trust-item">
+                        <div class="trust-num">4<span> States</span></div>
+                        <div class="trust-lbl">Delhi NCR • UP • MP • Maharashtra</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Services Section (4 Core Solutions) -->
+        <section class="service-section sec-pad">
+            <div class="auto-container">
+                
+                <div class="sec-title centred" style="margin-bottom: 50px;">
+                    <div class="top-title">
+                        <p style="color: #009ace; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 1.5px;">
+                            CORE SECURITY SUITE
+                        </p>
+                    </div>
+                    <h2 style="font-size: 34px; font-weight: 800; color: #0f172a; margin-top: 5px;">
+                        Enterprise Surveillance & Life Safety Systems
+                    </h2>
+                    <p style="color: #64748b; font-size: 15px; max-width: 650px; margin: 10px auto 0 auto;">
+                        Engineered for zero-downtime protection, compliant building safety, and seamless centralized management.
+                    </p>
+                </div>
+
+                <div class="row clearfix">
+                    
+                    <!-- 01 CCTV Surveillance -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one">
+                            <div class="inner-box" style="background-image: url(assets/images/service/service-1.jpg);">
+                                <div class="content-box">
+                                    <div class="icon-box"><i class="icon-install"></i></div>
+                                    <span class="category">DIGITECH // AI-ENABLED</span>
+                                    <h3>CCTV Surveillance Systems</h3>
+                                    <div class="link"><a href="cctv-surveillance.html">Read More<i class="fas fa-angle-right"></i></a></div>
+                                    <span class="count">01</span>
+                                </div>
+                                <div class="overlay-content">
+                                    <div class="icon-box"><i class="icon-install"></i></div>
+                                    <span class="category">DIGITECH // OPTICAL CLARITY</span>
+                                    <h3><a href="cctv-surveillance.html">CCTV Surveillance Systems</a></h3>
+                                    <p>High-definition 4K IP cameras, 360° PTZ domes, thermal perimeter sensing, and AI analytics (ANPR number plates & intrusion alerts). Trusted by over 50,000 businesses nationwide.</p>
+                                    <div class="btn-box">
+                                        <a href="cctv-surveillance.html">Read More<i class="fas fa-angle-right"></i></a>
+                                        <button onclick="openDemoModal('CCTV Surveillance System')" style="margin-left: 10px; background: transparent; border: 1px solid #ffffff; color: #ffffff; border-radius: 6px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer;">Request Quote</button>
+                                    </div>
+                                    <span class="count">01</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 02 Fire Alarm System -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one">
+                            <div class="inner-box" style="background-image: url(assets/images/service/service-2.jpg);">
+                                <div class="content-box">
+                                    <div class="icon-box"><i class="icon-support"></i></div>
+                                    <span class="category">DIGITECH // LIFE SAFETY</span>
+                                    <h3>Intelligent Fire Alarm Systems</h3>
+                                    <div class="link"><a href="fire-alarm-system.html">Read More<i class="fas fa-angle-right"></i></a></div>
+                                    <span class="count">02</span>
+                                </div>
+                                <div class="overlay-content">
+                                    <div class="icon-box"><i class="icon-support"></i></div>
+                                    <span class="category">DIGITECH // NBC COMPLIANT</span>
+                                    <h3><a href="fire-alarm-system.html">Intelligent Fire Alarm Systems</a></h3>
+                                    <p>Addressable smoke, heat, and flame detection systems designed for early detection, swift evacuation notification, and total compliance with National Building Code (NBC) norms.</p>
+                                    <div class="btn-box">
+                                        <a href="fire-alarm-system.html">Read More<i class="fas fa-angle-right"></i></a>
+                                        <button onclick="openDemoModal('Fire Alarm System')" style="margin-left: 10px; background: transparent; border: 1px solid #ffffff; color: #ffffff; border-radius: 6px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer;">Request Quote</button>
+                                    </div>
+                                    <span class="count">02</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 03 Access Control System -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one">
+                            <div class="inner-box" style="background-image: url(assets/images/service/service-3.jpg);">
+                                <div class="content-box">
+                                    <div class="icon-box"><i class="icon-toolbox"></i></div>
+                                    <span class="category">DIGITECH // BIOMETRIC ACCESS</span>
+                                    <h3>Access Control Systems</h3>
+                                    <div class="link"><a href="access-control-system.html">Read More<i class="fas fa-angle-right"></i></a></div>
+                                    <span class="count">03</span>
+                                </div>
+                                <div class="overlay-content">
+                                    <div class="icon-box"><i class="icon-toolbox"></i></div>
+                                    <span class="category">DIGITECH // AUDIT TRAILS</span>
+                                    <h3><a href="access-control-system.html">Access Control Systems</a></h3>
+                                    <p>Manage physical perimeter entry with advanced facial recognition, RFID smart cards, biometric scanners, flap barriers, and motorized boom barriers with real-time audit logs.</p>
+                                    <div class="btn-box">
+                                        <a href="access-control-system.html">Read More<i class="fas fa-angle-right"></i></a>
+                                        <button onclick="openDemoModal('Access Control System')" style="margin-left: 10px; background: transparent; border: 1px solid #ffffff; color: #ffffff; border-radius: 6px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer;">Request Quote</button>
+                                    </div>
+                                    <span class="count">03</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 04 Public Announcement (PA) System -->
+                    <div class="col-lg-6 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-one">
+                            <div class="inner-box" style="background-image: url(assets/images/service/service-44.jpg);">
+                                <div class="content-box">
+                                    <div class="icon-box"><i class="icon-speaker"></i></div>
+                                    <span class="category">DIGITECH // BROADCASTING</span>
+                                    <h3>Public Announcement (PA) Systems</h3>
+                                    <div class="link"><a href="pa-system.html">Read More<i class="fas fa-angle-right"></i></a></div>
+                                    <span class="count">04</span>
+                                </div>
+                                <div class="overlay-content">
+                                    <div class="icon-box"><i class="icon-speaker"></i></div>
+                                    <span class="category">DIGITECH // EN54 EVACUATION</span>
+                                    <h3><a href="pa-system.html">Public Announcement (PA) Systems</a></h3>
+                                    <p>Crystal-clear acoustic zoning, multi-zone IP paging microphones, and emergency voice evacuation broadcasting to keep premises informed, organized, and safe.</p>
+                                    <div class="btn-box">
+                                        <a href="pa-system.html">Read More<i class="fas fa-angle-right"></i></a>
+                                        <button onclick="openDemoModal('PA Announcement System')" style="margin-left: 10px; background: transparent; border: 1px solid #ffffff; color: #ffffff; border-radius: 6px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer;">Request Quote</button>
+                                    </div>
+                                    <span class="count">04</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Main Services Section End -->
+
+        <!-- Futuristic Special Services: Digitech HMS Intelligence Core -->
+        <section class="service-style-five sec-pad centred bg-color-6">
+            <div class="bg-layer" style="background-image: url(assets/images/background/service-bg-3.jpg);"></div>
+            <div class="auto-container">
+                <div class="sec-title light">
+                    <div class="top-title">
+                        <div class="shape">
+                            <div class="line line-1"></div>
+                            <div class="line line-2"></div>
+                            <div class="line line-3"></div>
+                            <div class="line line-4"></div>
+                            <div class="bg-shape" style="background-image: url(assets/images/icons/bg-shape-2.png);"></div>
+                        </div>
+                        <p>PROACTIVE INTELLIGENCE</p>
+                    </div>
+                    <h2>Digitech HMS & Proactive Monitoring</h2>
+                    <p style="color: #94a3b8; font-size: 15px; max-width: 700px; margin: 12px auto 0 auto;">
+                        Eliminating silent camera drops, hard drive write failures, and unrecorded incidents through continuous automated telemetry.
+                    </p>
+                </div>
+
+                <div class="row clearfix">
+                    
+                    <!-- HMS Feature 1 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-four wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="text">
+                                    <p>Continuous 60-second heartbeat check detects camera feed loss, cable disconnections, and offline NVR status before an incident occurs.</p>
+                                    <a href="javascript:void(0)" onclick="openDemoModal('Digitech HMS Telemetry')">Request Pilot<i class="fas fa-angle-right"></i></a>
+                                </div>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
+                                    <h4>24/7 HMS Health Telemetry</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HMS Feature 2 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-four wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="text">
+                                    <p>SMART diagnostics predict storage hard drive failure, bad sector degradation, and recording stops to guarantee video evidence retention.</p>
+                                    <a href="javascript:void(0)" onclick="openDemoModal('Storage & HDD Protection')">Learn More<i class="fas fa-angle-right"></i></a>
+                                </div>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="fas fa-hdd"></i></div>
+                                    <h4>HDD & Storage Diagnostics</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HMS Feature 3 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
+                        <div class="service-block-four wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="text">
+                                    <p>Guaranteed 4-hour on-site breakdown response across Delhi NCR, UP, MP, and Maharashtra with standby loaner hardware during repairs.</p>
+                                    <a href="javascript:void(0)" onclick="openDemoModal('AMC & Service SLA')">Explore SLA<i class="fas fa-angle-right"></i></a>
+                                </div>
+                                <div class="inner">
+                                    <div class="icon-box"><i class="fas fa-tools"></i></div>
+                                    <h4>Turnkey AMC & 4-Hr SLA</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Futuristic Special Services End -->
+
+        <!-- Regional Service Branches Section -->
+        <section style="padding: 75px 0; background: #ffffff; border-top: 1px solid #e2e8f0;">
+            <div class="auto-container">
+                <div class="sec-title centred" style="margin-bottom: 45px;">
+                    <div class="top-title">
+                        <p style="color: #009ace; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 1.5px;">
+                            PAN-INDIA SERVICE NETWORK
+                        </p>
+                    </div>
+                    <h2 style="font-size: 32px; font-weight: 800; color: #0f172a;">Regional Engineering Offices</h2>
+                </div>
+                <div class="row clearfix">
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 25px;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; height: 100%;">
+                            <span style="font-size: 11px; font-weight: 700; color: #009ace; font-family: 'JetBrains Mono', monospace;">CORPORATE HQ</span>
+                            <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 8px 0;">Delhi NCR</h4>
+                            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi-110070</p>
+                            <div style="margin-top: 15px; font-size: 13px; font-weight: 600; color: #135d76;">
+                                <i class="fas fa-phone-alt" style="color: #009ace; margin-right: 6px;"></i> (+91) 9999-760-222
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 25px;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; height: 100%;">
+                            <span style="font-size: 11px; font-weight: 700; color: #135d76; font-family: 'JetBrains Mono', monospace;">UP BRANCH</span>
+                            <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 8px 0;">Noida (UP)</h4>
+                            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">Office No-04, 2nd Floor, Ramkesh Tower, Sector-27, Noida, UP 201301</p>
+                            <div style="margin-top: 15px; font-size: 13px; font-weight: 600; color: #135d76;">
+                                <i class="fas fa-clock" style="color: #009ace; margin-right: 6px;"></i> Mon - Sat: 9:00 to 19:00
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 25px;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; height: 100%;">
+                            <span style="font-size: 11px; font-weight: 700; color: #135d76; font-family: 'JetBrains Mono', monospace;">MP BRANCH</span>
+                            <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 8px 0;">Bhopal (MP)</h4>
+                            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">B-46, Jai Bhawani Colony, Phase II, Bawadiya Kalan, Bhopal, MP 462039</p>
+                            <div style="margin-top: 15px; font-size: 13px; font-weight: 600; color: #135d76;">
+                                <i class="fas fa-clock" style="color: #009ace; margin-right: 6px;"></i> Mon - Sat: 9:00 to 19:00
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 25px;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; height: 100%;">
+                            <span style="font-size: 11px; font-weight: 700; color: #135d76; font-family: 'JetBrains Mono', monospace;">MAHARASHTRA BRANCH</span>
+                            <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 8px 0;">Nagpur (MH)</h4>
+                            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">16, Malabar Colony, Seminary Hills, Nagpur, Maharashtra 440006</p>
+                            <div style="margin-top: 15px; font-size: 13px; font-weight: 600; color: #135d76;">
+                                <i class="fas fa-clock" style="color: #009ace; margin-right: 6px;"></i> Mon - Sat: 9:00 to 19:00
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="footer-top">
+                <div class="bg-layer" style="background-image: url(assets/images/background/footer-bg.jpg);"></div>
+                <div class="auto-container">
+                    <div class="widget-section">
+                        <div class="row clearfix">
+                            <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                                <div class="footer-widget logo-widget">
+                                    <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo.png" alt="Digitech Services Logo"></a></figure>
+                                    <div class="support-box">
+                                        <h4><a href="tel:09999760222">(+91-) 9999-760-222</a></h4>
+                                        <p>Call for free engineering consultation!</p>
+                                    </div>
+                                    <div class="text">
+                                        <p>Digitech Services is an ISO 9001:2015 Certified Electronic Surveillance and Security Infrastructure Provider established in 2004.</p>
+                                        <a href="about.html">About Company<i class="fas fa-angle-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 footer-column">
+                                <div class="footer-widget links-widget">
+                                    <div class="widget-title">
+                                        <h3>Quick Links</h3>
+                                    </div>
+                                    <div class="widget-content clearfix">
+                                        <ul class="links-list clearfix">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="service.html">Services</a></li>
+                                            <li><a href="clients.html">Clients</a></li>
+                                            <li><a href="certificates.html">Certification</a></li>
+                                        </ul>
+                                        <ul class="links-list clearfix pl-25">
+                                            <li><a href="gallery.html">Photo Gallery</a></li>
+                                            <li><a href="cctv-surveillance.html">CCTV Surveillance</a></li>
+                                            <li><a href="fire-alarm-system.html">Fire Alarm Systems</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-info">
+                        <ul class="info-list clearfix">
+                            <li>
+                                <i class="icon-location"></i>
+                                <h6>Address</h6>
+                                <p>A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi-110070</p>
+                            </li>
+                            <li>
+                                <i class="icon-email-1"></i>
+                                <h6>Mail Us</h6>
+                                <p><a href="mailto:info@digitechservices.net">info@digitechservices.net</a></p>
+                            </li>
+                            <li>
+                                <i class="icon-clock"></i>
+                                <h6>Connect With Us</h6>
+                                <ul class="social-style-one clearfix">
+                                    <li><a href="https://facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="https://twitter.com" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="bottom-inner clearfix">
+                        <div class="copyright pull-left">
+                            <p>&copy; 2004 - 2026 <a href="index.html">Digitech Services</a>. All Rights Reserved. ISO 9001:2015 Certified.</p>
+                        </div>
+                        <ul class="footer-nav pull-right clearfix">
+                            <li>Nationwide Electronic Surveillance Specialists</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Main Footer End -->
+
+        <!-- Floating Quick Action Buttons (Call & WhatsApp) -->
+        <div class="floating-action-bar">
+            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="floating-btn wa-btn" title="Chat on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="tel:09999760222" class="floating-btn call-btn" title="Call Senior Engineer">
+                <i class="fas fa-phone-alt"></i>
+            </a>
+        </div>
+
+        <!-- Request Demo / Consultation Modal -->
+        <div id="demoModal" class="modal-overlay">
+            <div class="modal-box">
+                <button class="modal-close" onclick="closeDemoModal()">&times;</button>
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 11px; font-weight: 700; color: #009ace; font-family: 'JetBrains Mono', monospace;" id="modalCategoryTag">DIGITECH INQUIRY</span>
+                    <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-top: 4px;" id="modalHeading">Request Site Survey & Demo</h3>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Speak directly with a senior surveillance engineer within 2 hours.</p>
+                </div>
+                <form id="serviceInquiryForm" onsubmit="handleInquirySubmit(event)">
+                    <div class="modal-field">
+                        <label>Your Name *</label>
+                        <input type="text" id="custName" required placeholder="Full Name">
+                    </div>
+                    <div class="row clearfix" style="margin: 0 -8px;">
+                        <div class="col-6" style="padding: 0 8px;">
+                            <div class="modal-field">
+                                <label>Phone *</label>
+                                <input type="tel" id="custPhone" required placeholder="Mobile Number">
+                            </div>
+                        </div>
+                        <div class="col-6" style="padding: 0 8px;">
+                            <div class="modal-field">
+                                <label>Email *</label>
+                                <input type="email" id="custEmail" required placeholder="Email Address">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-field">
+                        <label>Service Required *</label>
+                        <select id="custService">
+                            <option value="CCTV Surveillance Systems">CCTV Surveillance Systems</option>
+                            <option value="Digitech HMS Monitoring">Digitech HMS 24/7 Monitoring</option>
+                            <option value="Fire Alarm Systems">Fire Alarm Systems</option>
+                            <option value="Access Control Systems">Access Control Systems</option>
+                            <option value="PA Announcement Systems">Public Announcement (PA) Systems</option>
+                            <option value="Comprehensive AMC">Annual Maintenance Contract (AMC)</option>
+                        </select>
+                    </div>
+                    <div class="modal-field">
+                        <label>Facility Details / Message</label>
+                        <textarea id="custMsg" rows="3" placeholder="Approximate number of cameras, premises square footage, or existing system issues..."></textarea>
+                    </div>
+                    <button type="submit" class="theme-btn style-one" style="width: 100%; border-radius: 8px !important; text-align: center; cursor: pointer;">
+                        Submit & Request Call Back
+                    </button>
+                </form>
+                <div id="inquirySuccess" style="display: none; text-align: center; padding: 25px 15px;">
+                    <i class="fas fa-check-circle" style="font-size: 40px; color: #10b981; margin-bottom: 12px;"></i>
+                    <h4 style="font-size: 18px; font-weight: 700; color: #0f172a;">Inquiry Received!</h4>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Our senior engineer will contact you shortly. You can also reach us directly at <strong>(+91) 9999-760-222</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts from Original Site -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!-- Modal Controller Logic -->
+    <script>
+        function openDemoModal(serviceName) {
+            var modal = document.getElementById('demoModal');
+            document.getElementById('modalHeading').innerText = serviceName || 'Request Site Survey & Demo';
+            document.getElementById('modalCategoryTag').innerText = (serviceName ? serviceName.toUpperCase() : 'DIGITECH INQUIRY');
+            
+            var sel = document.getElementById('custService');
+            if (serviceName && serviceName.includes('CCTV')) sel.value = 'CCTV Surveillance Systems';
+            else if (serviceName && serviceName.includes('HMS')) sel.value = 'Digitech HMS Monitoring';
+            else if (serviceName && serviceName.includes('Fire')) sel.value = 'Fire Alarm Systems';
+            else if (serviceName && serviceName.includes('Access')) sel.value = 'Access Control Systems';
+            else if (serviceName && serviceName.includes('PA')) sel.value = 'PA Announcement Systems';
+            else if (serviceName && serviceName.includes('AMC')) sel.value = 'Comprehensive AMC';
+
+            modal.style.display = 'flex';
+        }
+
+        function closeDemoModal() {
+            var modal = document.getElementById('demoModal');
+            modal.style.display = 'none';
+            document.getElementById('serviceInquiryForm').style.display = 'block';
+            document.getElementById('inquirySuccess').style.display = 'none';
+        }
+
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            document.getElementById('serviceInquiryForm').style.display = 'none';
+            document.getElementById('inquirySuccess').style.display = 'block';
+        }
+
+        document.getElementById('demoModal').addEventListener('click', function(e) {
+            if (e.target === this) closeDemoModal();
+        });
+    </script>
+
+</body>
+</html>
