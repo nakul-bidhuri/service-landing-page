@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <title>Services | Digitech - Electronic Surveillance & HMS Infrastructure</title>
+    <title>Digitech Services | Enterprise CCTV, Digitech HMS & Electronic Surveillance</title>
 
     <!-- Fav Icon -->
     <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16">
@@ -28,14 +28,14 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
 
-    <!-- Professional, Minimalistic & Futuristic Theme Enhancements (Using Original #009ace & #135d76) -->
+    <!-- Professional, Minimalistic & Futuristic Styling (Refined #009ace & #135d76) -->
     <style>
         :root {
             --brand-cyan: #009ace;
-            --brand-dark-cyan: #007ba5;
+            --brand-cyan-glow: rgba(0, 154, 206, 0.4);
             --brand-navy: #135d76;
-            --brand-dark: #0a1b24;
-            --brand-card-bg: rgba(255, 255, 255, 0.95);
+            --brand-dark: #071922;
+            --brand-card-dark: #0d2737;
         }
 
         body {
@@ -45,10 +45,15 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Futuristic Header Top Bar */
+        /* Kill the old overlapping template scroll-top blue circle */
+        .scroll-top {
+            display: none !important;
+        }
+
+        /* Top Header Info Bar */
         .header-top {
-            background: linear-gradient(90deg, #135d76 0%, #0d4254 100%) !important;
-            border-bottom: 1px solid rgba(0, 154, 206, 0.25);
+            background: linear-gradient(90deg, #135d76 0%, #0a3a4a 100%) !important;
+            border-bottom: 1px solid rgba(0, 154, 206, 0.3);
             padding: 8px 0 !important;
         }
         .header-top .top-inner {
@@ -67,75 +72,109 @@
         .header-top .info li i {
             color: #009ace !important;
         }
+        
+        /* Futuristic HMS Live Status Pill */
         .hms-telemetry-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             background: rgba(0, 154, 206, 0.15);
-            border: 1px solid rgba(0, 154, 206, 0.4);
-            padding: 4px 12px;
+            border: 1px solid rgba(0, 154, 206, 0.5);
+            padding: 4px 14px;
             border-radius: 20px;
             font-family: 'JetBrains Mono', monospace;
             font-size: 11px;
             font-weight: 600;
             color: #38bdf8;
             letter-spacing: 0.5px;
+            box-shadow: 0 0 12px rgba(0, 154, 206, 0.2);
         }
         .pulse-dot {
-            width: 7px;
-            height: 7px;
+            width: 8px;
+            height: 8px;
             background: #009ace;
             border-radius: 50%;
             box-shadow: 0 0 8px #009ace;
             animation: hmsPulse 2s infinite;
         }
         @keyframes hmsPulse {
-            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 154, 206, 0.7); }
-            70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(0, 154, 206, 0); }
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 154, 206, 0.8); }
+            70% { transform: scale(1.15); box-shadow: 0 0 0 8px rgba(0, 154, 206, 0); }
             100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 154, 206, 0); }
         }
 
-        /* Upper Header Clean & Professional Polish */
+        /* Upper Header: Prominent Brand Name + Logo */
         .header-upper {
-            padding: 20px 0 !important;
+            padding: 16px 0 !important;
             background: #ffffff;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+            border-bottom: 1px solid #f1f5f9;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
         }
-        .header-upper .logo img {
+        .brand-container {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none !important;
+        }
+        .brand-container img {
             max-height: 48px;
             width: auto;
             transition: transform 0.3s ease;
         }
-        .header-upper .logo:hover img {
-            transform: scale(1.02);
+        .brand-container:hover img {
+            transform: scale(1.03);
         }
+        .brand-identity {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 14px;
+        }
+        .brand-identity .brand-name {
+            font-size: 21px;
+            font-weight: 800;
+            color: #0b222e;
+            letter-spacing: -0.5px;
+            line-height: 1.1;
+        }
+        .brand-identity .brand-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: #009ace;
+            font-family: 'JetBrains Mono', monospace;
+            letter-spacing: 0.8px;
+            margin-top: 2px;
+        }
+
         .header-upper .info-list li {
-            padding-left: 55px !important;
+            padding-left: 52px !important;
         }
         .header-upper .info-list li i {
-            width: 44px !important;
-            height: 44px !important;
-            line-height: 44px !important;
+            width: 42px !important;
+            height: 42px !important;
+            line-height: 42px !important;
             background: rgba(0, 154, 206, 0.08) !important;
             color: #009ace !important;
-            border-radius: 10px !important;
+            border-radius: 8px !important;
             border: 1px solid rgba(0, 154, 206, 0.2);
-            font-size: 18px !important;
+            font-size: 17px !important;
         }
         .header-upper .info-list li p {
-            font-size: 12px;
-            font-weight: 500;
+            font-size: 11px;
+            font-weight: 600;
             color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 2px;
         }
         .header-upper .info-list li h5 a {
             font-weight: 700;
             color: #0f172a;
             font-size: 15px;
-            letter-spacing: -0.2px;
         }
 
-        /* Minimalistic & Modern Buttons */
+        /* Clean Minimalist Theme Buttons */
         .theme-btn.style-one {
             background: #009ace !important;
             border-radius: 8px !important;
@@ -143,18 +182,29 @@
             font-size: 13px !important;
             letter-spacing: 0.5px !important;
             text-transform: uppercase !important;
-            padding: 12px 28px !important;
-            box-shadow: 0 4px 14px rgba(0, 154, 206, 0.35) !important;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            padding: 12px 26px !important;
+            box-shadow: 0 4px 14px rgba(0, 154, 206, 0.3) !important;
+            transition: all 0.25s ease !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            cursor: pointer;
         }
         .theme-btn.style-one:hover {
             background: #007ba5 !important;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(0, 154, 206, 0.45) !important;
         }
+        .theme-btn.btn-ghost {
+            background: rgba(255, 255, 255, 0.12) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(255, 255, 255, 0.4) !important;
+            backdrop-filter: blur(8px);
+        }
+        .theme-btn.btn-ghost:hover {
+            background: #ffffff !important;
+            color: #009ace !important;
+        }
 
-        /* Modern Navigation Bar */
+        /* Navigation */
         .header-lower {
             background: #ffffff !important;
             border-bottom: 1px solid #e2e8f0;
@@ -163,208 +213,100 @@
             font-weight: 600 !important;
             font-size: 15px !important;
             color: #1e293b !important;
-            padding: 22px 20px !important;
-            transition: color 0.2s ease !important;
+            padding: 20px 20px !important;
         }
         .main-menu .navigation > li.current > a,
         .main-menu .navigation > li:hover > a {
             color: #009ace !important;
         }
 
-        /* Futuristic Page Title Banner */
-        .page-title {
+        /* Futuristic Hero Banner with Authentic Background Video */
+        .hero-banner {
             position: relative;
-            padding: 100px 0 90px 0 !important;
-            background-size: cover;
-            background-position: center;
+            min-height: 520px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #071922;
         }
-        .page-title::before {
-            content: '';
+        .hero-video-wrapper {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(10, 27, 36, 0.94) 0%, rgba(19, 93, 118, 0.88) 100%);
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
         }
-        .page-title .content-box {
-            position: relative;
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.4) contrast(1.1);
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(7, 25, 34, 0.92) 0%, rgba(19, 93, 118, 0.78) 100%);
             z-index: 2;
-            text-align: center;
         }
-        .page-title h1 {
-            font-size: 42px !important;
-            font-weight: 800 !important;
-            color: #ffffff !important;
-            letter-spacing: -0.5px;
-            margin-bottom: 15px;
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            padding: 80px 0;
         }
-        .page-title .sub-tag {
+        .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
             background: rgba(0, 154, 206, 0.2);
             border: 1px solid rgba(0, 154, 206, 0.5);
-            padding: 6px 18px;
+            padding: 6px 16px;
             border-radius: 30px;
             color: #38bdf8;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        .page-title .bread-crumb li {
-            color: #cbd5e1 !important;
-            font-size: 14px;
-        }
-        .page-title .bread-crumb li a {
-            color: #94a3b8 !important;
-            font-weight: 500;
-        }
-        .page-title .bread-crumb li a:hover {
-            color: #009ace !important;
-        }
-
-        /* Professional & Minimalistic Service Cards */
-        .service-section {
-            padding: 90px 0 80px 0 !important;
-            background: #f8fafc;
-        }
-        .service-block-one {
-            margin-bottom: 30px;
-        }
-        .service-block-one .inner-box {
-            border-radius: 14px !important;
-            overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            background-color: #0a1b24;
-        }
-        .service-block-one .inner-box:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 36px rgba(0, 154, 206, 0.18);
-            border-color: rgba(0, 154, 206, 0.4);
-        }
-        .service-block-one .inner-box .content-box {
-            padding: 40px 30px !important;
-            background: linear-gradient(180deg, rgba(10, 27, 36, 0.4) 0%, rgba(10, 27, 36, 0.92) 100%) !important;
-        }
-        .service-block-one .inner-box .content-box .category {
-            color: #009ace !important;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
-            font-size: 11px;
-            letter-spacing: 1px;
-        }
-        .service-block-one .inner-box .content-box h3 {
-            font-weight: 700 !important;
-            font-size: 22px !important;
-            color: #ffffff !important;
-            margin-top: 5px;
-        }
-        .service-block-one .inner-box .content-box .count {
-            color: rgba(255, 255, 255, 0.15) !important;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 800;
-            font-size: 44px;
-        }
-        .service-block-one .inner-box .overlay-content {
-            background: linear-gradient(135deg, rgba(19, 93, 118, 0.96) 0%, rgba(10, 27, 36, 0.96) 100%) !important;
-            backdrop-filter: blur(8px);
-            padding: 40px 30px !important;
-            border: 1px solid rgba(0, 154, 206, 0.4);
-            border-radius: 14px;
-        }
-        .service-block-one .inner-box .overlay-content h3 a {
-            color: #ffffff !important;
-            font-size: 22px !important;
-            font-weight: 700;
-        }
-        .service-block-one .inner-box .overlay-content p {
-            color: #e2e8f0 !important;
-            font-size: 14px !important;
-            line-height: 1.6 !important;
-            margin: 15px 0 25px 0 !important;
-        }
-        .service-block-one .inner-box .overlay-content .btn-box a {
-            background: #009ace !important;
-            color: #ffffff !important;
-            border-radius: 6px;
-            padding: 8px 20px;
-            font-weight: 600;
-            font-size: 13px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.2s ease;
-        }
-        .service-block-one .inner-box .overlay-content .btn-box a:hover {
-            background: #ffffff !important;
-            color: #009ace !important;
-        }
-
-        /* Futuristic Special Services Section (Digitech HMS & AI Core) */
-        .service-style-five {
-            padding: 95px 0 !important;
-            position: relative;
-        }
-        .service-style-five .sec-title h2 {
-            font-size: 36px !important;
-            font-weight: 800 !important;
-            color: #ffffff !important;
-            letter-spacing: -0.5px;
-        }
-        .service-style-five .top-title p {
-            color: #009ace !important;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 700;
             font-size: 12px;
-            letter-spacing: 1.5px;
-        }
-        .service-block-four .inner-box {
-            background: rgba(10, 27, 36, 0.85) !important;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(0, 154, 206, 0.25) !important;
-            border-radius: 14px !important;
-            padding: 35px 25px !important;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .service-block-four .inner-box:hover {
-            border-color: #009ace !important;
-            transform: translateY(-6px);
-            box-shadow: 0 15px 35px rgba(0, 154, 206, 0.2);
-        }
-        .service-block-four .inner-box .icon-box i {
-            color: #009ace !important;
-            font-size: 42px;
-        }
-        .service-block-four .inner-box h4 {
-            color: #ffffff !important;
-            font-size: 19px !important;
             font-weight: 700;
-            margin-top: 15px;
+            letter-spacing: 1px;
+            font-family: 'JetBrains Mono', monospace;
+            margin-bottom: 18px;
         }
-        .service-block-four .inner-box .text p {
-            color: #cbd5e1 !important;
-            font-size: 13px !important;
+        .hero-title {
+            font-size: 44px;
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+        }
+        .hero-title span {
+            color: #38bdf8;
+            text-shadow: 0 0 25px rgba(0, 154, 206, 0.4);
+        }
+        .hero-desc {
+            font-size: 16px;
+            color: #cbd5e1;
+            max-width: 680px;
             line-height: 1.6;
+            margin-bottom: 28px;
         }
-        .service-block-four .inner-box .text a {
-            color: #009ace !important;
-            font-weight: 600;
-            font-size: 13px;
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
         }
 
-        /* Minimalist Trust & Certification Strip */
+        /* Minimalist Metric Strip */
         .trust-strip {
             background: #ffffff;
-            border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
-            padding: 40px 0;
+            padding: 32px 0;
         }
         .trust-item {
             text-align: center;
             padding: 10px 15px;
         }
         .trust-item .trust-num {
-            font-size: 32px;
+            font-size: 34px;
             font-weight: 800;
             color: #135d76;
             line-height: 1.1;
@@ -378,13 +320,222 @@
             color: #64748b;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-top: 5px;
+            margin-top: 4px;
         }
 
-        /* Footer Polish */
+        /* Core Services Cards (01 CCTV, 02 Fire Alarm, etc.) */
+        .service-section {
+            padding: 85px 0 75px 0 !important;
+            background: #f8fafc;
+        }
+        .service-block-one .inner-box {
+            border-radius: 12px !important;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+            transition: all 0.35s ease;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            background-color: #071922;
+        }
+        .service-block-one .inner-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px rgba(0, 154, 206, 0.16);
+            border-color: rgba(0, 154, 206, 0.45);
+        }
+        .service-block-one .inner-box .content-box {
+            padding: 38px 28px !important;
+            background: linear-gradient(180deg, rgba(7, 25, 34, 0.35) 0%, rgba(7, 25, 34, 0.94) 100%) !important;
+        }
+        .service-block-one .inner-box .content-box .category {
+            color: #38bdf8 !important;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+        .service-block-one .inner-box .content-box h3 {
+            font-weight: 700 !important;
+            font-size: 21px !important;
+            color: #ffffff !important;
+            margin-top: 6px;
+        }
+        .service-block-one .inner-box .content-box .count {
+            color: rgba(255, 255, 255, 0.15) !important;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 800;
+            font-size: 42px;
+        }
+        .service-block-one .inner-box .overlay-content {
+            background: linear-gradient(135deg, rgba(19, 93, 118, 0.96) 0%, rgba(7, 25, 34, 0.96) 100%) !important;
+            backdrop-filter: blur(8px);
+            padding: 38px 28px !important;
+            border: 1px solid rgba(0, 154, 206, 0.4);
+            border-radius: 12px;
+        }
+        .service-block-one .inner-box .overlay-content h3 a {
+            color: #ffffff !important;
+            font-size: 21px !important;
+            font-weight: 700;
+        }
+        .service-block-one .inner-box .overlay-content p {
+            color: #e2e8f0 !important;
+            font-size: 14px !important;
+            line-height: 1.6 !important;
+            margin: 14px 0 22px 0 !important;
+        }
+        .service-block-one .inner-box .overlay-content .btn-box a {
+            background: #009ace !important;
+            color: #ffffff !important;
+            border-radius: 6px;
+            padding: 8px 18px;
+            font-weight: 600;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+        .service-block-one .inner-box .overlay-content .btn-box a:hover {
+            background: #ffffff !important;
+            color: #009ace !important;
+        }
+
+        /* 100% FIXED HIGH-CONTRAST: Digitech HMS Proactive Monitoring Section */
+        .hms-proactive-section {
+            background: linear-gradient(180deg, #071922 0%, #0a2433 50%, #071922 100%) !important;
+            padding: 95px 0 !important;
+            position: relative;
+            border-top: 1px solid rgba(0, 154, 206, 0.25);
+            border-bottom: 1px solid rgba(0, 154, 206, 0.25);
+        }
+        .hms-proactive-section .sec-title h2 {
+            font-size: 36px !important;
+            font-weight: 800 !important;
+            color: #ffffff !important;
+            letter-spacing: -0.5px;
+        }
+        .hms-proactive-section .top-title p {
+            color: #38bdf8 !important;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 1.5px;
+        }
+        .hms-proactive-section .sec-desc {
+            color: #94a3b8;
+            font-size: 15px;
+            max-width: 680px;
+            margin: 12px auto 0 auto;
+            line-height: 1.6;
+        }
+
+        /* High-Contrast Dark-Slate Glass Cards (NO COLOR OVERLAPPING) */
+        .hms-card {
+            background: #0d2837 !important;
+            border: 1px solid rgba(0, 154, 206, 0.4) !important;
+            border-radius: 14px !important;
+            padding: 34px 26px !important;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hms-card:hover {
+            border-color: #009ace !important;
+            transform: translateY(-6px);
+            box-shadow: 0 16px 36px rgba(0, 154, 206, 0.25);
+        }
+        .hms-card .icon-box {
+            width: 58px;
+            height: 58px;
+            border-radius: 12px;
+            background: rgba(0, 154, 206, 0.12);
+            border: 1px solid rgba(0, 154, 206, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #009ace;
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+        .hms-card h4 {
+            color: #ffffff !important;
+            font-size: 20px !important;
+            font-weight: 700 !important;
+            margin-bottom: 12px;
+        }
+        .hms-card p {
+            color: #cbd5e1 !important;
+            font-size: 14px !important;
+            line-height: 1.65 !important;
+            margin-bottom: 22px;
+        }
+        .hms-card .card-cta {
+            color: #38bdf8 !important;
+            font-weight: 700;
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: gap 0.2s;
+        }
+        .hms-card .card-cta:hover {
+            color: #ffffff !important;
+            gap: 10px;
+        }
+
+        /* Regional Branches Grid */
+        .branch-section {
+            padding: 80px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .branch-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 26px;
+            height: 100%;
+            transition: all 0.25s ease;
+        }
+        .branch-box:hover {
+            border-color: #009ace;
+            box-shadow: 0 8px 24px rgba(0, 154, 206, 0.1);
+        }
+        .branch-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: #009ace;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .branch-title {
+            font-size: 19px;
+            font-weight: 800;
+            color: #0f172a;
+            margin: 6px 0 10px 0;
+        }
+        .branch-desc {
+            font-size: 13px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+        .branch-phone {
+            margin-top: 14px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #135d76;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Footer */
         .main-footer {
-            background-color: #0a1b24 !important;
-            border-top: 1px solid rgba(0, 154, 206, 0.2);
+            background-color: #071922 !important;
+            border-top: 1px solid rgba(0, 154, 206, 0.25);
         }
         .footer-top {
             padding: 70px 0 40px 0 !important;
@@ -392,10 +543,10 @@
         .footer-widget .support-box h4 a {
             color: #009ace !important;
             font-weight: 800;
-            font-size: 20px;
+            font-size: 21px;
         }
         .footer-bottom {
-            background: #061117 !important;
+            background: #041016 !important;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding: 20px 0 !important;
         }
@@ -404,45 +555,54 @@
             font-size: 13px;
         }
 
-        /* Floating Minimalist Quick Connect Buttons */
-        .floating-action-bar {
+        /* Clean & Futuristic Floating Action Buttons (NO OVERLAPPING CIRCLE) */
+        .futuristic-floating-actions {
             position: fixed;
             bottom: 25px;
             right: 25px;
-            z-index: 999;
+            z-index: 9999;
             display: flex;
             flex-direction: column;
             gap: 12px;
+            align-items: flex-end;
         }
-        .floating-btn {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+        .action-pill {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-size: 20px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-            transition: all 0.3s ease;
-            text-decoration: none;
+            gap: 10px;
+            padding: 10px 18px;
+            border-radius: 30px;
+            color: #ffffff !important;
+            text-decoration: none !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+            transition: all 0.25s ease;
+            font-size: 13px;
+            font-weight: 700;
+            backdrop-filter: blur(8px);
         }
-        .floating-btn.wa-btn {
+        .action-pill.wa {
             background: #25d366;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        .floating-btn.call-btn {
+        .action-pill.wa:hover {
+            background: #20ba5a;
+            transform: translateX(-4px);
+        }
+        .action-pill.call {
             background: #009ace;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 24px rgba(0, 154, 206, 0.4);
         }
-        .floating-btn:hover {
-            transform: scale(1.1);
-            color: #ffffff;
+        .action-pill.call:hover {
+            background: #007ba5;
+            transform: translateX(-4px);
         }
 
-        /* Minimalist Request Demo Modal */
+        /* Minimalist Modal */
         .modal-overlay {
             position: fixed;
             inset: 0;
-            background: rgba(10, 27, 36, 0.75);
+            background: rgba(7, 25, 34, 0.8);
             backdrop-filter: blur(6px);
             z-index: 10000;
             display: none;
@@ -455,8 +615,8 @@
             border-radius: 16px;
             max-width: 500px;
             width: 100%;
-            padding: 35px 30px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 34px 28px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
             border: 1px solid #e2e8f0;
             position: relative;
         }
@@ -474,14 +634,14 @@
             color: #0f172a;
         }
         .modal-field {
-            margin-bottom: 16px;
+            margin-bottom: 15px;
         }
         .modal-field label {
             display: block;
             font-size: 12px;
             font-weight: 600;
             color: #475569;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
@@ -494,11 +654,38 @@
             color: #1e293b;
             background: #f8fafc;
             outline: none;
-            transition: border-color 0.2s;
         }
         .modal-field input:focus, .modal-field select:focus, .modal-field textarea:focus {
             border-color: #009ace;
             background: #ffffff;
+        }
+
+        /* Video Showcase Modal */
+        .video-modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+            z-index: 10001;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .video-modal-box {
+            max-width: 850px;
+            width: 100%;
+            position: relative;
+        }
+        .video-modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: #ffffff;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -526,7 +713,13 @@
                         <div class="auto-container">
                             <div class="upper-inner clearfix">
                                 <div class="logo-box pull-left">
-                                    <figure class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="Digitech Services"></a></figure>
+                                    <a href="index.html" class="brand-container">
+                                        <img src="assets/images/logo.png" alt="Digitech Services Logo">
+                                        <div class="brand-identity">
+                                            <span class="brand-name">DIGITECH SERVICES</span>
+                                            <span class="brand-tag">DIGITECH HMS &amp; SURVEILLANCE</span>
+                                        </div>
+                                    </a>
                                 </div>
                                 <ul class="info-list clearfix pull-right">
                                     <li>
@@ -537,7 +730,7 @@
                                     <li>
                                         <i class="icon-smartphone"></i>
                                         <p>Make a Call</p>
-                                        <h5><a href="tel:09999760222">(+91-) 09999760222</a></h5>
+                                        <h5><a href="tel:09999760222">(+91-) 9999-760-222</a></h5>
                                     </li>
                                     <li class="btn-box">
                                         <button onclick="openDemoModal('General Service Inquiry')" class="theme-btn style-one">Request Demo</button>
@@ -555,7 +748,7 @@
                 </div>
             </div>
 
-            <!-- Top Header Bar with HMS Telemetry Indicator -->
+            <!-- Top Header Bar with Live HMS Telemetry -->
             <div class="header-top auto-hidden">
                 <div class="auto-container">
                     <div class="top-inner clearfix">
@@ -566,7 +759,7 @@
                             </li>
                             <li style="margin-left: 20px;">
                                 <i class="fas fa-certificate"></i>
-                                <span>ISO 9001:2015 Certified Company (Est. 2004)</span>
+                                <span>ISO 9001:2015 Certified • Established 2004</span>
                             </li>
                         </ul>
                         <div class="pull-right">
@@ -579,14 +772,18 @@
                 </div>
             </div>
 
-            <!-- Upper Header -->
+            <!-- Upper Header: Prominent Brand Name + Logo -->
             <div class="header-upper auto-hidden">
                 <div class="auto-container">
                     <div class="upper-inner clearfix">
                         <div class="logo-box pull-left">
-                            <figure class="logo">
-                                <a href="index.html"><img src="assets/images/logo.png" alt="Digitech Services Logo"></a>
-                            </figure>
+                            <a href="index.html" class="brand-container">
+                                <img src="assets/images/logo.png" alt="Digitech Services Logo">
+                                <div class="brand-identity">
+                                    <span class="brand-name">DIGITECH SERVICES</span>
+                                    <span class="brand-tag">DIGITECH HMS &amp; ELECTRONIC SURVEILLANCE</span>
+                                </div>
+                            </a>
                         </div>
                         <ul class="info-list clearfix pull-right">
                             <li>
@@ -612,7 +809,6 @@
                 <div class="auto-container">
                     <div class="outer-box clearfix">
                         <div class="menu-area clearfix pull-left">
-                            <!-- Mobile Navigation Toggler -->
                             <div class="mobile-nav-toggler">
                                 <i class="icon-bar"></i>
                                 <i class="icon-bar"></i>
@@ -678,8 +874,13 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
 
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt="Digitech Services" title="Digitech"></a></div>
-                <div class="menu-outer"><!-- Menu Injected via Javascript --></div>
+                <div class="nav-logo">
+                    <a href="index.html" style="display: flex; align-items: center; gap: 10px; padding: 15px 0;">
+                        <img src="assets/images/logo-2.png" alt="Digitech Services Logo">
+                        <span style="font-size: 16px; font-weight: 800; color: #ffffff;">DIGITECH SERVICES</span>
+                    </a>
+                </div>
+                <div class="menu-outer"><!-- Injected via JS --></div>
                 <div class="contact-info">
                     <h4>Contact Info</h4>
                     <ul>
@@ -688,35 +889,40 @@
                         <li><a href="mailto:info@digitechservices.net">info@digitechservices.net</a></li>
                     </ul>
                 </div>
-                <div class="social-links">
-                    <ul class="clearfix">
-                        <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-linkedin-in"></span></a></li>
-                    </ul>
-                </div>
             </nav>
         </div>
         <!-- End Mobile Menu -->
 
-        <!-- Page Title Banner -->
-        <section class="page-title" style="background-image: url(assets/images/background/page-title.jpg);">
-            <div class="auto-container">
-                <div class="content-box">
-                    <div class="sub-tag">
-                        <i class="fas fa-shield-alt"></i> SMART SECURITY & SURVEILLANCE INFRASTRUCTURE
-                    </div>
-                    <div class="title">
-                        <h1>Our Services</h1>
-                    </div>
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="index.html">Home</a></li>
-                        <li>Electronic Surveillance & Digitech HMS Solutions</li>
-                    </ul>
+        <!-- Futuristic Hero Banner with Authentic Background Video -->
+        <section class="hero-banner">
+            <div class="hero-video-wrapper">
+                <video class="hero-video" autoplay loop muted playsinline poster="assets/images/background/page-title.jpg">
+                    <source src="assets/images/banner/banner-1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="auto-container hero-content">
+                <div class="hero-badge">
+                    <span class="pulse-dot"></span>
+                    <span>NEXT-GEN SURVEILLANCE &amp; DIGITECH HMS INFRASTRUCTURE</span>
+                </div>
+                <h1 class="hero-title">
+                    Smart Electronic Security <br>
+                    <span>&amp; Automated Health Monitoring</span>
+                </h1>
+                <p class="hero-desc">
+                    Protecting 50,000+ businesses across India since 2004. Digitech combines 4K enterprise CCTV, addressable fire safety, biometric access control, and 24/7 automated HMS telemetry into one zero-downtime ecosystem.
+                </p>
+                <div class="hero-actions">
+                    <button onclick="openDemoModal('Hero Site Survey')" class="theme-btn style-one">
+                        <i class="fas fa-shield-alt" style="margin-right: 6px;"></i> Request Free Site Survey
+                    </button>
+                    <button onclick="openVideoModal()" class="theme-btn btn-ghost" style="border-radius: 8px; padding: 12px 24px; font-weight: 700; font-size: 13px; cursor: pointer;">
+                        <i class="fas fa-play" style="margin-right: 8px; color: #38bdf8;"></i> Watch Systems Video
+                    </button>
                 </div>
             </div>
         </section>
-        <!-- End Page Title Banner -->
 
         <!-- Trust & Proof Metrics Strip -->
         <div class="trust-strip">
@@ -724,7 +930,7 @@
                 <div class="row clearfix">
                     <div class="col-lg-3 col-md-6 col-sm-6 trust-item">
                         <div class="trust-num">20<span>+</span></div>
-                        <div class="trust-lbl">Years Industry Excellence</div>
+                        <div class="trust-lbl">Years Industry Excellence (Est. 2004)</div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-sm-6 trust-item">
                         <div class="trust-num">50k<span>+</span></div>
@@ -749,11 +955,11 @@
                 <div class="sec-title centred" style="margin-bottom: 50px;">
                     <div class="top-title">
                         <p style="color: #009ace; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 12px; letter-spacing: 1.5px;">
-                            CORE SECURITY SUITE
+                            CORE ELECTRONIC SECURITY
                         </p>
                     </div>
                     <h2 style="font-size: 34px; font-weight: 800; color: #0f172a; margin-top: 5px;">
-                        Enterprise Surveillance & Life Safety Systems
+                        Integrated Infrastructure &amp; Surveillance Services
                     </h2>
                     <p style="color: #64748b; font-size: 15px; max-width: 650px; margin: 10px auto 0 auto;">
                         Engineered for zero-downtime protection, compliant building safety, and seamless centralized management.
@@ -777,7 +983,7 @@
                                     <div class="icon-box"><i class="icon-install"></i></div>
                                     <span class="category">DIGITECH // OPTICAL CLARITY</span>
                                     <h3><a href="cctv-surveillance.html">CCTV Surveillance Systems</a></h3>
-                                    <p>High-definition 4K IP cameras, 360° PTZ domes, thermal perimeter sensing, and AI analytics (ANPR number plates & intrusion alerts). Trusted by over 50,000 businesses nationwide.</p>
+                                    <p>High-definition 4K IP cameras, 360° PTZ domes, thermal perimeter sensing, and AI analytics (ANPR number plates &amp; intrusion alerts). Trusted by over 50,000 businesses nationwide.</p>
                                     <div class="btn-box">
                                         <a href="cctv-surveillance.html">Read More<i class="fas fa-angle-right"></i></a>
                                         <button onclick="openDemoModal('CCTV Surveillance System')" style="margin-left: 10px; background: transparent; border: 1px solid #ffffff; color: #ffffff; border-radius: 6px; padding: 7px 16px; font-size: 13px; font-weight: 600; cursor: pointer;">Request Quote</button>
@@ -871,73 +1077,65 @@
         </section>
         <!-- Main Services Section End -->
 
-        <!-- Futuristic Special Services: Digitech HMS Intelligence Core -->
-        <section class="service-style-five sec-pad centred bg-color-6">
-            <div class="bg-layer" style="background-image: url(assets/images/background/service-bg-3.jpg);"></div>
+        <!-- 100% FIXED HIGH-CONTRAST: Digitech HMS Proactive Monitoring Section -->
+        <section class="hms-proactive-section centred">
             <div class="auto-container">
                 <div class="sec-title light">
                     <div class="top-title">
-                        <div class="shape">
-                            <div class="line line-1"></div>
-                            <div class="line line-2"></div>
-                            <div class="line line-3"></div>
-                            <div class="line line-4"></div>
-                            <div class="bg-shape" style="background-image: url(assets/images/icons/bg-shape-2.png);"></div>
-                        </div>
-                        <p>PROACTIVE INTELLIGENCE</p>
+                        <p>PROACTIVE SURVEILLANCE TELEMETRY</p>
                     </div>
-                    <h2>Digitech HMS & Proactive Monitoring</h2>
-                    <p style="color: #94a3b8; font-size: 15px; max-width: 700px; margin: 12px auto 0 auto;">
-                        Eliminating silent camera drops, hard drive write failures, and unrecorded incidents through continuous automated telemetry.
+                    <h2>Digitech HMS &amp; Proactive Monitoring</h2>
+                    <p class="sec-desc">
+                        Solving the invisible security crisis: continuous automated polling eliminates silent camera drops, hard drive write failures, and unrecorded incidents.
                     </p>
                 </div>
 
-                <div class="row clearfix">
+                <div class="row clearfix" style="margin-top: 45px;">
                     
                     <!-- HMS Feature 1 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                        <div class="service-block-four wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="text">
-                                    <p>Continuous 60-second heartbeat check detects camera feed loss, cable disconnections, and offline NVR status before an incident occurs.</p>
-                                    <a href="javascript:void(0)" onclick="openDemoModal('Digitech HMS Telemetry')">Request Pilot<i class="fas fa-angle-right"></i></a>
-                                </div>
-                                <div class="inner">
-                                    <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
-                                    <h4>24/7 HMS Health Telemetry</h4>
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 25px;">
+                        <div class="hms-card text-left">
+                            <div>
+                                <div class="icon-box"><i class="fas fa-heartbeat"></i></div>
+                                <h4>24/7 HMS Health Telemetry</h4>
+                                <p>Continuous 60-second heartbeat check detects camera feed loss, cable disconnections, and offline NVR status before an incident occurs.</p>
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)" onclick="openDemoModal('Digitech HMS Telemetry')" class="card-cta">
+                                    Request HMS Pilot <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- HMS Feature 2 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                        <div class="service-block-four wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="text">
-                                    <p>SMART diagnostics predict storage hard drive failure, bad sector degradation, and recording stops to guarantee video evidence retention.</p>
-                                    <a href="javascript:void(0)" onclick="openDemoModal('Storage & HDD Protection')">Learn More<i class="fas fa-angle-right"></i></a>
-                                </div>
-                                <div class="inner">
-                                    <div class="icon-box"><i class="fas fa-hdd"></i></div>
-                                    <h4>HDD & Storage Diagnostics</h4>
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 25px;">
+                        <div class="hms-card text-left">
+                            <div>
+                                <div class="icon-box"><i class="fas fa-hdd"></i></div>
+                                <h4>HDD &amp; Storage Diagnostics</h4>
+                                <p>SMART diagnostics predict storage hard drive failure, bad sector degradation, and recording stops to guarantee video evidence retention.</p>
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)" onclick="openDemoModal('Storage & HDD Protection')" class="card-cta">
+                                    Explore Storage Health <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- HMS Feature 3 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12 service-block">
-                        <div class="service-block-four wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">
-                            <div class="inner-box">
-                                <div class="text">
-                                    <p>Guaranteed 4-hour on-site breakdown response across Delhi NCR, UP, MP, and Maharashtra with standby loaner hardware during repairs.</p>
-                                    <a href="javascript:void(0)" onclick="openDemoModal('AMC & Service SLA')">Explore SLA<i class="fas fa-angle-right"></i></a>
-                                </div>
-                                <div class="inner">
-                                    <div class="icon-box"><i class="fas fa-tools"></i></div>
-                                    <h4>Turnkey AMC & 4-Hr SLA</h4>
-                                </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom: 25px;">
+                        <div class="hms-card text-left">
+                            <div>
+                                <div class="icon-box"><i class="fas fa-tools"></i></div>
+                                <h4>Turnkey AMC &amp; 4-Hr SLA</h4>
+                                <p>Guaranteed 4-hour on-site breakdown response across Delhi NCR, UP, MP, and Maharashtra with standby loaner hardware during repairs.</p>
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)" onclick="openDemoModal('AMC & Service SLA')" class="card-cta">
+                                    Compare AMC Plans <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -945,10 +1143,10 @@
                 </div>
             </div>
         </section>
-        <!-- Futuristic Special Services End -->
+        <!-- Digitech HMS Section End -->
 
         <!-- Regional Service Branches Section -->
-        <section style="padding: 75px 0; background: #ffffff; border-top: 1px solid #e2e8f0;">
+        <section class="branch-section">
             <div class="auto-container">
                 <div class="sec-title centred" style="margin-bottom: 45px;">
                     <div class="top-title">
@@ -961,45 +1159,45 @@
                 <div class="row clearfix">
                     
                     <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 25px;">
-                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; height: 100%;">
-                            <span style="font-size: 11px; font-weight: 700; color: #009ace; font-family: 'JetBrains Mono', monospace;">CORPORATE HQ</span>
-                            <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 8px 0;">Delhi NCR</h4>
-                            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi-110070</p>
-                            <div style="margin-top: 15px; font-size: 13px; font-weight: 600; color: #135d76;">
-                                <i class="fas fa-phone-alt" style="color: #009ace; margin-right: 6px;"></i> (+91) 9999-760-222
+                        <div class="branch-box">
+                            <span class="branch-tag">CORPORATE HQ</span>
+                            <h4 class="branch-title">Delhi NCR</h4>
+                            <p class="branch-desc">A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi-110070</p>
+                            <div class="branch-phone">
+                                <i class="fas fa-phone-alt" style="color: #009ace;"></i> (+91) 9999-760-222
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 25px;">
-                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; height: 100%;">
-                            <span style="font-size: 11px; font-weight: 700; color: #135d76; font-family: 'JetBrains Mono', monospace;">UP BRANCH</span>
-                            <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 8px 0;">Noida (UP)</h4>
-                            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">Office No-04, 2nd Floor, Ramkesh Tower, Sector-27, Noida, UP 201301</p>
-                            <div style="margin-top: 15px; font-size: 13px; font-weight: 600; color: #135d76;">
-                                <i class="fas fa-clock" style="color: #009ace; margin-right: 6px;"></i> Mon - Sat: 9:00 to 19:00
+                        <div class="branch-box">
+                            <span class="branch-tag" style="color: #135d76;">UP BRANCH</span>
+                            <h4 class="branch-title">Noida (UP)</h4>
+                            <p class="branch-desc">Office No-04, 2nd Floor, Ramkesh Tower, Sector-27, Noida, UP 201301</p>
+                            <div class="branch-phone">
+                                <i class="fas fa-clock" style="color: #009ace;"></i> Mon - Sat: 9:00 to 19:00
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 25px;">
-                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; height: 100%;">
-                            <span style="font-size: 11px; font-weight: 700; color: #135d76; font-family: 'JetBrains Mono', monospace;">MP BRANCH</span>
-                            <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 8px 0;">Bhopal (MP)</h4>
-                            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">B-46, Jai Bhawani Colony, Phase II, Bawadiya Kalan, Bhopal, MP 462039</p>
-                            <div style="margin-top: 15px; font-size: 13px; font-weight: 600; color: #135d76;">
-                                <i class="fas fa-clock" style="color: #009ace; margin-right: 6px;"></i> Mon - Sat: 9:00 to 19:00
+                        <div class="branch-box">
+                            <span class="branch-tag" style="color: #135d76;">MP BRANCH</span>
+                            <h4 class="branch-title">Bhopal (MP)</h4>
+                            <p class="branch-desc">B-46, Jai Bhawani Colony, Phase II, Bawadiya Kalan, Bhopal, MP 462039</p>
+                            <div class="branch-phone">
+                                <i class="fas fa-clock" style="color: #009ace;"></i> Mon - Sat: 9:00 to 19:00
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-3 col-md-6 col-sm-12" style="margin-bottom: 25px;">
-                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 25px; height: 100%;">
-                            <span style="font-size: 11px; font-weight: 700; color: #135d76; font-family: 'JetBrains Mono', monospace;">MAHARASHTRA BRANCH</span>
-                            <h4 style="font-size: 18px; font-weight: 700; color: #0f172a; margin: 8px 0;">Nagpur (MH)</h4>
-                            <p style="font-size: 13px; color: #64748b; line-height: 1.6;">16, Malabar Colony, Seminary Hills, Nagpur, Maharashtra 440006</p>
-                            <div style="margin-top: 15px; font-size: 13px; font-weight: 600; color: #135d76;">
-                                <i class="fas fa-clock" style="color: #009ace; margin-right: 6px;"></i> Mon - Sat: 9:00 to 19:00
+                        <div class="branch-box">
+                            <span class="branch-tag" style="color: #135d76;">MAHARASHTRA BRANCH</span>
+                            <h4 class="branch-title">Nagpur (MH)</h4>
+                            <p class="branch-desc">16, Malabar Colony, Seminary Hills, Nagpur, Maharashtra 440006</p>
+                            <div class="branch-phone">
+                                <i class="fas fa-clock" style="color: #009ace;"></i> Mon - Sat: 9:00 to 19:00
                             </div>
                         </div>
                     </div>
@@ -1017,8 +1215,16 @@
                         <div class="row clearfix">
                             <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                                 <div class="footer-widget logo-widget">
-                                    <figure class="footer-logo"><a href="index.html"><img src="assets/images/logo.png" alt="Digitech Services Logo"></a></figure>
-                                    <div class="support-box">
+                                    <figure class="footer-logo">
+                                        <a href="index.html" class="brand-container">
+                                            <img src="assets/images/logo.png" alt="Digitech Services Logo">
+                                            <div class="brand-identity">
+                                                <span class="brand-name" style="color: #ffffff;">DIGITECH SERVICES</span>
+                                                <span class="brand-tag">ELECTRONIC SURVEILLANCE &amp; HMS</span>
+                                            </div>
+                                        </a>
+                                    </figure>
+                                    <div class="support-box" style="margin-top: 15px;">
                                         <h4><a href="tel:09999760222">(+91-) 9999-760-222</a></h4>
                                         <p>Call for free engineering consultation!</p>
                                     </div>
@@ -1092,13 +1298,15 @@
         </footer>
         <!-- Main Footer End -->
 
-        <!-- Floating Quick Action Buttons (Call & WhatsApp) -->
-        <div class="floating-action-bar">
-            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="floating-btn wa-btn" title="Chat on WhatsApp">
-                <i class="fab fa-whatsapp"></i>
+        <!-- Futuristic Floating Action Pills (NO OVERLAPPING CIRCLE) -->
+        <div class="futuristic-floating-actions">
+            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="action-pill wa">
+                <i class="fab fa-whatsapp" style="font-size: 18px;"></i>
+                <span>WhatsApp Chat</span>
             </a>
-            <a href="tel:09999760222" class="floating-btn call-btn" title="Call Senior Engineer">
-                <i class="fas fa-phone-alt"></i>
+            <a href="tel:09999760222" class="action-pill call">
+                <i class="fas fa-phone-alt" style="font-size: 15px;"></i>
+                <span>Call (+91) 9999-760-222</span>
             </a>
         </div>
 
@@ -1108,7 +1316,7 @@
                 <button class="modal-close" onclick="closeDemoModal()">&times;</button>
                 <div style="margin-bottom: 20px;">
                     <span style="font-size: 11px; font-weight: 700; color: #009ace; font-family: 'JetBrains Mono', monospace;" id="modalCategoryTag">DIGITECH INQUIRY</span>
-                    <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-top: 4px;" id="modalHeading">Request Site Survey & Demo</h3>
+                    <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-top: 4px;" id="modalHeading">Request Site Survey &amp; Demo</h3>
                     <p style="font-size: 13px; color: #64748b; margin-top: 4px;">Speak directly with a senior surveillance engineer within 2 hours.</p>
                 </div>
                 <form id="serviceInquiryForm" onsubmit="handleInquirySubmit(event)">
@@ -1146,13 +1354,26 @@
                         <textarea id="custMsg" rows="3" placeholder="Approximate number of cameras, premises square footage, or existing system issues..."></textarea>
                     </div>
                     <button type="submit" class="theme-btn style-one" style="width: 100%; border-radius: 8px !important; text-align: center; cursor: pointer;">
-                        Submit & Request Call Back
+                        Submit &amp; Request Call Back
                     </button>
                 </form>
                 <div id="inquirySuccess" style="display: none; text-align: center; padding: 25px 15px;">
                     <i class="fas fa-check-circle" style="font-size: 40px; color: #10b981; margin-bottom: 12px;"></i>
                     <h4 style="font-size: 18px; font-weight: 700; color: #0f172a;">Inquiry Received!</h4>
                     <p style="font-size: 13px; color: #64748b; margin-top: 6px;">Our senior engineer will contact you shortly. You can also reach us directly at <strong>(+91) 9999-760-222</strong>.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Player Modal -->
+        <div id="videoModal" class="video-modal-overlay">
+            <div class="video-modal-box">
+                <button class="video-modal-close" onclick="closeVideoModal()">&times;</button>
+                <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 50px rgba(0, 154, 206, 0.4); border: 1px solid rgba(0, 154, 206, 0.5);">
+                    <video id="modalVideoPlayer" controls playsinline style="width: 100%; height: auto; display: block; background: #000;">
+                        <source src="assets/images/banner/banner-2.mp4" type="video/mp4">
+                        Your browser does not support HTML5 video.
+                    </video>
                 </div>
             </div>
         </div>
@@ -1205,6 +1426,25 @@
 
         document.getElementById('demoModal').addEventListener('click', function(e) {
             if (e.target === this) closeDemoModal();
+        });
+
+        // Video Modal Controller
+        function openVideoModal() {
+            var vModal = document.getElementById('videoModal');
+            var player = document.getElementById('modalVideoPlayer');
+            vModal.style.display = 'flex';
+            player.play();
+        }
+
+        function closeVideoModal() {
+            var vModal = document.getElementById('videoModal');
+            var player = document.getElementById('modalVideoPlayer');
+            player.pause();
+            vModal.style.display = 'none';
+        }
+
+        document.getElementById('videoModal').addEventListener('click', function(e) {
+            if (e.target === this) closeVideoModal();
         });
     </script>
 
