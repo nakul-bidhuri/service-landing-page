@@ -4,3 +4,5 @@ node_modules
 .vercel
 *.log
 www.digitechservices.net/
+
+.vercel
