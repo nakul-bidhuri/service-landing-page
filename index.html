@@ -249,19 +249,18 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            text-decoration: none;
+            text-decoration: none !important;
         }
         .header-phone-icon {
-            width: 38px;
-            height: 38px;
-            border-radius: 8px;
-            background: rgba(0, 154, 206, 0.08);
-            border: 1px solid rgba(0, 154, 206, 0.2);
+            width: auto;
+            height: auto;
+            background: transparent !important;
+            border: none !important;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--brand-cyan);
-            font-size: 15px;
+            font-size: 17px;
         }
         .header-phone-text span {
             display: block;
@@ -273,6 +272,10 @@
         }
         .header-phone-text strong {
             display: block;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--brand-navy-deep);
+        }
             font-size: 14px;
             font-weight: 700;
             color: var(--brand-navy-deep);
@@ -871,123 +874,81 @@
             letter-spacing: 0.5px;
         }
 
-        /* Live Command Cockpit (HUD) */
-        .hms-command-cockpit {
-            background: rgba(8, 26, 37, 0.92);
-            border: 1px solid rgba(0, 154, 206, 0.35);
+        /* 4-Stage Operational Architecture Flow */
+        .hms-workflow-card {
+            background: #092230;
+            border: 1px solid rgba(0, 154, 206, 0.28);
             border-radius: 12px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            overflow: hidden;
+            padding: 34px 28px;
             margin-bottom: 45px;
         }
-        .cockpit-header {
-            background: #05141d;
-            border-bottom: 1px solid rgba(0, 154, 206, 0.25);
-            padding: 12px 20px;
+        .hms-workflow-title-box {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 18px;
+            margin-bottom: 26px;
         }
-        .cockpit-title {
-            font-size: 12px;
+        .hms-workflow-title {
+            font-size: 17px;
             font-weight: 800;
-            color: #38bdf8;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            color: #ffffff;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
-        .cockpit-status-tag {
-            font-size: 11px;
-            font-weight: 700;
-            color: #4ade80;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(74, 222, 128, 0.1);
-            border: 1px solid rgba(74, 222, 128, 0.25);
-            padding: 3px 10px;
-            border-radius: 20px;
-        }
-        .cockpit-body {
-            padding: 24px;
-        }
-        .terminal-screen {
-            background: #030d13;
-            border: 1px solid rgba(0, 154, 206, 0.2);
-            border-radius: 8px;
-            padding: 16px 18px;
-            font-family: 'Consolas', 'Courier New', monospace;
+        .hms-workflow-sub {
             font-size: 12px;
-            color: #94a3b8;
-            line-height: 1.7;
-            height: 230px;
-            overflow-y: hidden;
+            color: #38bdf8;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .hms-flow-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
             position: relative;
         }
-        .terminal-line { margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
-        .terminal-line.success { color: #34d399; }
-        .terminal-line.info { color: #38bdf8; }
-        .terminal-line.highlight { color: #facc15; }
-        .ecg-waveform-wrap {
-            position: absolute;
-            bottom: 8px;
-            left: 18px;
-            right: 18px;
-            height: 38px;
-            opacity: 0.7;
-            pointer-events: none;
-        }
-        .channel-hud-card {
-            background: rgba(14, 40, 56, 0.6);
+        .hms-flow-step {
+            background: rgba(15, 46, 64, 0.65);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 8px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
-            transition: all 0.2s;
+            padding: 22px 18px;
+            position: relative;
+            transition: all 0.25s;
         }
-        .channel-hud-card:hover {
-            border-color: rgba(0, 154, 206, 0.5);
-            background: rgba(14, 40, 56, 0.9);
+        .hms-flow-step:hover {
+            border-color: var(--brand-cyan);
+            background: rgba(15, 46, 64, 0.95);
+            transform: translateY(-2px);
         }
-        .channel-hud-head {
+        .hms-step-number {
+            font-size: 11px;
+            font-weight: 800;
+            color: var(--brand-cyan);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-bottom: 8px;
-            font-size: 12px;
-            font-weight: 700;
         }
-        .channel-hud-bar {
-            height: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 3px;
-            overflow: hidden;
-        }
-        .channel-hud-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #009ace, #38bdf8);
-            border-radius: 3px;
-        }
-        .btn-console-ping {
-            background: rgba(0, 154, 206, 0.15);
-            border: 1px solid var(--brand-cyan);
+        .hms-step-icon {
+            font-size: 16px;
             color: #38bdf8;
-            font-size: 12px;
-            font-weight: 700;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
         }
-        .btn-console-ping:hover {
-            background: var(--brand-cyan);
+        .hms-step-heading {
+            font-size: 15px;
+            font-weight: 700;
             color: #ffffff;
-            box-shadow: 0 0 15px rgba(0, 154, 206, 0.4);
+            margin-bottom: 8px;
+        }
+        .hms-step-desc {
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.55;
         }
 
         /* 4 Core HMS Pillar Cards */
@@ -1073,7 +1034,6 @@
             border: 1px solid rgba(0, 154, 206, 0.2);
             border-radius: 10px;
             padding: 28px;
-        }
             margin-top: 35px;
         }
         .comparison-col-header {
@@ -1240,46 +1200,31 @@
         }
 
         /* ==========================================================
-           FLOATING ACTION BUTTONS (Clean, Non-Intrusive)
+           FLOATING WHATSAPP BUTTON (Single Clean Green Bubble • No Blue Box)
            ========================================================== */
-        .floating-action-bar {
+        .floating-whatsapp-btn {
             position: fixed;
             bottom: 24px;
             right: 24px;
             z-index: 9999;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: flex-end;
-        }
-        .floating-action-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background-color: #25d366;
+            color: #ffffff !important;
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 10px 18px;
-            border-radius: 50px;
-            color: #ffffff !important;
-            font-size: 13px;
-            font-weight: 700;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+            transition: all 0.25s ease;
             text-decoration: none !important;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-            transition: all 0.2s ease;
         }
-        .floating-action-btn.whatsapp {
-            background-color: #25d366;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-        }
-        .floating-action-btn.whatsapp:hover {
-            background-color: #20ba5a;
-            transform: translateY(-2px);
-        }
-        .floating-action-btn.phone {
-            background-color: var(--brand-cyan);
-            border: 1px solid rgba(255, 255, 255, 0.25);
-        }
-        .floating-action-btn.phone:hover {
-            background-color: var(--brand-cyan-dark);
-            transform: translateY(-2px);
+        .floating-whatsapp-btn:hover {
+            transform: scale(1.08);
+            background-color: #20ba59;
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.6);
+            color: #ffffff !important;
         }
 
         /* ==========================================================
@@ -1415,18 +1360,17 @@
 
         @media (max-width: 1250px) {
             .header-phone-box {
-                background: rgba(0, 154, 206, 0.08);
-                border: 1px solid rgba(0, 154, 206, 0.25);
-                border-radius: 20px;
-                padding: 6px 14px;
+                background: transparent !important;
+                border: none !important;
+                padding: 0;
                 gap: 6px;
             }
             .header-phone-icon {
                 width: auto;
                 height: auto;
-                background: transparent;
-                border: none;
-                font-size: 13px;
+                background: transparent !important;
+                border: none !important;
+                font-size: 14px;
             }
             .header-phone-text span {
                 display: none;
@@ -1459,6 +1403,9 @@
             .hms-kpi-ribbon {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .hms-flow-steps {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .hms-pillar-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -1468,17 +1415,18 @@
             .hms-kpi-ribbon {
                 grid-template-columns: 1fr;
             }
+            .hms-flow-steps {
+                grid-template-columns: 1fr;
+            }
             .hms-pillar-grid {
                 grid-template-columns: 1fr;
             }
-            .floating-action-bar {
+            .floating-whatsapp-btn {
                 bottom: 16px;
                 right: 16px;
-                gap: 8px;
-            }
-            .floating-action-btn {
-                padding: 9px 15px;
-                font-size: 12px;
+                width: 46px;
+                height: 46px;
+                font-size: 22px;
             }
         }
     </style>
@@ -1912,16 +1860,16 @@
             </div>
         </section>
 
-        <!-- DIGITECH HMS: Enterprise-Futuristic Telemetry Architecture -->
+        <!-- DIGITECH HMS: Enterprise Telemetry & Health Monitoring -->
         <section class="hms-telemetry-section" id="hms">
             <div class="auto-container">
                 
                 <div class="text-center" style="margin-bottom: 25px;">
                     <div class="hms-futuristic-badge">
                         <span class="hms-pulse-radar"></span>
-                        <span>DIGITECH HMS &bull; AUTONOMOUS 24/7 TELEMETRY ARCHITECTURE</span>
+                        <span>DIGITECH HMS &bull; PROACTIVE HEALTH MONITORING ARCHITECTURE</span>
                     </div>
-                    <h2 class="hms-main-title">Next-Gen Predictive Surveillance Health &amp; Active Telemetry</h2>
+                    <h2 class="hms-main-title">Continuous Health Telemetry &amp; Zero-Downtime Surveillance</h2>
                     <p class="hms-subtitle">
                         Eliminating the silent CCTV blackout crisis. Most security cameras fail weeks before an incident occurs. Digitech HMS continuously polls optical hardware, predictive drive health, and stream integrity every 60 seconds.
                     </p>
@@ -1947,84 +1895,67 @@
                     </div>
                 </div>
 
-                <!-- Live Command Cockpit (HUD) -->
-                <div class="hms-command-cockpit">
-                    <div class="cockpit-header">
-                        <div class="cockpit-title">
-                            <i class="fas fa-satellite-dish" style="color: #38bdf8;"></i>
-                            <span>DIGITECH HMS // NOC COMMAND CONSOLE v4.2</span>
+                <!-- 4-Stage Operational Architecture Pipeline -->
+                <div class="hms-workflow-card">
+                    <div class="hms-workflow-title-box">
+                        <div class="hms-workflow-title">
+                            <i class="fas fa-network-wired" style="color: var(--brand-cyan);"></i>
+                            <span>Autonomous Operational Telemetry Pipeline</span>
                         </div>
-                        <div class="d-flex align-items-center gap-3">
-                            <span class="cockpit-status-tag"><i class="fas fa-circle" style="font-size: 8px;"></i> LIVE TELEMETRY STREAM</span>
-                            <span style="font-size: 11px; font-weight: 700; color: #94a3b8; font-family: monospace;" id="telemetryLiveClock">24/7 ACTIVE</span>
+                        <div class="hms-workflow-sub">
+                            <i class="fas fa-shield-alt"></i> Enterprise-Grade SLA Architecture
                         </div>
                     </div>
-                    <div class="cockpit-body">
-                        <div class="row align-items-center">
-                            
-                            <!-- Left: Terminal Log Stream -->
-                            <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
-                                <div class="terminal-screen" id="telemetryTerminalScreen">
-                                    <div class="terminal-line info"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> [SYS-BOOT] Initializing Digitech HMS Multi-Site Telemetry Node...</div>
-                                    <div class="terminal-line success"><i class="fas fa-check" style="font-size: 10px;"></i> [PING-CYCLE] 50,000+ CCTV optical streams verified active via RTSP/SNMP protocol.</div>
-                                    <div class="terminal-line"><i class="fas fa-database" style="font-size: 10px;"></i> [STORAGE-SMART] NVR Cluster Raid-6: Write cache optimal, temperature 37°C, 0 bad sectors.</div>
-                                    <div class="terminal-line highlight"><i class="fas fa-bolt" style="font-size: 10px;"></i> [POE-HEALTH] PoE Switch Array draw: 48.2V nominal, UPS reserve capacity 100%.</div>
-                                    <div class="terminal-line success"><i class="fas fa-shield-alt" style="font-size: 10px;"></i> [AI-TAMPER] Lens occlusion &amp; defocus scan: 100% unobstructed, zero blind spots detected.</div>
-                                    <div class="terminal-line info" id="dynamicTelemetryPingLine"><i class="fas fa-satellite" style="font-size: 10px;"></i> [SLA-HOTLINE] Regional Hubs (Delhi, Noida, Bhopal, Nagpur) standby loaner units: READY.</div>
-
-                                    <!-- Animated ECG Sine Waveform Visualizer -->
-                                    <div class="ecg-waveform-wrap">
-                                        <svg viewBox="0 0 500 40" style="width: 100%; height: 100%;" preserveAspectRatio="none">
-                                            <path d="M0,20 L120,20 L130,5 L140,35 L150,10 L160,25 L170,20 L270,20 L280,3 L290,37 L300,12 L310,28 L320,20 L500,20" fill="none" stroke="#009ace" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                <animate attributeName="stroke-dashoffset" from="500" to="0" dur="3s" repeatCount="indefinite" />
-                                            </path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 14px;">
-                                    <button class="btn-console-ping" onclick="simulateTelemetryPing()">
-                                        <i class="fas fa-sync-alt" id="pingBtnIcon"></i> Run Simulated Diagnostic Ping
-                                    </button>
-                                    <span style="font-size: 11px; color: #64748b; font-family: monospace;">Resolution: 60-Second Loop</span>
-                                </div>
+                    <div class="hms-flow-steps">
+                        
+                        <!-- Step 1 -->
+                        <div class="hms-flow-step">
+                            <div class="hms-step-number">
+                                <span>STAGE 01</span>
+                                <i class="fas fa-video hms-step-icon"></i>
                             </div>
-
-                            <!-- Right: Channel Health Status Gauges -->
-                            <div class="col-lg-5 col-md-12">
-                                <div class="channel-hud-card">
-                                    <div class="channel-hud-head">
-                                        <span style="color: #cbd5e1;"><i class="fas fa-video" style="color: var(--brand-cyan); margin-right: 6px;"></i> Optical Stream Continuity</span>
-                                        <span style="color: #4ade80;">100% ONLINE</span>
-                                    </div>
-                                    <div class="channel-hud-bar"><div class="channel-hud-progress" style="width: 100%;"></div></div>
-                                </div>
-
-                                <div class="channel-hud-card">
-                                    <div class="channel-hud-head">
-                                        <span style="color: #cbd5e1;"><i class="fas fa-hdd" style="color: #38bdf8; margin-right: 6px;"></i> Predictive S.M.A.R.T. Drive Health</span>
-                                        <span style="color: #38bdf8;">OPTIMAL (0 SECTOR ERRORS)</span>
-                                    </div>
-                                    <div class="channel-hud-bar"><div class="channel-hud-progress" style="width: 98%; background: linear-gradient(90deg, #0284c7, #38bdf8);"></div></div>
-                                </div>
-
-                                <div class="channel-hud-card">
-                                    <div class="channel-hud-head">
-                                        <span style="color: #cbd5e1;"><i class="fas fa-eye-slash" style="color: #facc15; margin-right: 6px;"></i> AI Defocus &amp; Tamper Protection</span>
-                                        <span style="color: #4ade80;">100% CLEAR VISION</span>
-                                    </div>
-                                    <div class="channel-hud-bar"><div class="channel-hud-progress" style="width: 100%; background: linear-gradient(90deg, #10b981, #34d399);"></div></div>
-                                </div>
-
-                                <div class="channel-hud-card">
-                                    <div class="channel-hud-head">
-                                        <span style="color: #cbd5e1;"><i class="fas fa-ambulance" style="color: #f43f5e; margin-right: 6px;"></i> 4-Hour SLA Field Standby</span>
-                                        <span style="color: #38bdf8;">DISPATCH READY</span>
-                                    </div>
-                                    <div class="channel-hud-bar"><div class="channel-hud-progress" style="width: 100%; background: linear-gradient(90deg, #0ea5e9, #009ace);"></div></div>
-                                </div>
-                            </div>
-
+                            <h4 class="hms-step-heading">Edge Telemetry</h4>
+                            <p class="hms-step-desc">
+                                Hardware-level health telemetry streamed from IP cameras, NVRs, HDDs, and PoE switch arrays every 60 seconds.
+                            </p>
                         </div>
+
+                        <!-- Step 2 -->
+                        <div class="hms-flow-step">
+                            <div class="hms-step-number">
+                                <span>STAGE 02</span>
+                                <i class="fas fa-microchip hms-step-icon"></i>
+                            </div>
+                            <h4 class="hms-step-heading">Diagnostic Analysis</h4>
+                            <p class="hms-step-desc">
+                                Algorithms continuously analyze video continuity, bad disk sectors, thermal spikes, PoE draw, and lens tamper.
+                            </p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="hms-flow-step">
+                            <div class="hms-step-number">
+                                <span>STAGE 03</span>
+                                <i class="fas fa-bell hms-step-icon"></i>
+                            </div>
+                            <h4 class="hms-step-heading">Instant NOC Escalation</h4>
+                            <p class="hms-step-desc">
+                                Immediate automated notification to facility management and Digitech central NOC via SMS, WhatsApp, and email.
+                            </p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="hms-flow-step">
+                            <div class="hms-step-number">
+                                <span>STAGE 04</span>
+                                <i class="fas fa-truck-pickup hms-step-icon"></i>
+                            </div>
+                            <h4 class="hms-step-heading">Rapid Field SLA</h4>
+                            <p class="hms-step-desc">
+                                Certified field engineers dispatched within 4 hours with pre-configured standby loaner hardware from regional hubs.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
 
@@ -2149,6 +2080,16 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+
+                <!-- Call to Action Ribbon for HMS -->
+                <div style="margin-top: 35px; text-align: center; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: center;">
+                    <button onclick="openDemoModal('Digitech HMS Infrastructure Assessment')" class="btn-brand-primary" style="padding: 13px 26px; font-size: 14px;">
+                        <i class="fas fa-shield-alt"></i> Request Digitech HMS Site Assessment
+                    </button>
+                    <a href="tel:09999760222" style="display: inline-flex; align-items: center; gap: 8px; color: #ffffff; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.2); padding: 12px 22px; border-radius: 6px; font-weight: 700; font-size: 13px; text-decoration: none;">
+                        <i class="fas fa-phone-alt" style="color: var(--brand-cyan);"></i> Central Hotline: (+91) 9999-760-222
+                    </a>
                 </div>
 
             </div>
@@ -2339,17 +2280,10 @@
             </div>
         </footer>
 
-        <!-- Floating Quick Contact Dock (Unmistakable & Polished) -->
-        <div class="floating-action-bar">
-            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="floating-action-btn whatsapp" title="Chat on WhatsApp with Technical Support">
-                <i class="fab fa-whatsapp" style="font-size: 17px;"></i>
-                <span>WhatsApp Support</span>
-            </a>
-            <a href="tel:09999760222" class="floating-action-btn phone" title="Call 24/7 Engineering Hotline: (+91) 9999-760-222">
-                <i class="fas fa-phone-alt" style="font-size: 13px;"></i>
-                <span>Call Hotline: 9999-760-222</span>
-            </a>
-        </div>
+        <!-- Floating WhatsApp Desk (Single Clean Green Bubble • No Blue Box) -->
+        <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team%2C%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="floating-whatsapp-btn" title="Chat with Digitech Engineering on WhatsApp" aria-label="WhatsApp Support">
+            <i class="fab fa-whatsapp"></i>
+        </a>
 
         <!-- Consultation & Site Survey Modal -->
         <div id="demoModal" class="modal-overlay-custom">
@@ -2496,44 +2430,6 @@
         document.getElementById('videoModal').addEventListener('click', function(e) {
             if (e.target === this) closeVideoModal();
         });
-
-        // Digitech HMS Telemetry Console Real-Time Controller
-        function updateTelemetryClock() {
-            var clockEl = document.getElementById('telemetryLiveClock');
-            if (clockEl) {
-                var now = new Date();
-                var timeStr = now.toLocaleTimeString('en-IN', { hour12: false });
-                clockEl.innerText = timeStr + ' IST // 50,000+ NODES OK';
-            }
-        }
-        setInterval(updateTelemetryClock, 1000);
-        updateTelemetryClock();
-
-        function simulateTelemetryPing() {
-            var btnIcon = document.getElementById('pingBtnIcon');
-            var screen = document.getElementById('telemetryTerminalScreen');
-            if (btnIcon) btnIcon.classList.add('fa-spin');
-
-            setTimeout(function() {
-                if (btnIcon) btnIcon.classList.remove('fa-spin');
-                if (screen) {
-                    var now = new Date();
-                    var timeStr = now.toLocaleTimeString('en-IN', { hour12: false });
-                    var pings = [
-                        '[' + timeStr + '] PING-SCAN: 50,000+ IP video streams confirmed nominal (Average latency 9ms).',
-                        '[' + timeStr + '] S.M.A.R.T. DIAGNOSTIC: 0 reallocated sectors detected across all active NVR clusters.',
-                        '[' + timeStr + '] OPTICAL AI: Lens obstruction & defocus test: 100% crystal-clear clarity verified.',
-                        '[' + timeStr + '] POWER AUDIT: 48V PoE lines nominal • Zero camera voltage drops reported.'
-                    ];
-                    var randomPing = pings[Math.floor(Math.random() * pings.length)];
-                    var newLine = document.createElement('div');
-                    newLine.className = 'terminal-line success';
-                    newLine.innerHTML = '<i class="fas fa-check-double" style="font-size: 10px;"></i> ' + randomPing;
-                    screen.appendChild(newLine);
-                    screen.scrollTop = screen.scrollHeight;
-                }
-            }, 500);
-        }
     </script>
 
 </body>
