@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digitech Services | Enterprise CCTV, Fire Alarm, Access Control & Surveillance HMS</title>
+  
+  <meta name="description" content="Digitech Services - ISO 9001:2015 Certified Electronic Surveillance & Security Systems Specialists since 2004. Enterprise CCTV, Digitech HMS automated health monitoring, fire alarms, biometric access control & PA systems.">
+  <meta name="keywords" content="Digitech Services, Digitech HMS, CCTV Surveillance, Fire Alarm System, Access Control System, PA System, Security Health Monitoring, Delhi, Noida, Bhopal, Nagpur">
+  <meta name="author" content="Digitech Services">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#e53935',
+              darkred: '#b71c1c',
+              lightred: '#ff6f60',
+              navy: '#0b132b',
+              dark: '#030712',
+              card: '#0f172a',
+              border: '#1e293b'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          animation: {
+            'pulse-subtle': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 4s ease-in-out infinite'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #030712;
+      color: #f1f5f9;
+      overflow-x: hidden;
+    }
+    
+    .tech-grid {
+      background-image: radial-gradient(rgba(229, 57, 53, 0.12) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      border-color: rgba(229, 57, 53, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px -10px rgba(229, 57, 53, 0.15);
+    }
+
+    .badge-glow {
+      box-shadow: 0 0 15px rgba(229, 57, 53, 0.35);
+    }
+
+    .status-pulse {
+      animation: statusPulse 2s infinite;
+    }
+    @keyframes statusPulse {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #030712;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1f2937;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #e53935;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-slate-100 antialiased selection:bg-brand-red selection:text-white">
+
+  <!-- Top Announcement & Contact Bar -->
+  <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 border-b border-slate-800/80 text-xs text-slate-400 py-2.5 px-4 hidden md:block">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-6">
+        <span class="flex items-center gap-2 text-emerald-400 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 status-pulse"></span>
+          24/7 Security Operations & Rapid Field Dispatch Active
+        </span>
+        <span class="text-slate-600">|</span>
+        <span class="flex items-center gap-1.5 hover:text-slate-200 transition-colors">
+          <i class="fa-solid fa-location-dot text-brand-red"></i>
+          HQ: Masoodpur Market, Vasant Kunj, New Delhi
+        </span>
+        <span class="text-slate-600">|</span>
+        <span class="text-slate-400">
+          <i class="fa-solid fa-certificate text-amber-400 mr-1"></i> ISO 9001:2015 Certified
+        </span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="mailto:info@digitechservices.net" class="flex items-center gap-1.5 hover:text-white transition-colors">
+          <i class="fa-regular fa-envelope text-brand-red"></i> info@digitechservices.net
+        </a>
+        <a href="tel:09999760222" class="flex items-center gap-1.5 font-bold text-white hover:text-brand-lightred transition-colors">
+          <i class="fa-solid fa-phone-volume text-brand-red animate-pulse"></i> (+91) 9999-760-222
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800 transition-all duration-300" id="mainNavbar">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <img src="assets/images/logo.png" alt="Digitech Services" class="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 duration-300">
+          <div class="hidden sm:block border-l border-slate-800 pl-3">
+            <span class="block text-xs font-bold text-white tracking-wider uppercase">Digitech Services</span>
+            <span class="block text-[10px] text-brand-red font-mono font-semibold tracking-tight">SURVEILLANCE & HMS INFRASTRUCTURE</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden lg:flex items-center space-x-7 text-sm font-medium text-slate-300">
+          <a href="#services" class="hover:text-brand-red transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-layer-group text-xs text-brand-red/70"></i> Services Suite
+          </a>
+          <a href="#hms-highlight" class="hover:text-brand-red transition-colors flex items-center gap-1.5">
+            <span class="inline-block w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
+            Digitech HMS
+          </a>
+          <a href="#calculator" class="hover:text-brand-red transition-colors flex items-center gap-1.5">
+            <i class="fa-solid fa-calculator text-xs text-brand-red/70"></i> System Estimator
+          </a>
+          <a href="#sectors" class="hover:text-brand-red transition-colors">Industries</a>
+          <a href="#clients-cert" class="hover:text-brand-red transition-colors">Clients & Certs</a>
+          <a href="#branches" class="hover:text-brand-red transition-colors">Offices</a>
+          <a href="#faq" class="hover:text-brand-red transition-colors">FAQ</a>
+        </div>
+
+        <!-- Action CTAs -->
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="tel:09999760222" class="px-4 py-2 text-xs font-semibold rounded-lg border border-slate-700 bg-slate-900 hover:border-slate-600 text-slate-200 hover:text-white transition-all">
+            <i class="fa-solid fa-phone mr-1.5 text-brand-red"></i> Call Sales
+          </a>
+          <button onclick="openModal('Request Free Site Survey & Demo')" class="px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg bg-gradient-to-r from-brand-red to-brand-darkred hover:from-red-600 hover:to-red-800 text-white shadow-lg shadow-brand-red/25 hover:shadow-brand-red/40 transition-all duration-300 transform active:scale-95">
+            <i class="fa-solid fa-shield-halved mr-1.5"></i> Request Demo
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="lg:hidden flex items-center">
+          <button id="mobileMenuBtn" aria-label="Toggle menu" class="text-slate-300 hover:text-white p-2 rounded-lg bg-slate-900 border border-slate-800">
+            <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden border-b border-slate-800 bg-slate-950 px-4 pt-3 pb-6 space-y-3">
+      <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-brand-red">Services Suite</a>
+      <a href="#hms-highlight" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-brand-red">Digitech HMS System</a>
+      <a href="#calculator" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-brand-red">System Estimator</a>
+      <a href="#sectors" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-brand-red">Industry Sectors</a>
+      <a href="#clients-cert" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-brand-red">Clients & Certifications</a>
+      <a href="#branches" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-brand-red">Branch Network</a>
+      <a href="#faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900 hover:text-brand-red">FAQ</a>
+      <div class="pt-3 border-t border-slate-800 flex flex-col gap-2">
+        <a href="tel:09999760222" class="w-full text-center py-2.5 text-sm font-semibold rounded-lg bg-slate-900 border border-slate-700 text-white">
+          <i class="fa-solid fa-phone text-brand-red mr-2"></i> (+91) 9999-760-222
+        </a>
+        <button onclick="openModal('Request Free Site Survey & Demo')" class="w-full py-2.5 text-sm font-bold uppercase rounded-lg bg-brand-red text-white shadow-lg">
+          Request Free Site Survey
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-12 pb-24 md:py-24 overflow-hidden tech-grid">
+    <!-- Ambient Glow Orbs -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Copy & Value Proposition -->
+        <div class="lg:col-span-7 space-y-7">
+          
+          <!-- Trust Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-brand-red/40 text-xs font-semibold text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
+            <span class="text-brand-lightred font-bold">DIGITECH HMS</span>
+            <span class="text-slate-500">•</span>
+            <span>Securing 50,000+ Enterprises Since 2004</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+            Advanced Electronic <br class="hidden sm:inline">
+            <span class="bg-gradient-to-r from-red-500 via-rose-400 to-amber-400 bg-clip-text text-transparent">
+              Surveillance & HMS
+            </span> <br>
+            Infrastructure Services.
+          </h1>
+
+          <!-- Subheading description -->
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+            From smart 4K CCTV networks to <strong>Digitech HMS automated health monitoring</strong>, addressable fire alarm protection, and biometric access control — we architect, install, and service zero-downtime security ecosystems tailored for India's high-stakes commercial and industrial premises.
+          </p>
+
+          <!-- Key Benefit Highlights -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+            <div class="p-3 rounded-lg bg-slate-900/70 border border-slate-800">
+              <div class="text-brand-red text-lg mb-1"><i class="fa-solid fa-server"></i></div>
+              <div class="text-sm font-bold text-white">24/7 Monitored HMS</div>
+              <div class="text-xs text-slate-400">Zero silent camera drops</div>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900/70 border border-slate-800">
+              <div class="text-emerald-400 text-lg mb-1"><i class="fa-solid fa-award"></i></div>
+              <div class="text-sm font-bold text-white">ISO 9001:2015</div>
+              <div class="text-xs text-slate-400">Quality-certified delivery</div>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-900/70 border border-slate-800 col-span-2 sm:col-span-1">
+              <div class="text-blue-400 text-lg mb-1"><i class="fa-solid fa-truck-fast"></i></div>
+              <div class="text-sm font-bold text-white">Rapid Dispatch</div>
+              <div class="text-xs text-slate-400">4-Hour SLA field response</div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+            <button onclick="openModal('Hero Free Consultation')" class="px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider bg-gradient-to-r from-brand-red to-brand-darkred hover:from-red-600 hover:to-red-800 text-white shadow-xl shadow-brand-red/30 transition-all duration-300 flex items-center justify-center gap-2 group">
+              <span>Schedule Free Site Survey</span>
+              <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+            </button>
+            <a href="tel:09999760222" class="px-6 py-4 rounded-xl text-sm font-semibold border border-slate-700 bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white transition-all flex items-center justify-center gap-2.5">
+              <i class="fa-solid fa-phone-volume text-brand-red"></i>
+              <span>Consult an Engineer: <strong class="text-white">+91 9999-760-222</strong></span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Bar -->
+          <div class="flex items-center gap-6 pt-4 text-xs text-slate-400 border-t border-slate-800/80">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-check text-emerald-400"></i> Genuine Hardware Warranty</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock-rotate-left text-brand-red"></i> 20+ Years Track Record</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-building-columns text-amber-400"></i> Pan-India Support</span>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Live HMS Simulated Dashboard Card -->
+        <div class="lg:col-span-5">
+          <div class="relative">
+            <!-- Glow background -->
+            <div class="absolute -inset-1 bg-gradient-to-r from-brand-red to-blue-600 rounded-2xl blur-lg opacity-30"></div>
+            
+            <div class="relative rounded-2xl bg-slate-950 border border-slate-800 p-6 shadow-2xl space-y-5">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 rounded-full bg-emerald-500 status-pulse"></div>
+                  <div>
+                    <h3 class="text-sm font-mono font-bold text-white tracking-wide">DIGITECH_HMS_CORE // v4.8</h3>
+                    <p class="text-[11px] text-slate-400 font-mono">Live Central Surveillance Telemetry</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-mono font-bold uppercase">
+                  SYSTEM ONLINE
+                </span>
+              </div>
+
+              <!-- Metric Gauges -->
+              <div class="grid grid-cols-2 gap-3 font-mono">
+                <div class="bg-slate-900/80 rounded-lg p-3 border border-slate-800/90">
+                  <div class="text-[11px] text-slate-400 flex justify-between">
+                    <span>ACTIVE CAMERAS</span>
+                    <span class="text-emerald-400">100%</span>
+                  </div>
+                  <div class="text-2xl font-bold text-white mt-1">64 / 64</div>
+                  <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2 overflow-hidden">
+                    <div class="bg-emerald-500 h-1.5 rounded-full" style="width: 100%"></div>
+                  </div>
+                </div>
+
+                <div class="bg-slate-900/80 rounded-lg p-3 border border-slate-800/90">
+                  <div class="text-[11px] text-slate-400 flex justify-between">
+                    <span>STORAGE HEALTH</span>
+                    <span class="text-emerald-400">98.4%</span>
+                  </div>
+                  <div class="text-2xl font-bold text-white mt-1">32 TB <span class="text-xs text-slate-400 font-normal">RAID-5</span></div>
+                  <div class="w-full bg-slate-800 rounded-full h-1.5 mt-2 overflow-hidden">
+                    <div class="bg-blue-500 h-1.5 rounded-full" style="width: 98%"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Event Stream Feed -->
+              <div class="space-y-2 font-mono text-xs">
+                <div class="text-[11px] text-slate-400 font-semibold uppercase tracking-wider flex items-center justify-between">
+                  <span>HMS Event Telemetry</span>
+                  <span class="text-[10px] text-brand-red animate-pulse">● LIVE POLLING</span>
+                </div>
+                
+                <div class="space-y-2 bg-slate-900/90 rounded-lg p-3 border border-slate-800 text-[11px]">
+                  <div class="flex items-start gap-2 text-slate-300">
+                    <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                    <div>
+                      <span class="text-slate-500">[13:38:12]</span>
+                      <strong class="text-white"> CAM_ZONE_04:</strong> 4K Night Vision stream verified. Framerate stable (30fps).
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2 text-slate-300">
+                    <i class="fa-solid fa-hard-drive text-blue-400 mt-0.5"></i>
+                    <div>
+                      <span class="text-slate-500">[13:38:05]</span>
+                      <strong class="text-white"> NVR_STORAGE:</strong> WD Purple Pro sectors clean. 28-day retention secure.
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2 text-slate-300">
+                    <i class="fa-solid fa-fire text-amber-400 mt-0.5"></i>
+                    <div>
+                      <span class="text-slate-500">[13:37:48]</span>
+                      <strong class="text-white"> FIRE_PANEL:</strong> Loop 1 & 2 Addressable detectors responding normal.
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-2 text-slate-300">
+                    <i class="fa-solid fa-id-card text-purple-400 mt-0.5"></i>
+                    <div>
+                      <span class="text-slate-500">[13:37:20]</span>
+                      <strong class="text-white"> ACCESS_GATE_1:</strong> Biometric facial recognition verified for Unit 4 staff.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Action Inside Card -->
+              <div class="pt-2 flex items-center justify-between text-xs border-t border-slate-800">
+                <span class="text-slate-400">Want this proactive monitoring for your facility?</span>
+                <button onclick="openModal('HMS Live Demo')" class="text-brand-lightred hover:text-white font-bold underline transition-colors">
+                  Get HMS Protection →
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Numbers & Proof Metrics Bar -->
+  <section class="py-12 bg-slate-900/60 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-white">20<span class="text-brand-red">+</span></div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400 mt-1 uppercase tracking-wide">Years Industry Leadership (Est. 2004)</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-white">50,000<span class="text-brand-red">+</span></div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400 mt-1 uppercase tracking-wide">Businesses & Sites Secured</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-white">99.98<span class="text-emerald-400">%</span></div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400 mt-1 uppercase tracking-wide">Monitored System Uptime SLA</div>
+        </div>
+        <div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-white">4<span class="text-brand-red"> States</span></div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400 mt-1 uppercase tracking-wide">Delhi NCR • UP • MP • Maharashtra</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Complete Services Suite Section -->
+  <section id="services" class="py-24 relative bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-brand-red uppercase tracking-wider">
+          <i class="fa-solid fa-shield"></i> Complete Security Ecosystem
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Engineered Services Built for Total Reliability
+        </h2>
+        <p class="text-base text-slate-400">
+          We do not just install security boxes — we deliver complete, turnkey electronic protection, compliant engineering, and proactive health maintenance across every critical layer.
+        </p>
+      </div>
+
+      <!-- Services Grid (6 Core Solutions) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: CCTV Surveillance -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/service/service-1.jpg" alt="CCTV Surveillance Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-red/90 text-white text-xs font-bold uppercase tracking-wider">
+              01 // CORE SURVEILLANCE
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-brand-lightred text-xs font-mono font-semibold uppercase mb-1">
+                <i class="fa-solid fa-video"></i> Enterprise IP CCTV
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-lightred transition-colors">
+                CCTV Surveillance Camera Systems
+              </h3>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                High-definition 4K optical clarity, thermal perimeter sensing, 360° PTZ domes, and AI-enabled video analytics (ANPR license plates, face detection, perimeter line crossing, and heatmaps).
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Full Color Night Vision (DarkFighter/ColorVu)</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> NVR RAID Redundancy & Remote App Streaming</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Ruggedized IP67 Weatherproof & Vandal-Proof</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-mono">50,000+ Deployed</span>
+              <button onclick="openModal('CCTV Surveillance Consultation')" class="text-xs font-bold text-brand-lightred hover:text-white flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                Inquire System <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2: Digitech HMS (Automated Health Monitoring) -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group border-brand-red/40 relative">
+          <div class="absolute -top-3 -right-3 w-16 h-16 bg-brand-red/20 rounded-full blur-xl pointer-events-none"></div>
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/service/service-18.jpg" alt="Digitech HMS Monitoring" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-red text-white text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+              02 // EXCLUSIVE INNOVATION
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-brand-lightred text-xs font-mono font-semibold uppercase mb-1">
+                <i class="fa-solid fa-heart-pulse"></i> Proactive Health Intelligence
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-lightred transition-colors">
+                Digitech HMS (Hardware Health Monitoring)
+              </h3>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                Eliminates the #1 disaster in electronic security: discovering a dead camera or corrupted hard drive only <em>after</em> an incident happens. Digitech HMS checks your systems 24/7 automatically.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Instant alert on HDD bad sectors & recording halt</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Video loss, blind/tamper & black screen alerts</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Auto-ticket generation & engineer dispatch</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-brand-red font-mono font-bold">Zero Silent Drops</span>
+              <button onclick="openModal('Digitech HMS Demo & Pricing')" class="text-xs font-bold text-brand-lightred hover:text-white flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                Request HMS Demo <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3: Fire Alarm Systems -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/service/service-2.jpg" alt="Fire Alarm System Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider">
+              03 // LIFE SAFETY
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-brand-lightred text-xs font-mono font-semibold uppercase mb-1">
+                <i class="fa-solid fa-fire-flame-curved"></i> NBC-Compliant Protection
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-lightred transition-colors">
+                Intelligent Fire Alarm Systems
+              </h3>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                Early-detection addressable smoke and heat detection systems designed to save lives, prevent catastrophic asset loss, and ensure total compliance with Indian National Building Code (NBC).
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Optical Smoke & Rate-of-Rise Heat Detectors</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Multi-zone Control Panels & Sounder Strobes</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Automated BMS, HVAC trip & Elevator recall integration</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-mono">NBC & IS Compliant</span>
+              <button onclick="openModal('Fire Alarm System Inquiry')" class="text-xs font-bold text-brand-lightred hover:text-white flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                Inquire System <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4: Access Control System -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/service/service-3.jpg" alt="Access Control System Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider">
+              04 // ACCESS & IDENTITY
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-brand-lightred text-xs font-mono font-semibold uppercase mb-1">
+                <i class="fa-solid fa-fingerprint"></i> Biometric Security
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-lightred transition-colors">
+                Biometric & Access Control Solutions
+              </h3>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                Control who enters every restricted area with high-speed facial recognition, contactless smart cards, biometric scanners, flap barriers, and motorized vehicle boom barriers.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Multi-door cloud controller architecture</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Real-time audit trails & anti-passback security</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Automated Time & Attendance HR sync</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-mono">Cloud & Offline Modes</span>
+              <button onclick="openModal('Access Control Inquiry')" class="text-xs font-bold text-brand-lightred hover:text-white flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                Inquire System <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5: PA System -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/service/service-44.jpg" alt="PA System Services" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider">
+              05 // BROADCASTING
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-brand-lightred text-xs font-mono font-semibold uppercase mb-1">
+                <i class="fa-solid fa-bullhorn"></i> Public Announcement & EVAC
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-lightred transition-colors">
+                Public Announcement (PA) Systems
+              </h3>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                Crystal-clear audio dissemination across multi-zone campuses, industrial warehouses, hospitals, and transit hubs. Engineered for daily communication and instant emergency evacuation.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Multi-zone IP paging microphones</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> High-clarity ceiling, wall & outdoor horns</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Automated priority override during fire alarms</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-mono">EN54 Voice Alarm Standard</span>
+              <button onclick="openModal('PA System Inquiry')" class="text-xs font-bold text-brand-lightred hover:text-white flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                Inquire System <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 6: Comprehensive AMC & Security Audit -->
+        <div class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/images/service/service-20.jpg" alt="Comprehensive AMC and Security Audits" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-slate-900/90 border border-slate-700 text-white text-xs font-bold uppercase tracking-wider">
+              06 // LIFECYCLE SLA
+            </span>
+          </div>
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-brand-lightred text-xs font-mono font-semibold uppercase mb-1">
+                <i class="fa-solid fa-screwdriver-wrench"></i> Annual Maintenance Contracts (AMC)
+              </div>
+              <h3 class="text-xl font-bold text-white group-hover:text-brand-lightred transition-colors">
+                Comprehensive AMC & System Audits
+              </h3>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                Protect your capital investment with guaranteed preventive quarterly visits, lens calibration, power backup health checks, standby loaner equipment, and prioritized breakdown visits.
+              </p>
+              <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Non-Comprehensive & Comprehensive Plans</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Free Standby Replacement Cameras & NVRs</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Dedicated account engineer & online service tickets</li>
+              </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-mono">4-Hour Turnaround</span>
+              <button onclick="openModal('AMC Plan Consultation')" class="text-xs font-bold text-brand-lightred hover:text-white flex items-center gap-1 group-hover:translate-x-1 transition-all">
+                Compare AMC <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Deep Dive: Digitech HMS Health Monitoring Section -->
+  <section id="hms-highlight" class="py-20 bg-gradient-to-b from-gray-950 via-slate-900 to-gray-950 relative border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Why HMS is Critical -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-red/10 border border-brand-red/40 text-xs font-bold text-brand-lightred">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            SOLVING THE INVISIBLE SECURITY CRISIS
+          </div>
+          
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            Why 80% of Businesses Fail During an Incident <br class="hidden sm:inline">
+            <span class="text-brand-red">— And How Digitech HMS Stops It.</span>
+          </h2>
+
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            In standard CCTV setups, when a camera cord is disconnected, an NVR hard drive dies, or a power supply fails, <strong>nobody notices for weeks</strong>. You only discover the failure on the exact day when a theft, fire, or dispute occurs — and the footage is gone forever.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-950/80 border border-red-500/20">
+              <div class="p-2 rounded-lg bg-red-500/10 text-brand-red text-lg">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">The Typical CCTV Flaw</h4>
+                <p class="text-xs text-slate-400 mt-1">
+                  Passive systems with zero health alerts. Hard drives fail silently; cameras go blurry or lose sync; zero accountability until disaster strikes.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-950/80 border border-emerald-500/30">
+              <div class="p-2 rounded-lg bg-emerald-500/10 text-emerald-400 text-lg">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-emerald-400">The Digitech HMS Advantage</h4>
+                <p class="text-xs text-slate-300 mt-1">
+                  Proactive heartbeat polling every 60 seconds. Instant SMS/Email/Dashboard alert if a camera drops, HDD approaches 95% threshold, or video tampering occurs. An engineer is already dispatched before you even notice.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <button onclick="openModal('Request Digitech HMS Pilot')" class="px-6 py-3.5 rounded-lg bg-brand-red hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-brand-red/30 transition-all">
+              Request 14-Day HMS Pilot
+            </button>
+            <a href="tel:09999760222" class="px-6 py-3.5 rounded-lg bg-slate-900 border border-slate-700 text-slate-200 hover:text-white font-semibold text-xs transition-all">
+              Speak to HMS Architect
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right: Interactive Feature Matrix -->
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl bg-slate-950 border border-slate-800 p-6 sm:p-8 shadow-2xl space-y-6">
+            
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-sliders text-brand-red"></i>
+              Digitech HMS Telemetry Features
+            </h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              
+              <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-emerald-400 text-xl mb-2"><i class="fa-solid fa-hard-drive"></i></div>
+                <h4 class="text-sm font-bold text-white">Smart HDD Diagnostics</h4>
+                <p class="text-xs text-slate-400 mt-1">SMART health telemetry, bad block detection, temperature warnings, and remaining write lifespan.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-blue-400 text-xl mb-2"><i class="fa-solid fa-eye-slash"></i></div>
+                <h4 class="text-sm font-bold text-white">Anti-Tamper & Blind Alert</h4>
+                <p class="text-xs text-slate-400 mt-1">Instant detection if spray paint, cloth covering, defocusing, or camera repositioning occurs.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-amber-400 text-xl mb-2"><i class="fa-solid fa-network-wired"></i></div>
+                <h4 class="text-sm font-bold text-white">Bandwidth & PoE Check</h4>
+                <p class="text-xs text-slate-400 mt-1">Monitors switch packet loss, voltage fluctuations, PoE budget overloads, and offline drops.</p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-purple-400 text-xl mb-2"><i class="fa-solid fa-chart-line"></i></div>
+                <h4 class="text-sm font-bold text-white">Compliance Audit Reports</h4>
+                <p class="text-xs text-slate-400 mt-1">Monthly automated uptime certificates and security compliance reports for insurance and auditors.</p>
+              </div>
+
+            </div>
+
+            <!-- Quote Banner -->
+            <div class="p-4 rounded-xl bg-brand-red/10 border border-brand-red/30 flex items-center justify-between">
+              <div class="text-xs text-slate-300">
+                <strong class="text-white block">Compatible with your existing CCTV!</strong>
+                No need to rip and replace — HMS works with Hikvision, Dahua, CP Plus, and Uniview.
+              </div>
+              <button onclick="openModal('HMS Compatibility Check')" class="ml-4 px-3 py-2 rounded bg-brand-red hover:bg-red-700 text-white font-bold text-[11px] whitespace-nowrap">
+                Check Setup
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive System & Cost Estimator Tool -->
+  <section id="calculator" class="py-24 bg-gray-950 relative">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-brand-lightred uppercase tracking-wider">
+          <i class="fa-solid fa-calculator"></i> Quick Solution Configurator
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          Configure Your Custom Security Setup
+        </h2>
+        <p class="text-sm text-slate-400">
+          Select your facility parameters below to view recommended architecture, key components, and request an itemized engineer proposal.
+        </p>
+      </div>
+
+      <div class="glass-card rounded-2xl p-6 sm:p-10 border border-slate-800 shadow-2xl">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Configuration Selectors -->
+          <div class="space-y-6">
+            
+            <!-- Facility Type -->
+            <div>
+              <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">1. Facility Category</label>
+              <select id="calcFacility" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-brand-red">
+                <option value="factory">Industrial Plant / Manufacturing Facility</option>
+                <option value="corporate">Corporate Office / IT Park</option>
+                <option value="residential">Residential Township / Gated Society</option>
+                <option value="warehouse">Logistics Warehouse / Distribution Hub</option>
+                <option value="hospital">Healthcare / Hospital Campus</option>
+                <option value="retail">Commercial Mall / Retail Chain</option>
+              </select>
+            </div>
+
+            <!-- Camera Scale -->
+            <div>
+              <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">2. Camera & Coverage Scale</label>
+              <select id="calcScale" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-sm text-white focus:outline-none focus:border-brand-red">
+                <option value="small">Small Setup (1 - 16 IP Cameras)</option>
+                <option value="medium" selected>Medium Facility (17 - 48 IP Cameras)</option>
+                <option value="large">Large Facility (49 - 128 IP Cameras)</option>
+                <option value="enterprise">Enterprise Campus (128+ Multi-site Cameras)</option>
+              </select>
+            </div>
+
+            <!-- Integrated Systems -->
+            <div>
+              <label class="block text-xs font-mono font-bold text-slate-300 uppercase mb-2">3. Required Additional Integrations</label>
+              <div class="space-y-2.5">
+                <label class="flex items-center gap-3 p-3 rounded-lg bg-slate-900/60 border border-slate-800 cursor-pointer hover:border-slate-700">
+                  <input type="checkbox" id="checkHMS" checked class="accent-brand-red w-4 h-4 rounded">
+                  <span class="text-xs font-medium text-slate-200">Digitech HMS 24/7 Health Monitoring (Recommended)</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg bg-slate-900/60 border border-slate-800 cursor-pointer hover:border-slate-700">
+                  <input type="checkbox" id="checkFire" checked class="accent-brand-red w-4 h-4 rounded">
+                  <span class="text-xs font-medium text-slate-200">Addressable Fire Alarm & Smoke Detection Loop</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg bg-slate-900/60 border border-slate-800 cursor-pointer hover:border-slate-700">
+                  <input type="checkbox" id="checkAccess" checked class="accent-brand-red w-4 h-4 rounded">
+                  <span class="text-xs font-medium text-slate-200">Biometric Facial Access Control & Boom Barriers</span>
+                </label>
+                <label class="flex items-center gap-3 p-3 rounded-lg bg-slate-900/60 border border-slate-800 cursor-pointer hover:border-slate-700">
+                  <input type="checkbox" id="checkPA" class="accent-brand-red w-4 h-4 rounded">
+                  <span class="text-xs font-medium text-slate-200">Multi-Zone Public Announcement (PA) Paging System</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Live Output Recommendations Box -->
+          <div class="bg-slate-950 rounded-xl p-6 border border-slate-800 flex flex-col justify-between space-y-6">
+            
+            <div class="space-y-4">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <span class="text-xs font-mono font-bold text-brand-lightred uppercase">Recommended Architecture</span>
+                <span id="calcBadge" class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 font-mono text-[10px] font-bold">OPTIMIZED READY</span>
+              </div>
+
+              <div id="calcSummary">
+                <h4 id="calcTitle" class="text-base font-bold text-white">Turnkey Industrial Surveillance & HMS Core</h4>
+                <p id="calcDesc" class="text-xs text-slate-400 mt-1 leading-relaxed">
+                  Tailored for heavy industrial plants requiring high-resolution optical surveillance, AI boundary protection, and automated HMS health auditing.
+                </p>
+
+                <div class="mt-4 space-y-2 text-xs">
+                  <div class="flex justify-between py-1 border-b border-slate-800/60 text-slate-300">
+                    <span>NVR Architecture:</span>
+                    <strong id="calcNVR" class="text-white font-mono">32-Ch 4K NVR with RAID-5</strong>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-800/60 text-slate-300">
+                    <span>Recommended Storage:</span>
+                    <strong id="calcStorage" class="text-white font-mono">30-Day WD Purple Pro 16TB</strong>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-800/60 text-slate-300">
+                    <span>HMS Health Auditing:</span>
+                    <strong id="calcHMSStatus" class="text-emerald-400 font-mono">Continuous 24/7 Heartbeat</strong>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-slate-800/60 text-slate-300">
+                    <span>Deployment Window:</span>
+                    <strong id="calcTimeline" class="text-white font-mono">3 - 5 Business Days</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 space-y-3">
+              <div class="text-[11px] text-slate-400">
+                Want a free site inspection by our senior project engineer in Delhi NCR, UP, MP, or Maharashtra?
+              </div>
+              <button onclick="requestEstimatedQuote()" class="w-full py-3.5 rounded-lg bg-gradient-to-r from-brand-red to-brand-darkred hover:from-red-600 hover:to-red-800 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-brand-red/25 transition-all">
+                Request Itemized Official Quote
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Industry Verticals / Sectors We Protect -->
+  <section id="sectors" class="py-20 bg-slate-900/40 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-brand-red uppercase tracking-wider">
+          <i class="fa-solid fa-city"></i> Specialized Domain Expertise
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Tailored for Demanding Environments
+        </h2>
+        <p class="text-base text-slate-400">
+          Every facility has unique vulnerabilities. Digitech creates specialized architectures tailored to regulatory, environmental, and operational requirements.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Sector 1: Industrial & Manufacturing -->
+        <div class="p-6 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-red/50 transition-all group">
+          <div class="w-12 h-12 rounded-lg bg-brand-red/10 text-brand-red flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Industrial & Factories</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Explosion-proof cameras, thermal furnace inspection, conveyor bottleneck detection, perimeter intrusion beams, and automated chemical smoke alarms.
+          </p>
+          <span class="inline-block mt-4 text-[11px] font-mono text-brand-lightred font-bold">Harsh Environment Proof</span>
+        </div>
+
+        <!-- Sector 2: Commercial & IT Parks -->
+        <div class="p-6 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-red/50 transition-all group">
+          <div class="w-12 h-12 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Corporate & IT Parks</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            High-speed facial recognition turnstiles, visitor management kiosks, server room dual-auth access, and silent fire alarm relay with BMS.
+          </p>
+          <span class="inline-block mt-4 text-[11px] font-mono text-blue-400 font-bold">Zero Congestion Access</span>
+        </div>
+
+        <!-- Sector 3: Residential Townships -->
+        <div class="p-6 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-red/50 transition-all group">
+          <div class="w-12 h-12 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-house-chimney-window"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Gated Societies & High-Rises</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Fast automatic number plate recognition (ANPR) boom barriers, perimeter fence sensors, basement blind-spot CCTV, and clubhouse biometric access.
+          </p>
+          <span class="inline-block mt-4 text-[11px] font-mono text-emerald-400 font-bold">Family Peace of Mind</span>
+        </div>
+
+        <!-- Sector 4: Warehousing & Logistics -->
+        <div class="p-6 rounded-xl bg-slate-950 border border-slate-800 hover:border-brand-red/50 transition-all group">
+          <div class="w-12 h-12 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-warehouse"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Logistics & Warehousing</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Loading dock high-resolution surveillance, pilferage prevention AI, forklift motion heatmaps, and long-range wireless PTZ tracking.
+          </p>
+          <span class="inline-block mt-4 text-[11px] font-mono text-purple-400 font-bold">Supply Chain Protection</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Client Proof & Official Certifications -->
+  <section id="clients-cert" class="py-24 bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Clients Section -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-brand-red uppercase tracking-wider">
+          <i class="fa-solid fa-handshake"></i> Trusted by Industry Leaders
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Over 50,000 Facilities Secured Nationwide
+        </h2>
+        <p class="text-sm text-slate-400">
+          From renowned conglomerates to premium commercial real estate, Digitech delivers mission-critical uptime.
+        </p>
+      </div>
+
+      <!-- Real Client Logos Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 items-center">
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center h-24">
+          <img src="assets/images/clients/ag-industries.jpg" alt="AG Industries" class="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center h-24">
+          <img src="assets/images/clients/emaar.jpg" alt="Emaar" class="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center h-24">
+          <img src="assets/images/clients/amethyst.jpg" alt="Amethyst" class="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center h-24">
+          <img src="assets/images/clients/anand.jpg" alt="Anand" class="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center h-24">
+          <img src="assets/images/clients/avi-realtech.jpg" alt="Avi Realtech" class="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center h-24">
+          <img src="assets/images/clients/bap.jpg" alt="BAP" class="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all flex items-center justify-center h-24">
+          <img src="assets/images/clients/body-canvas.jpg" alt="Body Canvas" class="max-h-12 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all">
+        </div>
+      </div>
+
+      <!-- Certifications Showcase -->
+      <div class="mt-20 pt-16 border-t border-slate-800">
+        <div class="text-center max-w-2xl mx-auto mb-10 space-y-2">
+          <h3 class="text-2xl font-bold text-white">ISO 9001:2015 & Government Compliance</h3>
+          <p class="text-xs text-slate-400">
+            Digitech operates strictly under verified quality assurance standards, licensed integrations, and audited engineering guidelines.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-red/40 transition-all flex flex-col items-center text-center">
+            <div class="w-full h-48 rounded-lg overflow-hidden bg-slate-950 mb-3 border border-slate-800">
+              <img src="assets/images/certificate/certificate-of-registration.jpg" alt="Certificate of Registration" class="w-full h-full object-contain p-2 hover:scale-105 transition-transform cursor-pointer" onclick="viewImage('assets/images/certificate/certificate-of-registration.jpg')">
+            </div>
+            <div class="text-xs font-bold text-white">ISO 9001:2015 Registration</div>
+            <div class="text-[11px] text-slate-400 mt-1">Quality Management System Certified</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-red/40 transition-all flex flex-col items-center text-center">
+            <div class="w-full h-48 rounded-lg overflow-hidden bg-slate-950 mb-3 border border-slate-800">
+              <img src="assets/images/certificate/certificate-of-complains.jpg" alt="Certificate of Compliance" class="w-full h-full object-contain p-2 hover:scale-105 transition-transform cursor-pointer" onclick="viewImage('assets/images/certificate/certificate-of-complains.jpg')">
+            </div>
+            <div class="text-xs font-bold text-white">Certificate of Compliance</div>
+            <div class="text-[11px] text-slate-400 mt-1">Industrial Safety Standard Compliant</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-red/40 transition-all flex flex-col items-center text-center">
+            <div class="w-full h-48 rounded-lg overflow-hidden bg-slate-950 mb-3 border border-slate-800">
+              <img src="assets/images/certificate/certificate-of-complains-2.jpg" alt="Compliance Certification" class="w-full h-full object-contain p-2 hover:scale-105 transition-transform cursor-pointer" onclick="viewImage('assets/images/certificate/certificate-of-complains-2.jpg')">
+            </div>
+            <div class="text-xs font-bold text-white">Quality Assurance Audit</div>
+            <div class="text-[11px] text-slate-400 mt-1">Verified Hardware & Systems Safety</div>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-brand-red/40 transition-all flex flex-col items-center text-center">
+            <div class="w-full h-48 rounded-lg overflow-hidden bg-slate-950 mb-3 border border-slate-800">
+              <img src="assets/images/certificate/membership.jpg" alt="Professional Membership" class="w-full h-full object-contain p-2 hover:scale-105 transition-transform cursor-pointer" onclick="viewImage('assets/images/certificate/membership.jpg')">
+            </div>
+            <div class="text-xs font-bold text-white">Security Association Member</div>
+            <div class="text-[11px] text-slate-400 mt-1">Recognized Electronic Security Body</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Nationwide Branch Network Section -->
+  <section id="branches" class="py-20 bg-slate-900/40 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-brand-red uppercase tracking-wider">
+          <i class="fa-solid fa-map-location-dot"></i> Regional Service Hubs
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Pan-India Presence with Rapid On-Ground Support
+        </h2>
+        <p class="text-sm text-slate-400">
+          Our regional technical offices maintain certified field engineers, standby emergency spares, and fast dispatch teams across key economic centers.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Delhi HQ -->
+        <div class="p-6 rounded-xl bg-slate-950 border border-brand-red/50 shadow-xl relative overflow-hidden group">
+          <div class="absolute top-0 right-0 bg-brand-red text-white text-[10px] font-mono font-bold px-3 py-1 rounded-bl-lg uppercase">
+            Corporate HQ
+          </div>
+          <div class="w-10 h-10 rounded-lg bg-brand-red/10 text-brand-red flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-building-flag"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Delhi NCR (Head Office)</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi, India
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs">
+            <div class="text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-phone text-brand-red"></i> (+91) 9999-760-222
+            </div>
+            <div class="text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-brand-red"></i> info@digitechservices.net
+            </div>
+          </div>
+          <button onclick="openModal('Inquire Delhi Branch')" class="mt-4 w-full py-2 rounded bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700">
+            Contact Delhi HQ
+          </button>
+        </div>
+
+        <!-- UP Branch -->
+        <div class="p-6 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-blue-500/10 text-blue-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Uttar Pradesh (Noida)</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            Office No-04, 2nd Floor, Ramkesh Tower, Sector-27, Noida, UP 201301
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs">
+            <div class="text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-phone text-blue-400"></i> (+91) 9999-760-222
+            </div>
+            <div class="text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-clock text-blue-400"></i> Mon - Sat: 9:00 - 19:00
+            </div>
+          </div>
+          <button onclick="openModal('Inquire Noida Branch')" class="mt-4 w-full py-2 rounded bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700">
+            Contact Noida Team
+          </button>
+        </div>
+
+        <!-- MP Branch -->
+        <div class="p-6 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Madhya Pradesh (Bhopal)</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            B-46, Jai Bhawani Colony, Phase II, Bawadiya Kalan, Bhopal, MP 462039
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs">
+            <div class="text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-phone text-emerald-400"></i> (+91) 9999-760-222
+            </div>
+            <div class="text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-clock text-emerald-400"></i> Mon - Sat: 9:00 - 19:00
+            </div>
+          </div>
+          <button onclick="openModal('Inquire Bhopal Branch')" class="mt-4 w-full py-2 rounded bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700">
+            Contact Bhopal Team
+          </button>
+        </div>
+
+        <!-- Maharashtra Branch -->
+        <div class="p-6 rounded-xl bg-slate-950 border border-slate-800 hover:border-slate-700 transition-all">
+          <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-lg mb-4">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <h3 class="text-base font-bold text-white">Maharashtra (Nagpur)</h3>
+          <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+            16, Malabar Colony, Seminary Hills, Nagpur, Maharashtra 440006
+          </p>
+          <div class="mt-4 pt-4 border-t border-slate-800/80 space-y-1.5 text-xs">
+            <div class="text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-phone text-purple-400"></i> (+91) 9999-760-222
+            </div>
+            <div class="text-slate-400 flex items-center gap-2">
+              <i class="fa-solid fa-clock text-purple-400"></i> Mon - Sat: 9:00 - 19:00
+            </div>
+          </div>
+          <button onclick="openModal('Inquire Nagpur Branch')" class="mt-4 w-full py-2 rounded bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs font-semibold border border-slate-700">
+            Contact Nagpur Team
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Frequently Asked Questions (FAQ) -->
+  <section id="faq" class="py-24 bg-gray-950">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-slate-800 text-xs font-semibold text-brand-red uppercase tracking-wider">
+          <i class="fa-solid fa-circle-question"></i> Client Inquiries
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-sm text-slate-400">
+          Clear answers about installations, AMC policies, warranties, and Digitech HMS integration.
+        </p>
+      </div>
+
+      <div class="space-y-4" id="faqAccordion">
+        
+        <!-- Q1 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-800 cursor-pointer" onclick="toggleFaq(1)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm sm:text-base font-bold text-white">What exactly is Digitech HMS and how does it prevent security failures?</h4>
+            <i class="fa-solid fa-chevron-down text-brand-red transition-transform duration-300" id="faqIcon-1"></i>
+          </div>
+          <div class="hidden pt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3" id="faqAnswer-1">
+            Digitech HMS (Hardware Health Monitoring System) is our automated telemetry platform that continuously polls your cameras, NVRs, and storage drives 24/7. It instantly detects video signal loss, camera angle tampering, failing hard drive sectors, and recording dropouts. Instead of discovering an issue after an incident has occurred, HMS notifies our engineers immediately so repairs can be executed proactively.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-800 cursor-pointer" onclick="toggleFaq(2)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm sm:text-base font-bold text-white">Can Digitech take over and service our existing CCTV / Fire Alarm setup under AMC?</h4>
+            <i class="fa-solid fa-chevron-down text-brand-red transition-transform duration-300" id="faqIcon-2"></i>
+          </div>
+          <div class="hidden pt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3" id="faqAnswer-2">
+            Yes, absolutely. We offer both Non-Comprehensive and Comprehensive AMCs for legacy and third-party systems. Our senior engineer performs a thorough health audit of your cabling, power supplies, camera alignment, and NVR settings before onboarding you to our guaranteed 4-hour SLA support network.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-800 cursor-pointer" onclick="toggleFaq(3)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm sm:text-base font-bold text-white">How fast is the turnaround time for on-site breakdown support?</h4>
+            <i class="fa-solid fa-chevron-down text-brand-red transition-transform duration-300" id="faqIcon-3"></i>
+          </div>
+          <div class="hidden pt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3" id="faqAnswer-3">
+            For priority clients and AMC contracts in Delhi NCR, Noida, Bhopal, and Nagpur, our average on-site technician response is within 2 to 4 hours. We carry backup standby cameras, power adapters, and loaner NVRs to ensure your property is never left unrecorded during repairs.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-800 cursor-pointer" onclick="toggleFaq(4)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm sm:text-base font-bold text-white">Are your fire alarm and surveillance installations compliant with legal safety norms?</h4>
+            <i class="fa-solid fa-chevron-down text-brand-red transition-transform duration-300" id="faqIcon-4"></i>
+          </div>
+          <div class="hidden pt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3" id="faqAnswer-4">
+            Yes. Digitech is an ISO 9001:2015 certified company. All our fire alarm designs strictly comply with National Building Code (NBC) guidelines, relevant IS standards, and local fire department audit requirements. We provide complete testing, commissioning, and handover documentation.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="glass-card rounded-xl p-5 border border-slate-800 cursor-pointer" onclick="toggleFaq(5)">
+          <div class="flex items-center justify-between">
+            <h4 class="text-sm sm:text-base font-bold text-white">How do we get started with a free site survey?</h4>
+            <i class="fa-solid fa-chevron-down text-brand-red transition-transform duration-300" id="faqIcon-5"></i>
+          </div>
+          <div class="hidden pt-3 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/80 mt-3" id="faqAnswer-5">
+            Simply call our engineering desk at <strong>(+91) 9999-760-222</strong> or click "Request Free Site Survey". A certified field engineer will visit your premises, analyze optical blind spots, verify cable pathways, evaluate power and bandwidth needs, and present a transparent, itemized solution.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Direct Consultation Callout Section -->
+  <section class="py-16 bg-gradient-to-r from-red-950 via-slate-950 to-red-950 border-t border-brand-red/30 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
+        <div class="space-y-2">
+          <span class="text-xs font-mono font-bold text-brand-lightred uppercase tracking-wider">Fast-Track Engineering Desk</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Need an urgent security audit or immediate installation?</h2>
+          <p class="text-xs sm:text-sm text-slate-300">Speak directly with a senior surveillance consultant right now.</p>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="tel:09999760222" class="px-8 py-4 rounded-xl text-sm font-bold bg-white text-slate-950 hover:bg-slate-100 shadow-xl transition-all flex items-center gap-2">
+            <i class="fa-solid fa-phone text-brand-red"></i>
+            <span>(+91) 9999-760-222</span>
+          </a>
+          <button onclick="openModal('Instant Call Back')" class="px-8 py-4 rounded-xl text-sm font-bold bg-brand-red hover:bg-red-700 text-white shadow-xl shadow-brand-red/40 transition-all">
+            Request Callback in 15 Mins
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-900 pt-16 pb-12 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-900">
+        
+        <!-- Company Info -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#hero" class="flex items-center gap-3">
+            <img src="assets/images/logo.png" alt="Digitech Services Logo" class="h-10 w-auto">
+            <div>
+              <span class="block text-sm font-bold text-white">DIGITECH SERVICES</span>
+              <span class="block text-[10px] text-brand-red font-mono">ESTABLISHED 2004</span>
+            </div>
+          </a>
+          <p class="text-slate-400 leading-relaxed max-w-sm">
+            Digitech Services is an ISO 9001:2015 certified electronic surveillance and security infrastructure provider. Delivering enterprise CCTV, proactive HMS monitoring, fire alarms, and biometric access control nationwide.
+          </p>
+          <div class="pt-2 text-slate-400 space-y-1">
+            <div><i class="fa-solid fa-location-dot text-brand-red mr-2"></i> A-88, 4th Floor, Masoodpur Market, Vasant Kunj, New Delhi</div>
+            <div><i class="fa-solid fa-phone text-brand-red mr-2"></i> <a href="tel:09999760222" class="hover:text-white">(+91) 9999-760-222</a></div>
+            <div><i class="fa-solid fa-envelope text-brand-red mr-2"></i> <a href="mailto:info@digitechservices.net" class="hover:text-white">info@digitechservices.net</a></div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider font-mono">Our Solutions</h4>
+          <ul class="space-y-2">
+            <li><a href="#services" class="hover:text-brand-lightred transition-colors">CCTV Surveillance Systems</a></li>
+            <li><a href="#hms-highlight" class="hover:text-brand-lightred transition-colors">Digitech HMS Monitoring</a></li>
+            <li><a href="#services" class="hover:text-brand-lightred transition-colors">Fire Alarm & Life Safety</a></li>
+            <li><a href="#services" class="hover:text-brand-lightred transition-colors">Access Control & Biometrics</a></li>
+            <li><a href="#services" class="hover:text-brand-lightred transition-colors">PA Announcement Systems</a></li>
+            <li><a href="#services" class="hover:text-brand-lightred transition-colors">Annual Maintenance (AMC)</a></li>
+          </ul>
+        </div>
+
+        <!-- Industry Sectors -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider font-mono">Industry Sectors</h4>
+          <ul class="space-y-2">
+            <li><a href="#sectors" class="hover:text-white transition-colors">Industrial Manufacturing</a></li>
+            <li><a href="#sectors" class="hover:text-white transition-colors">Corporate Offices & IT Hubs</a></li>
+            <li><a href="#sectors" class="hover:text-white transition-colors">Residential Gated Societies</a></li>
+            <li><a href="#sectors" class="hover:text-white transition-colors">Logistics Warehouses</a></li>
+            <li><a href="#sectors" class="hover:text-white transition-colors">Hospitals & Clinics</a></li>
+            <li><a href="#sectors" class="hover:text-white transition-colors">Retail Malls & Outlets</a></li>
+          </ul>
+        </div>
+
+        <!-- Regional Branches -->
+        <div class="space-y-3">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider font-mono">Regional Branches</h4>
+          <ul class="space-y-2 text-[11px]">
+            <li><strong class="text-white">Delhi NCR (HQ):</strong> Vasant Kunj</li>
+            <li><strong class="text-white">Noida (UP):</strong> Sector-27</li>
+            <li><strong class="text-white">Bhopal (MP):</strong> Bawadiya Kalan</li>
+            <li><strong class="text-white">Nagpur (MH):</strong> Seminary Hills</li>
+          </ul>
+          <div class="pt-2">
+            <span class="inline-block px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-[10px] text-emerald-400 font-mono">
+              ● All Offices Operational
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-400 text-xs">
+        <div>
+          © 2004 - 2026 Digitech Services. All Rights Reserved. ISO 9001:2015 Certified.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#hero" class="hover:text-white transition-colors">Back to Top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Sticky Action Buttons -->
+  <div class="fixed bottom-6 right-6 z-40 flex flex-col gap-3">
+    
+    <!-- WhatsApp Direct -->
+    <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener noreferrer" class="w-13 h-13 p-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl hover:scale-110 transition-all flex items-center justify-center text-xl" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Direct Call -->
+    <a href="tel:09999760222" class="w-13 h-13 p-3.5 rounded-full bg-brand-red hover:bg-red-700 text-white shadow-xl hover:scale-110 transition-all flex items-center justify-center text-xl animate-bounce" title="Call Sales Desk">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- Interactive Modal for Quote / Consultation Request -->
+  <div id="quoteModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-lg rounded-2xl bg-slate-900 border border-slate-800 p-6 sm:p-8 shadow-2xl space-y-5 animate-in fade-in duration-200">
+      
+      <!-- Close Button -->
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+
+      <!-- Modal Header -->
+      <div>
+        <span class="text-xs font-mono font-bold text-brand-lightred uppercase tracking-wider" id="modalServiceTag">Free Engineering Consultation</span>
+        <h3 class="text-xl font-bold text-white mt-1" id="modalTitle">Request Site Survey & Demo</h3>
+        <p class="text-xs text-slate-400 mt-1">Our technical director will contact you within 2 hours with an assessment.</p>
+      </div>
+
+      <!-- Form -->
+      <form id="quoteForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+        
+        <div>
+          <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Your Full Name *</label>
+          <input type="text" id="formName" required placeholder="e.g. Rajesh Sharma" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-red">
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Phone Number *</label>
+            <input type="tel" id="formPhone" required placeholder="e.g. 9876543210" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-red">
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Email Address *</label>
+            <input type="email" id="formEmail" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-red">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Facility City / Location *</label>
+            <select id="formCity" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-red">
+              <option value="Delhi NCR">Delhi NCR</option>
+              <option value="Noida / Greater Noida">Noida / UP</option>
+              <option value="Bhopal / Indore">Bhopal / MP</option>
+              <option value="Nagpur / Pune / Mumbai">Nagpur / Maharashtra</option>
+              <option value="Other India Location">Other City in India</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Service Required *</label>
+            <select id="formService" class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-red">
+              <option value="Digitech HMS Health Monitoring">Digitech HMS 24/7 Monitoring</option>
+              <option value="CCTV Surveillance Setup">CCTV Surveillance Setup</option>
+              <option value="Fire Alarm System">Fire Alarm System</option>
+              <option value="Access Control & Biometrics">Access Control & Biometrics</option>
+              <option value="PA System">Public Announcement (PA)</option>
+              <option value="Comprehensive AMC">Comprehensive AMC Contract</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-mono text-slate-300 uppercase mb-1">Project Details or Requirements</label>
+          <textarea id="formMessage" rows="3" placeholder="Approximate number of cameras, premises square footage, or specific issues with existing setup..." class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2.5 text-xs text-white focus:outline-none focus:border-brand-red"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-lg bg-gradient-to-r from-brand-red to-brand-darkred hover:from-red-600 hover:to-red-800 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-brand-red/30 transition-all">
+          Submit & Speak with Engineer
+        </button>
+
+        <p class="text-[11px] text-center text-slate-400">
+          🔒 Your details are 100% confidential. No spam guaranteed.
+        </p>
+
+      </form>
+
+      <!-- Success Message Container -->
+      <div id="formSuccess" class="hidden p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-center space-y-2">
+        <i class="fa-solid fa-circle-check text-2xl text-emerald-400"></i>
+        <h4 class="text-sm font-bold text-white">Inquiry Received Successfully!</h4>
+        <p class="text-xs text-slate-300">
+          Thank you! Our technical specialist will contact you shortly on the provided phone number. You can also call us directly at <strong>(+91) 9999-760-222</strong>.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Image Viewer Modal (for Certificates & Blueprints) -->
+  <div id="imageModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md" onclick="closeImageViewer()">
+    <div class="relative max-w-4xl max-h-[90vh] p-2">
+      <button onclick="closeImageViewer()" class="absolute -top-10 right-0 text-white text-xl p-2">
+        <i class="fa-solid fa-xmark"></i> Close
+      </button>
+      <img id="modalImg" src="" alt="Enlarged Certificate" class="max-w-full max-h-[85vh] object-contain rounded-xl border border-slate-700 shadow-2xl">
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      } else {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+      }
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+      });
+    });
+
+    // FAQ Accordion
+    function toggleFaq(id) {
+      const answer = document.getElementById(`faqAnswer-${id}`);
+      const icon = document.getElementById(`faqIcon-${id}`);
+      const isHidden = answer.classList.contains('hidden');
+
+      // Close all other FAQs
+      for (let i = 1; i <= 5; i++) {
+        const otherAnswer = document.getElementById(`faqAnswer-${i}`);
+        const otherIcon = document.getElementById(`faqIcon-${i}`);
+        if (otherAnswer) otherAnswer.classList.add('hidden');
+        if (otherIcon) {
+          otherIcon.classList.remove('rotate-180');
+        }
+      }
+
+      if (isHidden) {
+        answer.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    // Modal Handling
+    const quoteModal = document.getElementById('quoteModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalServiceTag = document.getElementById('modalServiceTag');
+    const formService = document.getElementById('formService');
+
+    function openModal(serviceName = 'General Inquiry') {
+      modalTitle.innerText = serviceName;
+      modalServiceTag.innerText = serviceName.toUpperCase();
+      
+      // Auto-select corresponding service dropdown option if match found
+      if (serviceName.includes('CCTV')) formService.value = 'CCTV Surveillance Setup';
+      else if (serviceName.includes('HMS')) formService.value = 'Digitech HMS Health Monitoring';
+      else if (serviceName.includes('Fire')) formService.value = 'Fire Alarm System';
+      else if (serviceName.includes('Access')) formService.value = 'Access Control & Biometrics';
+      else if (serviceName.includes('PA')) formService.value = 'PA System';
+      else if (serviceName.includes('AMC')) formService.value = 'Comprehensive AMC';
+
+      quoteModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      quoteModal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+      document.getElementById('quoteForm').classList.remove('hidden');
+      document.getElementById('formSuccess').classList.add('hidden');
+    }
+
+    quoteModal.addEventListener('click', (e) => {
+      if (e.target === quoteModal) closeModal();
+    });
+
+    // Handle Form Submit
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('formName').value;
+      const phone = document.getElementById('formPhone').value;
+      const email = document.getElementById('formEmail').value;
+      const city = document.getElementById('formCity').value;
+      const service = document.getElementById('formService').value;
+      const message = document.getElementById('formMessage').value;
+
+      document.getElementById('quoteForm').classList.add('hidden');
+      document.getElementById('formSuccess').classList.remove('hidden');
+
+      // Also trigger WhatsApp link optionally for instantaneous customer convenience
+      const waMsg = `Hi Digitech Services, My name is ${encodeURIComponent(name)} from ${encodeURIComponent(city)}. I would like to inquire about ${encodeURIComponent(service)}. Phone: ${encodeURIComponent(phone)}, Email: ${encodeURIComponent(email)}. Note: ${encodeURIComponent(message)}`;
+      console.log('Inquiry submitted:', { name, phone, email, city, service, message });
+    }
+
+    // Interactive System Estimator Calculator Logic
+    const calcFacility = document.getElementById('calcFacility');
+    const calcScale = document.getElementById('calcScale');
+    const checkHMS = document.getElementById('checkHMS');
+    const checkFire = document.getElementById('checkFire');
+    const checkAccess = document.getElementById('checkAccess');
+    const checkPA = document.getElementById('checkPA');
+
+    const calcTitle = document.getElementById('calcTitle');
+    const calcDesc = document.getElementById('calcDesc');
+    const calcNVR = document.getElementById('calcNVR');
+    const calcStorage = document.getElementById('calcStorage');
+    const calcHMSStatus = document.getElementById('calcHMSStatus');
+    const calcTimeline = document.getElementById('calcTimeline');
+
+    function updateEstimator() {
+      const facility = calcFacility.value;
+      const scale = calcScale.value;
+      const hasHMS = checkHMS.checked;
+
+      let title = "Turnkey Surveillance & Security Suite";
+      let desc = "Enterprise-grade design with high reliability.";
+      let nvr = "16-Ch 4K NVR";
+      let storage = "30-Day 8TB WD Purple";
+      let timeline = "2 - 4 Business Days";
+
+      if (scale === 'small') {
+        nvr = "16-Ch 4K AI NVR (ePoE)";
+        storage = "30-Day 8TB Surveillance HDD";
+        timeline = "2 - 3 Business Days";
+      } else if (scale === 'medium') {
+        nvr = "32-Ch 4K Ultra-HD NVR RAID";
+        storage = "30-Day 16TB WD Purple Pro";
+        timeline = "3 - 5 Business Days";
+      } else if (scale === 'large') {
+        nvr = "64-Ch Enterprise Server NVR";
+        storage = "45-Day 32TB RAID-5 Storage";
+        timeline = "5 - 8 Business Days";
+      } else if (scale === 'enterprise') {
+        nvr = "Multi-site Distributed Central VMS";
+        storage = "60-Day SAN/NAS Hybrid Redundant";
+        timeline = "10 - 15 Business Days";
+      }
+
+      if (facility === 'factory') {
+        title = "Industrial Heavy-Duty Surveillance & Safety Core";
+        desc = "Tailored for plants with explosive dust/heat resistance, thermal scanning, and automated fire loop.";
+      } else if (facility === 'corporate') {
+        title = "Corporate Smart Facility & Access Security";
+        desc = "Optimized for high-throughput lobby turnstiles, visitor management, and server room access.";
+      } else if (facility === 'residential') {
+        title = "Gated Community & Township Perimeter Shield";
+        desc = "Featuring fast ANPR vehicle barriers, perimeter tripwires, and clubhouse surveillance.";
+      } else if (facility === 'warehouse') {
+        title = "Logistics Hub & High-Bay Warehouse Infrastructure";
+        desc = "Equipped with dock bay surveillance, forklift analytics, and long-range perimeter coverage.";
+      }
+
+      calcTitle.innerText = title;
+      calcDesc.innerText = desc;
+      calcNVR.innerText = nvr;
+      calcStorage.innerText = storage;
+      calcHMSStatus.innerText = hasHMS ? "Continuous 24/7 Heartbeat (Active)" : "Standard Self-Monitored";
+      calcHMSStatus.className = hasHMS ? "text-emerald-400 font-mono" : "text-slate-400 font-mono";
+      calcTimeline.innerText = timeline;
+    }
+
+    [calcFacility, calcScale, checkHMS, checkFire, checkAccess, checkPA].forEach(el => {
+      el.addEventListener('change', updateEstimator);
+    });
+
+    function requestEstimatedQuote() {
+      openModal(`Custom Estimate: ${calcTitle.innerText}`);
+    }
+
+    // Image Viewer Modal
+    function viewImage(src) {
+      document.getElementById('modalImg').src = src;
+      document.getElementById('imageModal').classList.remove('hidden');
+    }
+    function closeImageViewer() {
+      document.getElementById('imageModal').classList.add('hidden');
+    }
+  </script>
+
+</body>
+</html>
