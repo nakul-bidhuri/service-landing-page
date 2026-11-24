@@ -147,8 +147,8 @@
             flex-shrink: 0;
         }
         .brand-logo-img {
-            height: 44px;
-            width: 44px;
+            height: 50px;
+            width: 50px;
             object-fit: contain;
             display: block;
         }
@@ -158,7 +158,7 @@
             justify-content: center;
         }
         .brand-meta .company-name {
-            font-size: 19px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--brand-navy-deep);
             line-height: 1.15;
@@ -176,7 +176,7 @@
         }
         .nav-vertical-divider {
             width: 1px;
-            height: 34px;
+            height: 36px;
             background-color: var(--brand-slate-border);
             margin: 0 22px;
             flex-shrink: 0;
@@ -551,48 +551,73 @@
         }
 
         /* ==========================================================
-           CLIENT TRUST BAR: Enterprise Monochrome-to-Color Grid
+           CLIENT TRUST SECTION (Zoomed, Bold & Identifiable)
            ========================================================== */
         .client-trust-section {
             background: #ffffff;
             border-bottom: 1px solid var(--brand-slate-border);
-            padding: 38px 0;
+            padding: 55px 0 65px 0;
         }
         .client-trust-label {
             text-align: center;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--brand-text-muted);
-            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--brand-navy-deep);
+            letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
         }
         .client-logo-grid {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
-            gap: 32px 42px;
+            gap: 20px;
         }
-        .client-logo-item {
+        .client-logo-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px 20px;
+            width: 200px;
+            min-height: 112px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 48px;
-            filter: grayscale(100%);
-            opacity: 0.65;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
             transition: all 0.25s ease;
+            text-decoration: none !important;
         }
-        .client-logo-item:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: scale(1.05);
+        .client-logo-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--brand-cyan);
+            box-shadow: 0 10px 25px rgba(0, 154, 206, 0.15);
         }
-        .client-logo-item img {
-            max-height: 42px;
-            max-width: 130px;
+        .client-logo-card img {
+            max-height: 56px;
+            max-width: 160px;
             width: auto;
             object-fit: contain;
+            filter: none !important;
+            opacity: 1 !important;
+            display: block;
+            margin-bottom: 8px;
+            transition: transform 0.25s ease;
+        }
+        .client-logo-card:hover img {
+            transform: scale(1.05);
+        }
+        .client-brand-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--brand-navy-deep);
+            text-align: center;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
         }
 
         /* ==========================================================
@@ -753,46 +778,230 @@
         }
 
         /* ==========================================================
-           DIGITECH HMS: Proprietary Proactive Monitoring Section
+           DIGITECH HMS: Enterprise-Futuristic Telemetry Architecture
            ========================================================== */
         .hms-telemetry-section {
-            background: linear-gradient(180deg, #071922 0%, #0b2331 50%, #071922 100%);
-            padding: 95px 0;
+            background: linear-gradient(180deg, #06151e 0%, #082130 50%, #06151e 100%);
+            background-image: radial-gradient(rgba(0, 154, 206, 0.12) 1px, transparent 1px), linear-gradient(180deg, #06151e 0%, #082130 50%, #06151e 100%);
+            background-size: 28px 28px, 100% 100%;
+            padding: 100px 0 95px 0;
             position: relative;
-            border-top: 1px solid rgba(0, 154, 206, 0.2);
-            border-bottom: 1px solid rgba(0, 154, 206, 0.2);
+            border-top: 1px solid rgba(0, 154, 206, 0.25);
+            border-bottom: 1px solid rgba(0, 154, 206, 0.25);
             color: #ffffff;
         }
-        .hms-badge-tag {
+        .hms-futuristic-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0, 154, 206, 0.12);
+            border: 1px solid rgba(0, 154, 206, 0.4);
+            padding: 5px 16px;
+            border-radius: 30px;
             color: #38bdf8;
             font-size: 11px;
             font-weight: 700;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
-            margin-bottom: 8px;
+            margin-bottom: 14px;
+        }
+        .hms-pulse-radar {
+            width: 8px;
+            height: 8px;
+            background-color: #00e5ff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00e5ff;
+            animation: radarPulse 1.8s infinite;
+        }
+        @keyframes radarPulse {
+            0% { transform: scale(0.9); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.5; }
+            100% { transform: scale(0.9); opacity: 1; }
         }
         .hms-main-title {
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 800;
             color: #ffffff;
-            line-height: 1.2;
-            margin-bottom: 14px;
+            line-height: 1.25;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
         }
         .hms-subtitle {
             font-size: 15px;
             color: #94a3b8;
-            max-width: 680px;
+            max-width: 720px;
             margin: 0 auto;
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
+        /* 4 Key KPI Metrics Strip */
+        .hms-kpi-ribbon {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin: 45px 0 35px 0;
+        }
+        .hms-kpi-item {
+            background: rgba(11, 35, 49, 0.6);
+            border: 1px solid rgba(0, 154, 206, 0.25);
+            border-radius: 8px;
+            padding: 18px 16px;
+            text-align: center;
+            transition: all 0.25s;
+        }
+        .hms-kpi-item:hover {
+            border-color: var(--brand-cyan);
+            background: rgba(11, 35, 49, 0.9);
+            transform: translateY(-2px);
+        }
+        .hms-kpi-num {
+            font-size: 26px;
+            font-weight: 800;
+            color: #38bdf8;
+            display: block;
+            line-height: 1.1;
+            margin-bottom: 4px;
+            font-family: 'Plus Jakarta Sans', monospace;
+        }
+        .hms-kpi-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Live Command Cockpit (HUD) */
+        .hms-command-cockpit {
+            background: rgba(8, 26, 37, 0.92);
+            border: 1px solid rgba(0, 154, 206, 0.35);
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+            margin-bottom: 45px;
+        }
+        .cockpit-header {
+            background: #05141d;
+            border-bottom: 1px solid rgba(0, 154, 206, 0.25);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cockpit-title {
+            font-size: 12px;
+            font-weight: 800;
+            color: #38bdf8;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .cockpit-status-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: #4ade80;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.25);
+            padding: 3px 10px;
+            border-radius: 20px;
+        }
+        .cockpit-body {
+            padding: 24px;
+        }
+        .terminal-screen {
+            background: #030d13;
+            border: 1px solid rgba(0, 154, 206, 0.2);
+            border-radius: 8px;
+            padding: 16px 18px;
+            font-family: 'Consolas', 'Courier New', monospace;
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.7;
+            height: 230px;
+            overflow-y: hidden;
+            position: relative;
+        }
+        .terminal-line { margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+        .terminal-line.success { color: #34d399; }
+        .terminal-line.info { color: #38bdf8; }
+        .terminal-line.highlight { color: #facc15; }
+        .ecg-waveform-wrap {
+            position: absolute;
+            bottom: 8px;
+            left: 18px;
+            right: 18px;
+            height: 38px;
+            opacity: 0.7;
+            pointer-events: none;
+        }
+        .channel-hud-card {
+            background: rgba(14, 40, 56, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            transition: all 0.2s;
+        }
+        .channel-hud-card:hover {
+            border-color: rgba(0, 154, 206, 0.5);
+            background: rgba(14, 40, 56, 0.9);
+        }
+        .channel-hud-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .channel-hud-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .channel-hud-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #009ace, #38bdf8);
+            border-radius: 3px;
+        }
+        .btn-console-ping {
+            background: rgba(0, 154, 206, 0.15);
+            border: 1px solid var(--brand-cyan);
+            color: #38bdf8;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .btn-console-ping:hover {
+            background: var(--brand-cyan);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(0, 154, 206, 0.4);
+        }
+
+        /* 4 Core HMS Pillar Cards */
+        .hms-pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
         .hms-pillar-card {
             background: #0d2837;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 10px;
-            padding: 32px 26px;
-            height: calc(100% - 25px);
-            margin-bottom: 25px;
+            padding: 28px 22px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -801,11 +1010,11 @@
         .hms-pillar-card:hover {
             border-color: var(--brand-cyan);
             transform: translateY(-4px);
-            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
         }
         .hms-pillar-icon {
-            width: 52px;
-            height: 52px;
+            width: 48px;
+            height: 48px;
             border-radius: 8px;
             background: rgba(0, 154, 206, 0.12);
             border: 1px solid rgba(0, 154, 206, 0.3);
@@ -813,20 +1022,21 @@
             align-items: center;
             justify-content: center;
             color: var(--brand-cyan);
-            font-size: 22px;
-            margin-bottom: 22px;
+            font-size: 20px;
+            margin-bottom: 18px;
         }
         .hms-pillar-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            line-height: 1.3;
         }
         .hms-pillar-desc {
-            font-size: 14px;
+            font-size: 13px;
             color: #cbd5e1;
-            line-height: 1.65;
-            margin-bottom: 22px;
+            line-height: 1.6;
+            margin-bottom: 18px;
         }
         .hms-metric-badge {
             display: inline-flex;
@@ -834,16 +1044,16 @@
             gap: 6px;
             background: rgba(255, 255, 255, 0.06);
             border: 1px solid rgba(255, 255, 255, 0.12);
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 4px;
             font-size: 11px;
             color: #38bdf8;
             font-weight: 600;
-            margin-bottom: 18px;
+            margin-bottom: 14px;
         }
         .hms-card-action {
             color: #38bdf8;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
@@ -854,15 +1064,16 @@
         }
         .hms-card-action:hover {
             color: #ffffff;
-            gap: 9px;
+            gap: 8px;
         }
 
         /* Problem-Solution Comparison Box */
         .hms-comparison-box {
-            background: rgba(9, 30, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(7, 24, 34, 0.7);
+            border: 1px solid rgba(0, 154, 206, 0.2);
             border-radius: 10px;
             padding: 28px;
+        }
             margin-top: 35px;
         }
         .comparison-col-header {
@@ -1202,15 +1413,33 @@
             text-decoration: none;
         }
 
-        @media (max-width: 1200px) {
-            .header-phone-text {
+        @media (max-width: 1250px) {
+            .header-phone-box {
+                background: rgba(0, 154, 206, 0.08);
+                border: 1px solid rgba(0, 154, 206, 0.25);
+                border-radius: 20px;
+                padding: 6px 14px;
+                gap: 6px;
+            }
+            .header-phone-icon {
+                width: auto;
+                height: auto;
+                background: transparent;
+                border: none;
+                font-size: 13px;
+            }
+            .header-phone-text span {
                 display: none;
             }
-            .desktop-nav-links {
-                gap: 14px;
+            .header-phone-text strong {
+                font-size: 12px;
+                white-space: nowrap;
             }
-            .nav-vertical-divider {
-                margin: 0 14px;
+            .desktop-nav-links {
+                gap: 12px;
+            }
+            .desktop-nav-links > li > a {
+                font-size: 13px;
             }
         }
 
@@ -1226,6 +1455,30 @@
             }
             .hero-console-frame {
                 margin-top: 40px;
+            }
+            .hms-kpi-ribbon {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hms-pillar-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hms-kpi-ribbon {
+                grid-template-columns: 1fr;
+            }
+            .hms-pillar-grid {
+                grid-template-columns: 1fr;
+            }
+            .floating-action-bar {
+                bottom: 16px;
+                right: 16px;
+                gap: 8px;
+            }
+            .floating-action-btn {
+                padding: 9px 15px;
+                font-size: 12px;
             }
         }
     </style>
@@ -1458,42 +1711,60 @@
             </div>
         </section>
 
-        <!-- CLIENT TRUST SECTION: Real Enterprise Partnerships -->
+        <!-- CLIENT TRUST SECTION: Real Enterprise Partnerships (Zoomed & Identifiable) -->
         <section class="client-trust-section">
             <div class="auto-container">
                 <div class="client-trust-label">
-                    TRUSTED BY LEADING ENTERPRISES, INDUSTRIAL HUBS &amp; INSTITUTIONS ACROSS INDIA
+                    TRUSTED BY LEADING ENTERPRISES, INDUSTRIAL HUBS &amp; GOVERNMENT INSTITUTIONS
                 </div>
                 <div class="client-logo-grid">
-                    <div class="client-logo-item" title="Emaar Properties">
-                        <img src="assets/images/clients/emaar.jpg" alt="Emaar">
+                    <div class="client-logo-card" title="Emaar Properties - Master Communities & Retail">
+                        <img src="assets/images/clients/emaar.jpg" alt="Emaar Properties">
+                        <span class="client-brand-title">Emaar Properties</span>
                     </div>
-                    <div class="client-logo-item" title="Jaypee Group">
+                    <div class="client-logo-card" title="Jaypee Group - Infrastructure & Real Estate">
                         <img src="assets/images/clients/jaypee-group.jpg" alt="Jaypee Group">
+                        <span class="client-brand-title">Jaypee Group</span>
                     </div>
-                    <div class="client-logo-item" title="AG Industries">
+                    <div class="client-logo-card" title="AG Industries - Heavy Manufacturing Plant">
                         <img src="assets/images/clients/ag-industries.jpg" alt="AG Industries">
+                        <span class="client-brand-title">AG Industries</span>
                     </div>
-                    <div class="client-logo-item" title="Anand Group">
+                    <div class="client-logo-card" title="Anand Group - Automotive OEM Components">
                         <img src="assets/images/clients/anand.jpg" alt="Anand Group">
+                        <span class="client-brand-title">Anand Group</span>
                     </div>
-                    <div class="client-logo-item" title="Indian Spinal Injuries Centre">
+                    <div class="client-logo-card" title="Indian Spinal Injuries Centre - Super Specialty Hospital">
                         <img src="assets/images/clients/indian-spinal-injuries.jpg" alt="Indian Spinal Injuries Centre">
+                        <span class="client-brand-title">Indian Spinal Injuries</span>
                     </div>
-                    <div class="client-logo-item" title="Government of Tamil Nadu">
+                    <div class="client-logo-card" title="Government of Tamil Nadu - Public Infrastructure">
                         <img src="assets/images/clients/govement-tamilnadu.jpg" alt="Government of Tamil Nadu">
+                        <span class="client-brand-title">Govt. of Tamil Nadu</span>
                     </div>
-                    <div class="client-logo-item" title="Avi Realtech">
+                    <div class="client-logo-card" title="Avi Realtech - Commercial Towers">
                         <img src="assets/images/clients/avi-realtech.jpg" alt="Avi Realtech">
+                        <span class="client-brand-title">Avi Realtech</span>
                     </div>
-                    <div class="client-logo-item" title="Inter-University Accelerator Centre">
-                        <img src="assets/images/clients/iuac.jpg" alt="IUAC">
+                    <div class="client-logo-card" title="Inter-University Accelerator Centre (IUAC) - Research Campus">
+                        <img src="assets/images/clients/iuac.jpg" alt="IUAC Accelerator Centre">
+                        <span class="client-brand-title">IUAC (Govt. of India)</span>
                     </div>
-                    <div class="client-logo-item" title="Judith Leiber">
+                    <div class="client-logo-card" title="Judith Leiber - Luxury Flagship Outlets">
                         <img src="assets/images/clients/judith-leiber.jpg" alt="Judith Leiber">
+                        <span class="client-brand-title">Judith Leiber</span>
                     </div>
-                    <div class="client-logo-item" title="Galaxy">
-                        <img src="assets/images/clients/galaxy.jpg" alt="Galaxy">
+                    <div class="client-logo-card" title="Galaxy Group - Premium Corporate Hubs">
+                        <img src="assets/images/clients/galaxy.jpg" alt="Galaxy Group">
+                        <span class="client-brand-title">Galaxy Group</span>
+                    </div>
+                    <div class="client-logo-card" title="Talbros Automotive - Precision Manufacturing">
+                        <img src="assets/images/clients/talbros.jpg" alt="Talbros Automotive">
+                        <span class="client-brand-title">Talbros Auto</span>
+                    </div>
+                    <div class="client-logo-card" title="Looks Salon - Pan-India Luxury Retail Chain">
+                        <img src="assets/images/clients/looks-saloon.jpg" alt="Looks Salon">
+                        <span class="client-brand-title">Looks Salon</span>
                     </div>
                 </div>
             </div>
@@ -1641,91 +1912,213 @@
             </div>
         </section>
 
-        <!-- DIGITECH HMS: Proprietary Proactive Monitoring Section -->
-        <section class="hms-telemetry-section">
+        <!-- DIGITECH HMS: Enterprise-Futuristic Telemetry Architecture -->
+        <section class="hms-telemetry-section" id="hms">
             <div class="auto-container">
                 
-                <div class="text-center" style="margin-bottom: 50px;">
-                    <div class="hms-badge-tag">PROPRIETARY TELEMETRY INNOVATION</div>
-                    <h2 class="hms-main-title">Digitech HMS &amp; Proactive Health Monitoring</h2>
+                <div class="text-center" style="margin-bottom: 25px;">
+                    <div class="hms-futuristic-badge">
+                        <span class="hms-pulse-radar"></span>
+                        <span>DIGITECH HMS &bull; AUTONOMOUS 24/7 TELEMETRY ARCHITECTURE</span>
+                    </div>
+                    <h2 class="hms-main-title">Next-Gen Predictive Surveillance Health &amp; Active Telemetry</h2>
                     <p class="hms-subtitle">
-                        Eliminating the silent CCTV failure epidemic: 60-second automated hardware polling prevents unnoticed camera drops, failed storage drives, and unrecorded security breaches.
+                        Eliminating the silent CCTV blackout crisis. Most security cameras fail weeks before an incident occurs. Digitech HMS continuously polls optical hardware, predictive drive health, and stream integrity every 60 seconds.
                     </p>
                 </div>
 
-                <div class="row">
+                <!-- 4 Key KPI Metrics Strip -->
+                <div class="hms-kpi-ribbon">
+                    <div class="hms-kpi-item">
+                        <span class="hms-kpi-num">60 SEC</span>
+                        <span class="hms-kpi-label">Autonomous Ping Cycle</span>
+                    </div>
+                    <div class="hms-kpi-item">
+                        <span class="hms-kpi-num">99.98%</span>
+                        <span class="hms-kpi-label">Verified Footage Retention</span>
+                    </div>
+                    <div class="hms-kpi-item">
+                        <span class="hms-kpi-num">50,000+</span>
+                        <span class="hms-kpi-label">Active Monitored Endpoints</span>
+                    </div>
+                    <div class="hms-kpi-item">
+                        <span class="hms-kpi-num">&lt; 4 HOURS</span>
+                        <span class="hms-kpi-label">Guaranteed On-Site SLA</span>
+                    </div>
+                </div>
+
+                <!-- Live Command Cockpit (HUD) -->
+                <div class="hms-command-cockpit">
+                    <div class="cockpit-header">
+                        <div class="cockpit-title">
+                            <i class="fas fa-satellite-dish" style="color: #38bdf8;"></i>
+                            <span>DIGITECH HMS // NOC COMMAND CONSOLE v4.2</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <span class="cockpit-status-tag"><i class="fas fa-circle" style="font-size: 8px;"></i> LIVE TELEMETRY STREAM</span>
+                            <span style="font-size: 11px; font-weight: 700; color: #94a3b8; font-family: monospace;" id="telemetryLiveClock">24/7 ACTIVE</span>
+                        </div>
+                    </div>
+                    <div class="cockpit-body">
+                        <div class="row align-items-center">
+                            
+                            <!-- Left: Terminal Log Stream -->
+                            <div class="col-lg-7 col-md-12 mb-4 mb-lg-0">
+                                <div class="terminal-screen" id="telemetryTerminalScreen">
+                                    <div class="terminal-line info"><i class="fas fa-chevron-right" style="font-size: 10px;"></i> [SYS-BOOT] Initializing Digitech HMS Multi-Site Telemetry Node...</div>
+                                    <div class="terminal-line success"><i class="fas fa-check" style="font-size: 10px;"></i> [PING-CYCLE] 50,000+ CCTV optical streams verified active via RTSP/SNMP protocol.</div>
+                                    <div class="terminal-line"><i class="fas fa-database" style="font-size: 10px;"></i> [STORAGE-SMART] NVR Cluster Raid-6: Write cache optimal, temperature 37°C, 0 bad sectors.</div>
+                                    <div class="terminal-line highlight"><i class="fas fa-bolt" style="font-size: 10px;"></i> [POE-HEALTH] PoE Switch Array draw: 48.2V nominal, UPS reserve capacity 100%.</div>
+                                    <div class="terminal-line success"><i class="fas fa-shield-alt" style="font-size: 10px;"></i> [AI-TAMPER] Lens occlusion &amp; defocus scan: 100% unobstructed, zero blind spots detected.</div>
+                                    <div class="terminal-line info" id="dynamicTelemetryPingLine"><i class="fas fa-satellite" style="font-size: 10px;"></i> [SLA-HOTLINE] Regional Hubs (Delhi, Noida, Bhopal, Nagpur) standby loaner units: READY.</div>
+
+                                    <!-- Animated ECG Sine Waveform Visualizer -->
+                                    <div class="ecg-waveform-wrap">
+                                        <svg viewBox="0 0 500 40" style="width: 100%; height: 100%;" preserveAspectRatio="none">
+                                            <path d="M0,20 L120,20 L130,5 L140,35 L150,10 L160,25 L170,20 L270,20 L280,3 L290,37 L300,12 L310,28 L320,20 L500,20" fill="none" stroke="#009ace" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <animate attributeName="stroke-dashoffset" from="500" to="0" dur="3s" repeatCount="indefinite" />
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 14px;">
+                                    <button class="btn-console-ping" onclick="simulateTelemetryPing()">
+                                        <i class="fas fa-sync-alt" id="pingBtnIcon"></i> Run Simulated Diagnostic Ping
+                                    </button>
+                                    <span style="font-size: 11px; color: #64748b; font-family: monospace;">Resolution: 60-Second Loop</span>
+                                </div>
+                            </div>
+
+                            <!-- Right: Channel Health Status Gauges -->
+                            <div class="col-lg-5 col-md-12">
+                                <div class="channel-hud-card">
+                                    <div class="channel-hud-head">
+                                        <span style="color: #cbd5e1;"><i class="fas fa-video" style="color: var(--brand-cyan); margin-right: 6px;"></i> Optical Stream Continuity</span>
+                                        <span style="color: #4ade80;">100% ONLINE</span>
+                                    </div>
+                                    <div class="channel-hud-bar"><div class="channel-hud-progress" style="width: 100%;"></div></div>
+                                </div>
+
+                                <div class="channel-hud-card">
+                                    <div class="channel-hud-head">
+                                        <span style="color: #cbd5e1;"><i class="fas fa-hdd" style="color: #38bdf8; margin-right: 6px;"></i> Predictive S.M.A.R.T. Drive Health</span>
+                                        <span style="color: #38bdf8;">OPTIMAL (0 SECTOR ERRORS)</span>
+                                    </div>
+                                    <div class="channel-hud-bar"><div class="channel-hud-progress" style="width: 98%; background: linear-gradient(90deg, #0284c7, #38bdf8);"></div></div>
+                                </div>
+
+                                <div class="channel-hud-card">
+                                    <div class="channel-hud-head">
+                                        <span style="color: #cbd5e1;"><i class="fas fa-eye-slash" style="color: #facc15; margin-right: 6px;"></i> AI Defocus &amp; Tamper Protection</span>
+                                        <span style="color: #4ade80;">100% CLEAR VISION</span>
+                                    </div>
+                                    <div class="channel-hud-bar"><div class="channel-hud-progress" style="width: 100%; background: linear-gradient(90deg, #10b981, #34d399);"></div></div>
+                                </div>
+
+                                <div class="channel-hud-card">
+                                    <div class="channel-hud-head">
+                                        <span style="color: #cbd5e1;"><i class="fas fa-ambulance" style="color: #f43f5e; margin-right: 6px;"></i> 4-Hour SLA Field Standby</span>
+                                        <span style="color: #38bdf8;">DISPATCH READY</span>
+                                    </div>
+                                    <div class="channel-hud-bar"><div class="channel-hud-progress" style="width: 100%; background: linear-gradient(90deg, #0ea5e9, #009ace);"></div></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Core HMS Pillar Cards -->
+                <div class="hms-pillar-grid">
                     
                     <!-- Pillar 1 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="hms-pillar-card">
-                            <div>
-                                <div class="hms-pillar-icon">
-                                    <i class="fas fa-heartbeat"></i>
-                                </div>
-                                <h3 class="hms-pillar-title">Automated Heartbeat Polling</h3>
-                                <p class="hms-pillar-desc">
-                                    Continuous automated 60-second ping cycles verify camera stream continuity, PoE switch power draw, and optical feed latency before an incident occurs.
-                                </p>
+                    <div class="hms-pillar-card">
+                        <div>
+                            <div class="hms-pillar-icon">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3 class="hms-pillar-title">Automated Heartbeat Polling</h3>
+                            <p class="hms-pillar-desc">
+                                Automated 60-second ping cycles verify camera stream continuity, PoE power draw, and optical latency to detect feed loss before incidents occur.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="hms-metric-badge">
+                                <i class="fas fa-clock"></i> 60-Sec Resolution
                             </div>
                             <div>
-                                <div class="hms-metric-badge">
-                                    <i class="fas fa-clock"></i> 60-Sec Resolution
-                                </div>
-                                <div>
-                                    <a href="javascript:void(0)" onclick="openDemoModal('Digitech HMS Heartbeat Telemetry')" class="hms-card-action">
-                                        Explore Polling Architecture <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
+                                <a href="javascript:void(0)" onclick="openDemoModal('Digitech HMS Heartbeat Telemetry')" class="hms-card-action">
+                                    Explore Architecture <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Pillar 2 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="hms-pillar-card">
-                            <div>
-                                <div class="hms-pillar-icon">
-                                    <i class="fas fa-hdd"></i>
-                                </div>
-                                <h3 class="hms-pillar-title">Predictive Storage &amp; SMART Analytics</h3>
-                                <p class="hms-pillar-desc">
-                                    Continuous hardware diagnostics detect bad disk sectors, thermal spikes, and write-cache errors to guarantee uninterrupted 30 to 90-day evidence retention.
-                                </p>
+                    <div class="hms-pillar-card">
+                        <div>
+                            <div class="hms-pillar-icon">
+                                <i class="fas fa-hdd"></i>
+                            </div>
+                            <h3 class="hms-pillar-title">Predictive Storage S.M.A.R.T.</h3>
+                            <p class="hms-pillar-desc">
+                                Continuous diagnostics monitor bad disk sectors, thermal spikes, and write-speed drops to prevent unrecoverable evidence loss.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="hms-metric-badge">
+                                <i class="fas fa-database"></i> Zero Data Loss
                             </div>
                             <div>
-                                <div class="hms-metric-badge">
-                                    <i class="fas fa-database"></i> Zero Data Loss
-                                </div>
-                                <div>
-                                    <a href="javascript:void(0)" onclick="openDemoModal('Digitech HMS Storage Protection')" class="hms-card-action">
-                                        Inspect Storage Safeguards <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
+                                <a href="javascript:void(0)" onclick="openDemoModal('Digitech HMS Storage Protection')" class="hms-card-action">
+                                    Inspect Safeguards <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Pillar 3 -->
-                    <div class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="hms-pillar-card">
-                            <div>
-                                <div class="hms-pillar-icon">
-                                    <i class="fas fa-tools"></i>
-                                </div>
-                                <h3 class="hms-pillar-title">4-Hour Guaranteed On-Site SLA</h3>
-                                <p class="hms-pillar-desc">
-                                    When telemetry detects a degradation, an engineer is dispatched with emergency loaner cameras and NVR units from our regional hubs (Delhi NCR, UP, MP, MH).
-                                </p>
+                    <div class="hms-pillar-card">
+                        <div>
+                            <div class="hms-pillar-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h3 class="hms-pillar-title">AI Tamper &amp; Defocus Shield</h3>
+                            <p class="hms-pillar-desc">
+                                Real-time AI algorithms detect lens spray-paint, intentional defocusing, camera orientation shifts, and cable tampering within 5 seconds.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="hms-metric-badge">
+                                <i class="fas fa-shield-alt"></i> &lt; 5s Tamper Alert
                             </div>
                             <div>
-                                <div class="hms-metric-badge">
-                                    <i class="fas fa-shield-alt"></i> 4-Hour Response SLA
-                                </div>
-                                <div>
-                                    <a href="javascript:void(0)" onclick="openDemoModal('Comprehensive AMC & SLA')" class="hms-card-action">
-                                        Compare AMC Plans <i class="fas fa-arrow-right"></i>
-                                    </a>
-                                </div>
+                                <a href="javascript:void(0)" onclick="openDemoModal('AI Tamper & Defocus Shield')" class="hms-card-action">
+                                    Review AI Detection <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="hms-pillar-card">
+                        <div>
+                            <div class="hms-pillar-icon">
+                                <i class="fas fa-truck-pickup"></i>
+                            </div>
+                            <h3 class="hms-pillar-title">4-Hour Guaranteed On-Site SLA</h3>
+                            <p class="hms-pillar-desc">
+                                When a fault occurs, an engineer is dispatched from our nearest hub with pre-configured loaner cameras and NVRs for instant replacement.
+                            </p>
+                        </div>
+                        <div>
+                            <div class="hms-metric-badge">
+                                <i class="fas fa-bolt"></i> 4-Hour Response SLA
+                            </div>
+                            <div>
+                                <a href="javascript:void(0)" onclick="openDemoModal('Comprehensive AMC & SLA')" class="hms-card-action">
+                                    Compare AMC Plans <i class="fas fa-arrow-right"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1737,22 +2130,22 @@
                     <div class="row">
                         <div class="col-md-6 mb-4 mb-md-0" style="border-right: 1px solid rgba(255, 255, 255, 0.1);">
                             <div class="comparison-col-header bad">
-                                <i class="fas fa-times-circle"></i> The Traditional Surveillance Failure
+                                <i class="fas fa-times-circle"></i> The Traditional Surveillance Failure Epidemic
                             </div>
                             <ul class="comparison-list">
-                                <li>• Cameras go offline silently; faults are only discovered weeks later during a major security incident.</li>
-                                <li>• Hard drives overheat or stop recording; video evidence is permanently unrecoverable.</li>
+                                <li>• Cameras go offline silently; faults are only discovered weeks later during an investigation.</li>
+                                <li>• Hard drives fail or overheat; recording stops without any warning to security staff.</li>
                                 <li>• Maintenance is purely reactive, resulting in days or weeks of facility vulnerability.</li>
                             </ul>
                         </div>
                         <div class="col-md-6 pl-md-4">
                             <div class="comparison-col-header good">
-                                <i class="fas fa-check-circle"></i> The Digitech HMS Advantage
+                                <i class="fas fa-check-circle"></i> The Digitech HMS Proactive Advantage
                             </div>
                             <ul class="comparison-list">
-                                <li>• Continuous 60-second telemetry polling alerts our central engineering NOC instantly.</li>
-                                <li>• Predictive SMART drive diagnostics trigger replacement before storage writes fail.</li>
-                                <li>• Turnkey 4-hour on-site SLA with standby loaner hardware maintains unbroken uptime.</li>
+                                <li>• Continuous 60-second telemetry polling alerts our central engineering NOC automatically.</li>
+                                <li>• Predictive SMART drive diagnostics trigger hardware replacement before storage fails.</li>
+                                <li>• Guaranteed 4-hour on-site SLA with standby loaner hardware maintains unbroken uptime.</li>
                             </ul>
                         </div>
                     </div>
@@ -1946,15 +2339,15 @@
             </div>
         </footer>
 
-        <!-- Floating Non-Intrusive Quick Actions -->
+        <!-- Floating Quick Contact Dock (Unmistakable & Polished) -->
         <div class="floating-action-bar">
-            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="floating-action-btn whatsapp">
-                <i class="fab fa-whatsapp" style="font-size: 16px;"></i>
-                <span>WhatsApp</span>
+            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="floating-action-btn whatsapp" title="Chat on WhatsApp with Technical Support">
+                <i class="fab fa-whatsapp" style="font-size: 17px;"></i>
+                <span>WhatsApp Support</span>
             </a>
-            <a href="tel:09999760222" class="floating-action-btn phone">
+            <a href="tel:09999760222" class="floating-action-btn phone" title="Call 24/7 Engineering Hotline: (+91) 9999-760-222">
                 <i class="fas fa-phone-alt" style="font-size: 13px;"></i>
-                <span>Call Hotline</span>
+                <span>Call Hotline: 9999-760-222</span>
             </a>
         </div>
 
@@ -2103,6 +2496,44 @@
         document.getElementById('videoModal').addEventListener('click', function(e) {
             if (e.target === this) closeVideoModal();
         });
+
+        // Digitech HMS Telemetry Console Real-Time Controller
+        function updateTelemetryClock() {
+            var clockEl = document.getElementById('telemetryLiveClock');
+            if (clockEl) {
+                var now = new Date();
+                var timeStr = now.toLocaleTimeString('en-IN', { hour12: false });
+                clockEl.innerText = timeStr + ' IST // 50,000+ NODES OK';
+            }
+        }
+        setInterval(updateTelemetryClock, 1000);
+        updateTelemetryClock();
+
+        function simulateTelemetryPing() {
+            var btnIcon = document.getElementById('pingBtnIcon');
+            var screen = document.getElementById('telemetryTerminalScreen');
+            if (btnIcon) btnIcon.classList.add('fa-spin');
+
+            setTimeout(function() {
+                if (btnIcon) btnIcon.classList.remove('fa-spin');
+                if (screen) {
+                    var now = new Date();
+                    var timeStr = now.toLocaleTimeString('en-IN', { hour12: false });
+                    var pings = [
+                        '[' + timeStr + '] PING-SCAN: 50,000+ IP video streams confirmed nominal (Average latency 9ms).',
+                        '[' + timeStr + '] S.M.A.R.T. DIAGNOSTIC: 0 reallocated sectors detected across all active NVR clusters.',
+                        '[' + timeStr + '] OPTICAL AI: Lens obstruction & defocus test: 100% crystal-clear clarity verified.',
+                        '[' + timeStr + '] POWER AUDIT: 48V PoE lines nominal • Zero camera voltage drops reported.'
+                    ];
+                    var randomPing = pings[Math.floor(Math.random() * pings.length)];
+                    var newLine = document.createElement('div');
+                    newLine.className = 'terminal-line success';
+                    newLine.innerHTML = '<i class="fas fa-check-double" style="font-size: 10px;"></i> ' + randomPing;
+                    screen.appendChild(newLine);
+                    screen.scrollTop = screen.scrollHeight;
+                }
+            }, 500);
+        }
     </script>
 
 </body>

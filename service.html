@@ -145,8 +145,8 @@
             flex-shrink: 0;
         }
         .brand-logo-img {
-            height: 44px;
-            width: 44px;
+            height: 50px;
+            width: 50px;
             object-fit: contain;
             display: block;
         }
@@ -156,7 +156,7 @@
             justify-content: center;
         }
         .brand-meta .company-name {
-            font-size: 19px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--brand-navy-deep);
             line-height: 1.15;
@@ -174,7 +174,7 @@
         }
         .nav-vertical-divider {
             width: 1px;
-            height: 34px;
+            height: 36px;
             background-color: var(--brand-slate-border);
             margin: 0 22px;
             flex-shrink: 0;
@@ -556,47 +556,72 @@
             gap: 9px;
         }
 
-        /* Client Trust Bar */
+        /* Client Trust Section (Zoomed & Identifiable) */
         .client-trust-section {
             background: #ffffff;
             border-bottom: 1px solid var(--brand-slate-border);
-            padding: 38px 0;
+            padding: 50px 0 60px 0;
         }
         .client-trust-label {
             text-align: center;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--brand-text-muted);
-            letter-spacing: 1.5px;
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--brand-navy-deep);
+            letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 24px;
+            margin-bottom: 30px;
         }
         .client-logo-grid {
             display: flex;
             flex-wrap: wrap;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
-            gap: 32px 42px;
+            gap: 20px;
         }
-        .client-logo-item {
+        .client-logo-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px 20px;
+            width: 200px;
+            min-height: 110px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 48px;
-            filter: grayscale(100%);
-            opacity: 0.65;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
             transition: all 0.25s ease;
+            text-decoration: none !important;
         }
-        .client-logo-item:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: scale(1.05);
+        .client-logo-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--brand-cyan);
+            box-shadow: 0 10px 25px rgba(0, 154, 206, 0.15);
         }
-        .client-logo-item img {
-            max-height: 42px;
-            max-width: 130px;
+        .client-logo-card img {
+            max-height: 56px;
+            max-width: 160px;
             width: auto;
             object-fit: contain;
+            filter: none !important;
+            opacity: 1 !important;
+            display: block;
+            margin-bottom: 8px;
+            transition: transform 0.25s ease;
+        }
+        .client-logo-card:hover img {
+            transform: scale(1.05);
+        }
+        .client-brand-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--brand-navy-deep);
+            text-align: center;
+            line-height: 1.2;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
         }
 
         /* Branches */
@@ -838,21 +863,51 @@
             text-decoration: none;
         }
 
-        @media (max-width: 1200px) {
-            .header-phone-text {
+        @media (max-width: 1250px) {
+            .header-phone-box {
+                background: rgba(0, 154, 206, 0.08);
+                border: 1px solid rgba(0, 154, 206, 0.25);
+                border-radius: 20px;
+                padding: 6px 14px;
+                gap: 6px;
+            }
+            .header-phone-icon {
+                width: auto;
+                height: auto;
+                background: transparent;
+                border: none;
+                font-size: 13px;
+            }
+            .header-phone-text span {
                 display: none;
             }
-            .desktop-nav-links {
-                gap: 14px;
+            .header-phone-text strong {
+                font-size: 12px;
+                white-space: nowrap;
             }
-            .nav-vertical-divider {
-                margin: 0 14px;
+            .desktop-nav-links {
+                gap: 12px;
+            }
+            .desktop-nav-links > li > a {
+                font-size: 13px;
             }
         }
 
         @media (max-width: 991px) {
             .desktop-nav-links, .header-phone-box, .nav-vertical-divider {
                 display: none !important;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .floating-action-bar {
+                bottom: 16px;
+                right: 16px;
+                gap: 8px;
+            }
+            .floating-action-btn {
+                padding: 9px 15px;
+                font-size: 12px;
             }
         }
     </style>
@@ -1209,36 +1264,44 @@
             </div>
         </section>
 
-        <!-- CLIENT TRUST SECTION -->
+        <!-- CLIENT TRUST SECTION (Zoomed & Identifiable) -->
         <section class="client-trust-section">
             <div class="auto-container">
                 <div class="client-trust-label">
-                    TRUSTED BY LEADING ENTERPRISES, INDUSTRIAL HUBS &amp; INSTITUTIONS ACROSS INDIA
+                    TRUSTED BY LEADING ENTERPRISES, INDUSTRIAL HUBS &amp; GOVERNMENT INSTITUTIONS
                 </div>
                 <div class="client-logo-grid">
-                    <div class="client-logo-item" title="Emaar Properties">
-                        <img src="assets/images/clients/emaar.jpg" alt="Emaar">
+                    <div class="client-logo-card" title="Emaar Properties - Master Communities & Retail">
+                        <img src="assets/images/clients/emaar.jpg" alt="Emaar Properties">
+                        <span class="client-brand-title">Emaar Properties</span>
                     </div>
-                    <div class="client-logo-item" title="Jaypee Group">
+                    <div class="client-logo-card" title="Jaypee Group - Infrastructure & Real Estate">
                         <img src="assets/images/clients/jaypee-group.jpg" alt="Jaypee Group">
+                        <span class="client-brand-title">Jaypee Group</span>
                     </div>
-                    <div class="client-logo-item" title="AG Industries">
+                    <div class="client-logo-card" title="AG Industries - Heavy Manufacturing Plant">
                         <img src="assets/images/clients/ag-industries.jpg" alt="AG Industries">
+                        <span class="client-brand-title">AG Industries</span>
                     </div>
-                    <div class="client-logo-item" title="Anand Group">
+                    <div class="client-logo-card" title="Anand Group - Automotive OEM Components">
                         <img src="assets/images/clients/anand.jpg" alt="Anand Group">
+                        <span class="client-brand-title">Anand Group</span>
                     </div>
-                    <div class="client-logo-item" title="Indian Spinal Injuries Centre">
+                    <div class="client-logo-card" title="Indian Spinal Injuries Centre - Super Specialty Hospital">
                         <img src="assets/images/clients/indian-spinal-injuries.jpg" alt="Indian Spinal Injuries Centre">
+                        <span class="client-brand-title">Indian Spinal Injuries</span>
                     </div>
-                    <div class="client-logo-item" title="Government of Tamil Nadu">
+                    <div class="client-logo-card" title="Government of Tamil Nadu - Public Infrastructure">
                         <img src="assets/images/clients/govement-tamilnadu.jpg" alt="Government of Tamil Nadu">
+                        <span class="client-brand-title">Govt. of Tamil Nadu</span>
                     </div>
-                    <div class="client-logo-item" title="Avi Realtech">
+                    <div class="client-logo-card" title="Avi Realtech - Commercial Towers">
                         <img src="assets/images/clients/avi-realtech.jpg" alt="Avi Realtech">
+                        <span class="client-brand-title">Avi Realtech</span>
                     </div>
-                    <div class="client-logo-item" title="Inter-University Accelerator Centre">
-                        <img src="assets/images/clients/iuac.jpg" alt="IUAC">
+                    <div class="client-logo-card" title="Inter-University Accelerator Centre (IUAC) - Research Campus">
+                        <img src="assets/images/clients/iuac.jpg" alt="IUAC Accelerator Centre">
+                        <span class="client-brand-title">IUAC (Govt. of India)</span>
                     </div>
                 </div>
             </div>
@@ -1390,15 +1453,15 @@
             </div>
         </footer>
 
-        <!-- Floating Non-Intrusive Quick Actions -->
+        <!-- Floating Quick Contact Dock (Unmistakable & Polished) -->
         <div class="floating-action-bar">
-            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="floating-action-btn whatsapp">
-                <i class="fab fa-whatsapp" style="font-size: 16px;"></i>
-                <span>WhatsApp</span>
+            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20services%20and%20Digitech%20HMS" target="_blank" rel="noopener" class="floating-action-btn whatsapp" title="Chat on WhatsApp with Technical Support">
+                <i class="fab fa-whatsapp" style="font-size: 17px;"></i>
+                <span>WhatsApp Support</span>
             </a>
-            <a href="tel:09999760222" class="floating-action-btn phone">
+            <a href="tel:09999760222" class="floating-action-btn phone" title="Call 24/7 Engineering Hotline: (+91) 9999-760-222">
                 <i class="fas fa-phone-alt" style="font-size: 13px;"></i>
-                <span>Call Hotline</span>
+                <span>Call Hotline: 9999-760-222</span>
             </a>
         </div>
 

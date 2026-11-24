@@ -50,7 +50,7 @@
         .nav-inner-container { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; }
         .nav-brand-group { display: flex; align-items: center; }
         .brand-link { display: flex; align-items: center; gap: 12px; text-decoration: none !important; flex-shrink: 0; }
-        .brand-logo-img { height: 44px; width: 44px; object-fit: contain; }
+        .brand-logo-img { height: 50px; width: 50px; object-fit: contain; }
         .brand-meta .company-name { font-size: 19px; font-weight: 800; color: var(--brand-navy-deep); line-height: 1.15; white-space: nowrap; }
         .brand-meta .company-desc { font-size: 10px; font-weight: 700; color: var(--brand-cyan); text-transform: uppercase; margin-top: 3px; white-space: nowrap; }
         .nav-vertical-divider { width: 1px; height: 34px; background-color: var(--brand-slate-border); margin: 0 22px; flex-shrink: 0; }
@@ -117,8 +117,42 @@
         .mobile-nav-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
         .mobile-nav-list li a { color: var(--brand-text-primary); font-size: 14px; font-weight: 600; text-decoration: none; }
 
-        @media (max-width: 1200px) { .header-phone-text { display: none; } .desktop-nav-links { gap: 14px; } .nav-vertical-divider { margin: 0 14px; } }
-        @media (max-width: 991px) { .desktop-nav-links, .header-phone-box, .nav-vertical-divider { display: none !important; } }
+        @media (max-width: 1250px) {
+            .header-phone-box {
+                background: rgba(0, 154, 206, 0.08);
+                border: 1px solid rgba(0, 154, 206, 0.25);
+                border-radius: 20px;
+                padding: 6px 14px;
+                gap: 6px;
+            }
+            .header-phone-icon {
+                width: auto;
+                height: auto;
+                background: transparent;
+                border: none;
+                font-size: 13px;
+            }
+            .header-phone-text span {
+                display: none;
+            }
+            .header-phone-text strong {
+                font-size: 12px;
+                white-space: nowrap;
+            }
+            .desktop-nav-links {
+                gap: 12px;
+            }
+            .nav-vertical-divider {
+                margin: 0 12px;
+            }
+        }
+        @media (max-width: 991px) {
+            .desktop-nav-links,
+            .header-phone-box,
+            .nav-vertical-divider {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 
@@ -308,8 +342,12 @@
 
         <!-- Floating Actions -->
         <div class="floating-action-bar">
-            <a href="https://wa.me/919999760222" target="_blank" rel="noopener" class="floating-action-btn whatsapp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
-            <a href="tel:09999760222" class="floating-action-btn phone"><i class="fas fa-phone-alt"></i><span>Call Hotline</span></a>
+            <a href="https://wa.me/919999760222?text=Hello%20Digitech%20Team%2C%20I%20would%20like%20to%20inquire%20about%20your%20services" target="_blank" rel="noopener" class="floating-action-btn whatsapp" title="Chat on WhatsApp with Technical Support">
+                <i class="fab fa-whatsapp" style="font-size: 17px;"></i><span>WhatsApp Support</span>
+            </a>
+            <a href="tel:09999760222" class="floating-action-btn phone" title="Call 24/7 Engineering Hotline: (+91) 9999-760-222">
+                <i class="fas fa-phone-alt" style="font-size: 13px;"></i><span>Call Hotline: 9999-760-222</span>
+            </a>
         </div>
 
         <!-- Modal -->
