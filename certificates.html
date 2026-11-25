@@ -136,6 +136,25 @@
         .mobile-nav-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
         .mobile-nav-list li a { color: var(--brand-text-primary); font-size: 14px; font-weight: 600; text-decoration: none; }
 
+        .mobile-phone-call-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: var(--brand-cyan-light);
+            color: var(--brand-cyan) !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        .mobile-phone-call-btn:hover {
+            background: var(--brand-cyan);
+            color: #ffffff !important;
+        }
+
         @media (max-width: 1250px) {
             .header-phone-box {
                 background: transparent !important;
@@ -170,14 +189,35 @@
             .nav-vertical-divider {
                 display: none !important;
             }
+            .header-contact-actions .btn-brand-primary {
+                display: none !important;
+            }
+            .header-contact-actions {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+        @media (max-width: 768px) {
+            .topbar-enterprise { padding: 6px 0; font-size: 11px; }
+            .topbar-address-text { display: none !important; }
+            .header-main-nav { padding: 8px 0; }
+            .brand-logo-img { height: 42px; width: 42px; }
+            .brand-meta .company-name { font-size: 16px; }
+            .brand-meta .company-desc { font-size: 9px; }
+            .page-banner-enterprise { padding: 45px 0 35px 0; }
+            .page-banner-enterprise h1 { font-size: 24px; }
+            .cert-grid { grid-template-columns: 1fr; gap: 20px; }
+            .cert-card { padding: 20px 16px; }
+            .floating-whatsapp-btn { bottom: 18px; right: 18px; width: 48px; height: 48px; font-size: 24px; }
         }
         @media (max-width: 576px) {
             .floating-whatsapp-btn {
-                bottom: 16px;
-                right: 16px;
-                width: 46px;
-                height: 46px;
-                font-size: 22px;
+                bottom: 18px;
+                right: 18px;
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
             }
         }
     </style>
@@ -192,8 +232,8 @@
             <div class="auto-container container-box">
                 <div class="topbar-left">
                     <span class="topbar-credential"><i class="fas fa-certificate"></i> ISO 9001:2015 Certified Engineering</span>
-                    <span style="margin: 0 12px; opacity: 0.3;">|</span>
-                    <span>Corporate HQ: Masoodpur Market, Vasant Kunj, New Delhi</span>
+                    <span class="topbar-address-text" style="margin: 0 12px; opacity: 0.3;">|</span>
+                    <span class="topbar-address-text">Corporate HQ: Masoodpur Market, Vasant Kunj, New Delhi</span>
                 </div>
                 <div class="topbar-right d-none d-md-flex align-items-center gap-3">
                     <div class="topbar-hms-status"><span class="pulse-indicator"></span> DIGITECH HMS: 24/7 ACTIVE TELEMETRY</div>
@@ -238,7 +278,10 @@
                         <div class="header-phone-icon"><i class="fas fa-phone-alt"></i></div>
                         <div class="header-phone-text"><span>Direct Engineering Hotline</span><strong>(+91) 9999-760-222</strong></div>
                     </a>
-                    <button onclick="openDemoModal('Certification Inquiry')" class="btn-brand-primary">
+                    <a href="tel:09999760222" class="mobile-phone-call-btn d-lg-none" aria-label="Call Digitech Hotline">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                    <button onclick="openDemoModal('Certification Inquiry')" class="btn-brand-primary d-none d-lg-inline-flex">
                         <i class="fas fa-clipboard-check"></i> Request Site Survey
                     </button>
                     <button class="mobile-toggle-btn d-lg-none" id="mobileNavToggle" onclick="toggleMobileNav()"><i class="fas fa-bars"></i></button>

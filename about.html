@@ -401,11 +401,33 @@
             color: var(--brand-text-secondary);
         }
 
-        /* Client Trust Section (Zoomed & Identifiable) */
+        /* Mobile Quick Phone Call Button */
+        .mobile-phone-call-btn {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: var(--brand-cyan-light);
+            color: var(--brand-cyan) !important;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            text-decoration: none !important;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        .mobile-phone-call-btn:hover {
+            background: var(--brand-cyan);
+            color: #ffffff !important;
+        }
+
+        /* Client Trust Section (Continuous Horizontal Animated Marquee Ticker) */
         .client-trust-section {
             background: #ffffff;
             border-bottom: 1px solid var(--brand-slate-border);
-            padding: 50px 0 60px 0;
+            padding: 48px 0 52px 0;
+            overflow: hidden;
+            position: relative;
         }
         .client-trust-label {
             text-align: center;
@@ -414,29 +436,49 @@
             color: var(--brand-navy-deep);
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 30px;
+            margin-bottom: 24px;
         }
-        .client-logo-grid {
+        .client-marquee-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 6px 0;
+            -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0%, #000 6%, #000 94%, transparent 100%);
+        }
+        .client-marquee-track {
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: row;
+            flex-wrap: nowrap;
             align-items: stretch;
-            justify-content: center;
             gap: 20px;
+            width: max-content;
+            animation: clientMarqueeScroll 38s linear infinite;
+            will-change: transform;
+        }
+        .client-marquee-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes clientMarqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 10px)); }
         }
         .client-logo-card {
             background: #ffffff;
             border: 1px solid #e2e8f0;
             border-radius: 12px;
             padding: 16px 20px;
-            width: 200px;
-            min-height: 110px;
+            width: 195px;
+            min-height: 108px;
+            flex: 0 0 195px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
             transition: all 0.25s ease;
             text-decoration: none !important;
+            user-select: none;
         }
         .client-logo-card:hover {
             transform: translateY(-4px);
@@ -444,8 +486,8 @@
             box-shadow: 0 10px 25px rgba(0, 154, 206, 0.15);
         }
         .client-logo-card img {
-            max-height: 56px;
-            max-width: 160px;
+            max-height: 52px;
+            max-width: 155px;
             width: auto;
             object-fit: contain;
             filter: none !important;
@@ -453,6 +495,7 @@
             display: block;
             margin-bottom: 8px;
             transition: transform 0.25s ease;
+            pointer-events: none;
         }
         .client-logo-card:hover img {
             transform: scale(1.05);
@@ -617,15 +660,83 @@
             .desktop-nav-links, .header-phone-box, .nav-vertical-divider {
                 display: none !important;
             }
+            .header-contact-actions .btn-brand-primary {
+                display: none !important;
+            }
+            .header-contact-actions {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
+            .topbar-enterprise {
+                padding: 6px 0;
+                font-size: 11px;
+            }
+            .topbar-address-text {
+                display: none !important;
+            }
+            .header-main-nav {
+                padding: 8px 0;
+            }
+            .brand-logo-img {
+                height: 42px;
+                width: 42px;
+            }
+            .brand-meta .company-name {
+                font-size: 16px;
+            }
+            .brand-meta .company-desc {
+                font-size: 9px;
+            }
+            .client-trust-section {
+                padding: 36px 0 40px 0;
+            }
+            .client-trust-label {
+                font-size: 11px;
+                letter-spacing: 1.2px;
+                margin-bottom: 16px;
+                padding: 0 14px;
+            }
+            .client-marquee-container {
+                -webkit-mask-image: none;
+                mask-image: none;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                padding: 4px 0 8px 0;
+            }
+            .client-marquee-container::-webkit-scrollbar {
+                display: none;
+            }
+            .client-marquee-track {
+                gap: 12px;
+                animation: clientMarqueeScroll 26s linear infinite;
+            }
+            .client-logo-card {
+                width: 160px;
+                min-width: 160px;
+                flex: 0 0 160px;
+                min-height: 94px;
+                padding: 12px 14px;
+                border-radius: 10px;
+            }
+            .client-logo-card img {
+                max-height: 42px;
+                max-width: 125px;
+                margin-bottom: 6px;
+            }
+            .client-brand-title {
+                font-size: 11px;
+            }
             .floating-whatsapp-btn {
-                bottom: 16px;
-                right: 16px;
-                width: 46px;
-                height: 46px;
-                font-size: 22px;
+                bottom: 18px;
+                right: 18px;
+                width: 48px;
+                height: 48px;
+                font-size: 24px;
             }
         }
     </style>
@@ -642,8 +753,8 @@
                     <span class="topbar-credential">
                         <i class="fas fa-certificate"></i> ISO 9001:2015 Certified Engineering
                     </span>
-                    <span style="margin: 0 12px; opacity: 0.3;">|</span>
-                    <span>Corporate HQ: Masoodpur Market, Vasant Kunj, New Delhi</span>
+                    <span class="topbar-address-text" style="margin: 0 12px; opacity: 0.3;">|</span>
+                    <span class="topbar-address-text">Corporate HQ: Masoodpur Market, Vasant Kunj, New Delhi</span>
                 </div>
                 <div class="topbar-right d-none d-md-flex align-items-center gap-3">
                     <div class="topbar-hms-status">
@@ -705,9 +816,16 @@
                             <strong>(+91) 9999-760-222</strong>
                         </div>
                     </a>
-                    <button onclick="openDemoModal('About Us Consultation')" class="btn-brand-primary">
+                    <a href="tel:09999760222" class="mobile-phone-call-btn d-lg-none" aria-label="Call Digitech Hotline">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
+                    <button onclick="openDemoModal('About Us Consultation')" class="btn-brand-primary d-none d-lg-inline-flex">
                         <i class="fas fa-clipboard-check"></i> Request Site Survey
                     </button>
+                    <button class="mobile-toggle-btn d-lg-none" id="mobileNavToggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
                     <button class="mobile-toggle-btn d-lg-none" id="mobileNavToggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">
                         <i class="fas fa-bars"></i>
                     </button>
@@ -827,11 +945,15 @@
             </div>
         </section>
 
-        <!-- CLIENT TRUST SECTION (Zoomed & Identifiable) -->
+        <!-- CLIENT TRUST SECTION: Continuous Horizontal Animated Marquee Ticker (Never Vertical Stack) -->
         <section class="client-trust-section">
             <div class="auto-container">
                 <div class="client-trust-label">TRUSTED BY 50,000+ ENTERPRISES, INDUSTRIAL HUBS &amp; GOVERNMENT BODIES</div>
-                <div class="client-logo-grid">
+            </div>
+            
+            <div class="client-marquee-container" id="clientMarqueeContainerAbout">
+                <div class="client-marquee-track">
+                    <!-- First Set of Partners -->
                     <div class="client-logo-card" title="Emaar Properties - Master Communities & Retail">
                         <img src="assets/images/clients/emaar.jpg" alt="Emaar Properties">
                         <span class="client-brand-title">Emaar Properties</span>
@@ -861,6 +983,40 @@
                         <span class="client-brand-title">Avi Realtech</span>
                     </div>
                     <div class="client-logo-card" title="Inter-University Accelerator Centre (IUAC) - Research Campus">
+                        <img src="assets/images/clients/iuac.jpg" alt="IUAC Accelerator Centre">
+                        <span class="client-brand-title">IUAC (Govt. of India)</span>
+                    </div>
+
+                    <!-- Duplicated Set for Seamless Infinite Horizontal Loop -->
+                    <div class="client-logo-card" aria-hidden="true" title="Emaar Properties - Master Communities & Retail">
+                        <img src="assets/images/clients/emaar.jpg" alt="Emaar Properties">
+                        <span class="client-brand-title">Emaar Properties</span>
+                    </div>
+                    <div class="client-logo-card" aria-hidden="true" title="Jaypee Group - Infrastructure & Real Estate">
+                        <img src="assets/images/clients/jaypee-group.jpg" alt="Jaypee Group">
+                        <span class="client-brand-title">Jaypee Group</span>
+                    </div>
+                    <div class="client-logo-card" aria-hidden="true" title="AG Industries - Heavy Manufacturing Plant">
+                        <img src="assets/images/clients/ag-industries.jpg" alt="AG Industries">
+                        <span class="client-brand-title">AG Industries</span>
+                    </div>
+                    <div class="client-logo-card" aria-hidden="true" title="Anand Group - Automotive OEM Components">
+                        <img src="assets/images/clients/anand.jpg" alt="Anand Group">
+                        <span class="client-brand-title">Anand Group</span>
+                    </div>
+                    <div class="client-logo-card" aria-hidden="true" title="Indian Spinal Injuries Centre - Super Specialty Hospital">
+                        <img src="assets/images/clients/indian-spinal-injuries.jpg" alt="Indian Spinal Injuries Centre">
+                        <span class="client-brand-title">Indian Spinal Injuries</span>
+                    </div>
+                    <div class="client-logo-card" aria-hidden="true" title="Government of Tamil Nadu - Public Infrastructure">
+                        <img src="assets/images/clients/govement-tamilnadu.jpg" alt="Government of Tamil Nadu">
+                        <span class="client-brand-title">Govt. of Tamil Nadu</span>
+                    </div>
+                    <div class="client-logo-card" aria-hidden="true" title="Avi Realtech - Commercial Towers">
+                        <img src="assets/images/clients/avi-realtech.jpg" alt="Avi Realtech">
+                        <span class="client-brand-title">Avi Realtech</span>
+                    </div>
+                    <div class="client-logo-card" aria-hidden="true" title="Inter-University Accelerator Centre (IUAC) - Research Campus">
                         <img src="assets/images/clients/iuac.jpg" alt="IUAC Accelerator Centre">
                         <span class="client-brand-title">IUAC (Govt. of India)</span>
                     </div>
